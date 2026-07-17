@@ -155,35 +155,6 @@ def update_case(case_id, payload):
 
     raise Exception("Supabase update failed.")
 
-def increment_report_count(
-    case_id: int,
-    user_id: str
-):
-    """
-    Increment report count and add user if needed.
-    """
-
-    case = get_case(case_id)
-
-    current_count = case["report_count"]
-
-    users = case.get("user_ids", [])
-
-    if user_id not in users:
-        users.append(user_id)
-
-    updates = {
-        "report_count": current_count + 1,
-        "user_ids": users,
-        "last_reported_at": datetime.now(timezone.utc).isoformat()
-    }
-
-    return update_case(
-        case_id,
-        updates
-    )
-
-
 # ==========================================================
 # Duplicate Optimization
 # ==========================================================
@@ -215,28 +186,7 @@ def user_reported_case_recently(
 
     return len(response.data) > 0
 
-def merge_duplicate_report(
-    complaint_id: int,
-    case_id: int
-):
-    """
-    Mark complaint as duplicate and
-    update the case timestamp.
-    """
 
-    assign_case_to_complaint(
-        complaint_id,
-        case_id,
-        True
-    )
-
-    update_case(
-        case_id,
-        {
-            "last_reported_at":
-            datetime.now(timezone.utc).isoformat()
-        }
-    )
 
 
 # ==========================================================
@@ -502,3 +452,111 @@ def get_clustering_statistics():
         "outlier_count": outlier_count,
         "outlier_rate": outlier_rate,
     }
+def create_benchmark(
+    model_name,
+    complaints_processed,
+    average_latency_ms,
+    throughput,
+    memory_mb
+):
+
+    response = (
+        supabase
+        .table(
+            "model_benchmarks"
+        )
+        .insert(
+            {
+                "model_name":
+                    model_name,
+
+                "complaints_processed":
+                    complaints_processed,
+
+                "average_latency_ms":
+                    average_latency_ms,
+
+                "throughput":
+                    throughput,
+
+                "memory_mb":
+                    memory_mb
+            }
+        )
+        .execute()
+    )
+
+    return response.data[0]
+def get_benchmarks():
+
+    response = (
+        supabase
+        .table("model_benchmarks")
+        .select("*")
+        .execute()
+    )
+
+    return response.data
+def get_sample_complaints(
+    limit=100
+):
+
+    response = (
+        supabase
+        .table(
+            "complaints"
+        )
+        .select(
+            "complaint_text"
+        )
+        .limit(limit)
+        .execute()
+    )
+
+    return [
+        row["complaint_text"]
+        for row in response.data
+    ]
+def create_case_history(
+    case_id: int,
+    report_count: int
+):
+
+    response = (
+        supabase
+        .table(
+            "case_history"
+        )
+        .insert(
+            {
+                "case_id": case_id,
+                "report_count": report_count
+            }
+        )
+        .execute()
+    )
+
+    return response.data
+def get_case_history(
+    case_id: int
+):
+
+    response = (
+        supabase
+        .table(
+            "case_history"
+        )
+        .select("*")
+        .eq(
+            "case_id",
+            case_id
+        )
+        .order(
+            "recorded_at",
+            desc=True
+        )
+        .limit(2)
+        .execute()
+    )
+
+    return response.data

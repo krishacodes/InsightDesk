@@ -1,4 +1,5 @@
 from backend.services.preprocess import clean_text
+from datetime import datetime, timezone
 
 from backend.services.embedding_service import (
     generate_embedding,
@@ -15,16 +16,82 @@ from backend.database.supabase import (
     update_complaint,
     assign_case_to_complaint,
     create_case,
-    increment_report_count,
+    update_case,
+    create_case_history,
     user_reported_case_recently,
-    merge_duplicate_report
+    get_case
+    
 )
 from backend.services.sentiment.sentiment_service import (
     enrich_case_with_sentiment
 )
 
 SIMILARITY_THRESHOLD = 0.85
+def increment_report_count(
+    case_id: int,
+    user_id: str
+):
+    """
+    Increment report count and maintain
+    case history for spike detection.
+    """
 
+    case = get_case(case_id)
+
+    current_count = case["report_count"]
+
+    users = case.get("user_ids", [])
+
+    if user_id not in users:
+        users.append(user_id)
+
+    new_count = current_count + 1
+
+    updates = {
+        "report_count": new_count,
+        "user_ids": users,
+        "last_reported_at":
+            datetime.now(
+                timezone.utc
+            ).isoformat()
+    }
+
+    response = update_case(
+        case_id,
+        updates
+    )
+    print("Increment called!")
+    print(new_count)
+
+    create_case_history(
+        case_id=case_id,
+        report_count=new_count
+    )
+    print("History created!")
+
+    return response
+def merge_duplicate_report(
+    complaint_id: int,
+    case_id: int
+):
+    """
+    Mark complaint as duplicate and
+    update the case timestamp.
+    """
+
+    assign_case_to_complaint(
+        complaint_id,
+        case_id,
+        True
+    )
+
+    update_case(
+        case_id,
+        {
+            "last_reported_at":
+            datetime.now(timezone.utc).isoformat()
+        }
+    )
 
 def process_complaint(complaint):
     """
@@ -110,7 +177,7 @@ def process_complaint(complaint):
                 best_case_id
             )
             enrich_case_with_sentiment(
-            case_id
+                best_case_id
             )
 
 
@@ -174,3 +241,5 @@ def process_complaint(complaint):
         "is_duplicate": False,
         "status": "New case created"
     }
+
+
