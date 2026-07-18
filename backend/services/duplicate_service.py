@@ -19,7 +19,8 @@ from backend.database.supabase import (
     update_case,
     create_case_history,
     user_reported_case_recently,
-    get_case
+    get_case,
+    upsert_complaint_window
     
 )
 from backend.services.sentiment.sentiment_service import (
@@ -193,7 +194,9 @@ def process_complaint(complaint):
             best_case_id,
             complaint.user_id
         )
-
+        upsert_complaint_window(
+        best_case_id
+        )
         assign_case_to_complaint(
             complaint_id,
             best_case_id,
@@ -217,7 +220,9 @@ def process_complaint(complaint):
     )
 
     case_id = new_case["case_id"]
-
+    upsert_complaint_window(
+    case_id
+    )
     # Store representative embedding in Pinecone
     store_case_embedding(
         case_id=case_id,

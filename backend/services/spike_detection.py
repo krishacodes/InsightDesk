@@ -25,33 +25,35 @@ def compute_z_score(
     ) / std
 
 
-def detect_spike(
-    case_id
-):
+def detect_spike(case_id):
 
     history = get_case_history(
         case_id
     )
 
-    if len(history) < 7:
-
-        return {
-            "spike": False,
-            "critical": False,
-            "z_score": 0,
-            "current":current
-        }
-
     counts = [
 
-        row["report_count"]
+        row["complaint_ct"]
 
         for row in history
     ]
 
-    historical = counts[:-1]
+    current = counts[-1] if counts else 0
 
-    current = counts[-1]
+    if len(history) < 7:
+
+        return {
+
+            "spike": False,
+
+            "critical": False,
+
+            "z_score": 0,
+
+            "current": current
+        }
+
+    historical = counts[:-1]
 
     z_score = compute_z_score(
         historical,

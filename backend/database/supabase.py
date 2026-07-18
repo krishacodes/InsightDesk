@@ -1,6 +1,7 @@
 from datetime import datetime, timezone, timedelta
 import os
 
+
 from dotenv import load_dotenv
 from supabase import Client, create_client
 
@@ -118,7 +119,7 @@ def create_case(
 
 
 def get_case(
-    case_id: int
+        case_id:int
 ):
     """
     Retrieve a case.
@@ -537,26 +538,170 @@ def create_case_history(
     )
 
     return response.data
-def get_case_history(
-    case_id: int
-):
+def get_case_history(case_id):
 
     response = (
         supabase
-        .table(
-            "case_history"
+        .table("complaint_windows")
+        .select(
+            "complaint_ct"
         )
-        .select("*")
         .eq(
             "case_id",
             case_id
         )
         .order(
-            "recorded_at",
-            desc=True
+            "window_start"
         )
-        .limit(2)
         .execute()
     )
 
     return response.data
+#collection api 
+def get_cases():
+
+    response = (
+        supabase
+        .table("cases")
+        .select("*")
+        .execute()
+    )
+
+    return response.data
+def get_complaints():
+
+    response = (
+        supabase
+        .table("complaints")
+        .select("*")
+        .execute()
+    )
+
+    return response.data
+def get_topics():
+
+    response = (
+        supabase
+        .table("topics")
+        .select("*")
+        .execute()
+    )
+
+    return response.data
+def upsert_complaint_window(
+    case_id: int,
+    window_hours: int = 6
+):
+    """
+    Create or update a complaint window
+    for spike detection.
+
+    Example:
+    00:00 - 06:00
+    06:00 - 12:00
+    12:00 - 18:00
+    18:00 - 24:00
+    """
+
+    now = datetime.now(
+        timezone.utc
+    )
+
+    # Round down to nearest
+    # 6-hour boundary
+
+    window_start = now.replace(
+        hour=(
+            now.hour //
+            window_hours
+        ) * window_hours,
+        minute=0,
+        second=0,
+        microsecond=0
+    )
+
+    window_end = (
+        window_start +
+        timedelta(
+            hours=window_hours
+        )
+    )
+
+    # Check whether window exists
+
+    response = (
+
+        supabase
+        .table(
+            "complaint_windows"
+        )
+        .select(
+            "*"
+        )
+        .eq(
+            "case_id",
+            case_id
+        )
+        .eq(
+            "window_start",
+            window_start.isoformat()
+        )
+        .execute()
+    )
+
+    # Existing window
+
+    if response.data:
+
+        current_count = (
+            response
+            .data[0]
+            ["complaint_ct"]
+        )
+
+        return (
+
+            supabase
+            .table(
+                "complaint_windows"
+            )
+            .update(
+                {
+                    "complaint_ct":
+                    current_count + 1
+                }
+            )
+            .eq(
+                "window_id",
+                response.data[0][
+                    "window_id"
+                ]
+            )
+            .execute()
+        )
+
+    # New window
+
+    return (
+
+        supabase
+        .table(
+            "complaint_windows"
+        )
+        .insert(
+            {
+                "case_id":
+                case_id,
+
+                "window_start":
+                window_start.isoformat(),
+
+                "window_end":
+                window_end.isoformat(),
+
+                "complaint_ct":
+                1
+            }
+        )
+        .execute()
+    )
