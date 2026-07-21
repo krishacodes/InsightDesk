@@ -62,15 +62,15 @@ def detect_spike(case_id):
 
     return {
 
-        "spike":
-        z_score > 2,
+    "spike":
+    bool(z_score > 2),
 
-        "critical":
-        z_score > 3,
+    "critical":
+    bool(z_score > 3),
 
-        "z_score":
-        round(z_score, 2),
+    "z_score":
+    float(round(z_score, 2)),
 
-        "current":
-        current
-    }
+    "current":
+    int(current)
+}

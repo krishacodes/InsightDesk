@@ -705,3 +705,97 @@ def upsert_complaint_window(
         )
         .execute()
     )
+#Give me all complaints associated with this case.
+def get_complaints_by_case(
+    case_id
+):
+
+    response = (
+        supabase
+        .table("complaints")
+        .select("*")
+        .eq("case_id", case_id)
+        .execute()
+    )
+
+    return response.data
+def save_rca(
+    case_id,
+    rca
+):
+
+    result = supabase.table(
+        "case_rca"
+    ).insert(
+
+        {
+
+            "case_id":
+            case_id,
+
+            "probable_cause":
+            rca.probable_cause,
+
+            "affected_segment":
+            rca.affected_segment,
+
+            "recommended_action":
+            rca.recommended_action,
+
+            "severity":
+            rca.severity,
+
+            "confidence":
+            rca.confidence,
+
+            "source_evidence":
+            rca.source_evidence,
+
+            "generated_at":
+            rca.generated_at,
+
+            "model_used":
+            rca.model_used
+        }
+
+    ).execute()
+
+    return result.data
+def get_rca(
+    case_id
+):
+
+    result = supabase.table(
+        "case_rca"
+    ).select(
+        "*"
+    ).eq(
+        "case_id",
+        case_id
+    ).order(
+        "generated_at",
+        desc=True
+    ).limit(
+        1
+    ).execute()
+
+    if result.data:
+
+        return result.data[0]
+
+    return None
+def get_spike_cases():
+
+    result = (
+        supabase
+        .table("cases")
+        .select("*")
+        .eq("spike_status", True)
+        .order(
+            "spike_detected_at",
+            desc=True
+        )
+        .execute()
+    )
+
+    return result.data

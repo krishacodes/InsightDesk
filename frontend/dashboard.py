@@ -11,12 +11,16 @@ sys.path.append(
 )
 
 import streamlit as st
-
+from backend.services.rca_service import (
+    generate_rca
+)
 from backend.database.supabase import (
     get_benchmarks,
     get_complaints,
+    get_rca,
     get_topics,
-    get_cases
+    get_cases,
+    get_spike_cases
 )
 from backend.services.spike_detection import (
     detect_spike
@@ -223,12 +227,100 @@ if not spike_found:
 st.markdown("---")
 
 st.header(
-    "Root Cause Analysis"
+    "AI Root Cause Analysis"
 )
 
-st.info(
-    "RCA module coming soon."
-)
+try:
+
+    spike_cases = get_spike_cases()
+
+    if not spike_cases:
+
+        st.info(
+            "No spike cases available."
+        )
+
+    else:
+
+        case_id = spike_cases[0]["case_id"]
+
+        spike_result = detect_spike(
+            case_id
+        )
+
+        if spike_result["spike"]:
+
+            # Will generate once and reuse afterwards
+            generate_rca(
+                case_id
+            )
+
+            rca = get_rca(
+                case_id
+            )
+
+            st.subheader(
+                "Probable Cause"
+            )
+
+            st.write(
+                rca["probable_cause"]
+            )
+
+            col1, col2 = st.columns(2)
+
+            with col1:
+
+                st.metric(
+                    "Severity",
+                    rca["severity"]
+                )
+
+            with col2:
+
+                st.metric(
+                    "Confidence",
+                    f'{rca["confidence"] * 100:.0f}%'
+                )
+
+            st.subheader(
+                "Recommended Action"
+            )
+
+            st.write(
+                rca["recommended_action"]
+            )
+
+            st.subheader(
+                "Source Evidence"
+            )
+
+            for evidence in rca["source_evidence"]:
+
+                st.write(
+                    f"- {evidence}"
+                )
+
+            with st.expander(
+                "View Full RCA Object"
+            ):
+
+                st.write(
+                    rca
+                )
+
+        else:
+
+            st.info(
+                "No spike detected. RCA generation not required."
+            )
+
+except Exception as e:
+
+    st.error(
+        f"Unable to generate RCA: {e}"
+    )
+
 
 # ==================================
 # EMAIL ESCALATION
