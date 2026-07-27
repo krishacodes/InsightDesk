@@ -214,14 +214,24 @@ def process_complaint(complaint):
     # Step 7 : Create New Case
     # ----------------------------------------------------
 
+    # Create a new case record in the database. Populate basic fields
+    # such as representative text, initial report count and user ids,
+    # and timestamps.
     new_case = create_case(
-        representative_text=cleaned_text,
-        user_id=complaint.user_id
+        {
+            "representative_text": cleaned_text,
+            "report_count": 1,
+            "user_ids": [complaint.user_id],
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "last_reported_at": datetime.now(timezone.utc).isoformat(),
+        }
     )
 
     case_id = new_case["case_id"]
+
+    # Ensure complaint window/upsert is created for this case
     upsert_complaint_window(
-    case_id
+        case_id
     )
     # Store representative embedding in Pinecone
     store_case_embedding(

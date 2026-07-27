@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 from bertopic import BERTopic
 from sentence_transformers import SentenceTransformer
-
+from sklearn.feature_extraction.text import CountVectorizer
 from backend.database.supabase import (
     get_all_cases,
     get_clustering_metadata,
@@ -26,6 +26,13 @@ MAX_CLUSTER_AGE_DAYS = 7
 
 embedding_model = SentenceTransformer(
     "all-MiniLM-L6-v2"
+)
+vectorizer_model = CountVectorizer(
+
+    stop_words="english",
+    ngram_range=(1, 2),
+    min_df=2
+
 )
 def _should_recluster(force: bool = False):
     """
@@ -139,7 +146,10 @@ def _load_cases():
 
         case_ids.append(case_id)
         documents.append(text)
+        print("\nDOCUMENTS GOING TO BERTOPIC\n")
 
+        for document in documents[:20]:
+            print(document)
     return case_ids, documents
 def _generate_embeddings(documents):
     """
@@ -186,9 +196,10 @@ def _run_bertopic(documents, embeddings):
 
     topic_model = BERTopic(
         embedding_model=None,
+        vectorizer_model=vectorizer_model,
         calculate_probabilities=True,
         verbose=True,
-        min_topic_size=2,
+        min_topic_size=3,
     )
 
     topics, probabilities = topic_model.fit_transform(
@@ -215,20 +226,6 @@ from backend.services.department_service import (
 def _process_topics(topic_model, clustering_run_id: int) -> Dict[int, int]:
     """
     Process BERTopic topics and synchronize them with the database.
-
-    Parameters
-    ----------
-    topic_model : BERTopic
-        Trained BERTopic model.
-
-    clustering_run_id : int
-        ID of the current clustering run.
-
-    Returns
-    -------
-    dict
-        Mapping:
-        BERTopic Topic Number -> Database topic_id
     """
 
     topic_mapping = {}
@@ -259,28 +256,40 @@ def _process_topics(topic_model, clustering_run_id: int) -> Dict[int, int]:
         # Generate metadata
         # -------------------------------------------------
 
-        topic_name = " + ".join(keywords[:2]).title()
+        topic_name = " + ".join(
+            keywords[:3]
+        ).title()
 
-        topic_slug = "_".join(keywords[:3]).lower()
+        topic_slug = "_".join(
+            keywords[:3]
+        ).lower()
 
-        description = ", ".join(keywords)
+        description = ", ".join(
+            keywords
+        )
 
         # -------------------------------------------------
         # Department Assignment
         # -------------------------------------------------
 
         try:
-            department = assign_department(keywords)
+            department = assign_department(
+                keywords
+            )
 
         except Exception:
 
-            department = assign_department_by_keywords(keywords)
+            department = assign_department_by_keywords(
+                keywords
+            )
 
         # -------------------------------------------------
         # Check if topic already exists
         # -------------------------------------------------
 
-        existing_topic = get_topic_by_slug(topic_slug)
+        existing_topic = get_topic_by_slug(
+            topic_slug
+        )
 
         # -------------------------------------------------
         # Existing Topic
@@ -288,7 +297,9 @@ def _process_topics(topic_model, clustering_run_id: int) -> Dict[int, int]:
 
         if existing_topic:
 
-            topic_id = existing_topic["topic_id"]
+            topic_id = existing_topic[
+                "topic_id"
+            ]
 
             update_topic(
                 topic_id=topic_id,
@@ -305,46 +316,91 @@ def _process_topics(topic_model, clustering_run_id: int) -> Dict[int, int]:
 
         else:
 
-            new_topic = create_topic(
-                topic_name=topic_name,
-                topic_slug=topic_slug,
-                department=department,
-                description=description,
-                clustering_run_id=clustering_run_id,
-            )
+            try:
 
-            topic_id = new_topic["topic_id"]
+                new_topic = create_topic(
+                    topic_name=topic_name,
+                    topic_slug=topic_slug,
+                    department=department,
+                    description=description,
+                    clustering_run_id=clustering_run_id,
+                )
+
+                topic_id = new_topic[
+                    "topic_id"
+                ]
+
+            except Exception as e:
+
+                print(
+                    f"\nError creating topic: {e}\n"
+                )
+
+                # Skip problematic topics
+                topic_id = None
 
         # -------------------------------------------------
         # Store Mapping
         # -------------------------------------------------
 
-        topic_mapping[topic_number] = topic_id
+        topic_mapping[
+            topic_number
+        ] = topic_id
+    print("\nFINAL TOPIC MAPPING\n")
 
+    print(topic_mapping)
     return topic_mapping
-def _update_database(case_ids, topics, topic_mapping):
-    """
-    Update each case with its assigned database topic_id.
-
-    Parameters
-    ----------
-    case_ids : list[int]
-    topics : list[int]
-    topic_mapping : dict
-    """
+def _update_database(
+        case_ids,
+        topics,
+        topic_mapping
+):
 
     updated_cases = 0
 
-    for case_id, bertopic_topic in zip(case_ids, topics):
+    print("\nTOPIC MAPPING\n")
+    print(topic_mapping)
 
-        db_topic_id = topic_mapping.get(bertopic_topic)
 
-        update_case_topic(
-            case_id=case_id,
-            topic_id=db_topic_id
+    for case_id, bertopic_topic in zip(
+            case_ids,
+            topics
+    ):
+
+        print("\n----------------")
+
+        print(
+            "CASE ID :",
+            case_id
         )
 
+        print(
+            "BERTOPIC TOPIC :",
+            bertopic_topic
+        )
+
+
+        db_topic_id = topic_mapping.get(
+            bertopic_topic
+        )
+
+
+        print(
+            "DATABASE TOPIC ID :",
+            db_topic_id
+        )
+
+
+        update_case_topic(
+
+            case_id=case_id,
+            topic_id=db_topic_id
+
+        )
+
+
         updated_cases += 1
+
 
     return updated_cases
 def _update_metadata(topic_mapping):

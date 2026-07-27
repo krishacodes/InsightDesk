@@ -21,6 +21,14 @@ DEPARTMENT_KEYWORDS = {
         "android",
         "ios",
         "update",
+        "internet",
+        "network",
+        "connection",
+        "slow",
+        "latency",
+        "loading",
+        "server",
+        "downtime",
     ],
 
     "Authentication": [
@@ -32,6 +40,7 @@ DEPARTMENT_KEYWORDS = {
         "signup",
         "verification",
         "token",
+        "authenticate",
     ],
 
     "Payments": [
@@ -43,6 +52,9 @@ DEPARTMENT_KEYWORDS = {
         "invoice",
         "wallet",
         "subscription",
+        "money",
+        "charged",
+        "deducted",
     ],
 
     "Customer Success": [
@@ -53,6 +65,8 @@ DEPARTMENT_KEYWORDS = {
         "service",
         "customer",
         "help",
+        "chat",
+        "assistance",
     ],
 
     "Platform": [
@@ -65,8 +79,8 @@ DEPARTMENT_KEYWORDS = {
     ],
 }
 def assign_department_by_keywords(keywords: list[str]) -> str:
-    """
-    Assign department using rule-based keyword matching.
+    """ 
+    Assign department using keyword scoring.
 
     Parameters
     ----------
@@ -78,16 +92,63 @@ def assign_department_by_keywords(keywords: list[str]) -> str:
         Department name.
     """
 
-    keywords = [k.lower() for k in keywords]
+    keywords = [
 
-    for department, triggers in DEPARTMENT_KEYWORDS.items():
+        keyword.lower()
 
-        for keyword in keywords:
+        for keyword in keywords
+
+    ]
+
+
+    scores = {
+
+        department: 0
+
+        for department in DEPARTMENT_KEYWORDS
+
+    }
+
+
+    # -------------------------------
+    # Calculate department scores
+    # -------------------------------
+
+    for keyword in keywords:
+
+        for department, triggers in (
+            DEPARTMENT_KEYWORDS.items()
+        ):
 
             if keyword in triggers:
-                return department
 
-    return "General"
+                scores[department] += 1
+
+
+    # -------------------------------
+    # No matches found
+    # -------------------------------
+
+    highest_score = max(
+        scores.values()
+    )
+
+    if highest_score == 0:
+
+        return "General"
+
+
+    # -------------------------------
+    # Return best matching department
+    # -------------------------------
+
+    for department, score in (
+        scores.items()
+    ):
+
+        if score == highest_score:
+
+            return department
 def assign_department(keywords: list[str]) -> str:
     """
     Public department assignment function.
