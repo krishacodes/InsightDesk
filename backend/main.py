@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
 
-from backend.models.complaint import ComplaintCreate
+from backend.chatbot.router import router as chatbot_router
+from backend.routers.dashboard import router as dashboard_router
 
+from backend.models.complaint import ComplaintCreate
 from backend.services.duplicate_service import process_complaint
+
 
 app = FastAPI(
     title="InsightDesk API",
@@ -12,6 +15,7 @@ app = FastAPI(
 
 @app.get("/")
 def home():
+
     return {
         "message": "InsightDesk API is running 🚀"
     }
@@ -21,13 +25,6 @@ def home():
 def analyze_complaint(
     complaint: ComplaintCreate
 ):
-    """
-    Main API endpoint.
-
-    Receives a complaint,
-    passes it to the duplicate detection pipeline,
-    and returns the processing result.
-    """
 
     try:
 
@@ -43,3 +40,12 @@ def analyze_complaint(
             status_code=500,
             detail=str(e)
         )
+
+
+app.include_router(
+    chatbot_router
+)
+
+app.include_router(
+    dashboard_router
+)

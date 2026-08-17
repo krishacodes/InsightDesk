@@ -799,3 +799,14 @@ def get_spike_cases():
     )
 
     return result.data
+def get_complaint_volume_by_day():
+
+    response = (
+        supabase
+        .table("complaints")
+        .select("created_at")
+        .order("created_at")
+        .execute()
+    )
+
+    return response.data

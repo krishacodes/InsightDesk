@@ -1,44 +1,109 @@
-import sys
-import os
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
 import streamlit as st
-
-from components.header import render_header
-from components.sidebar import render_sidebar
-from views.overview import render_overview
-from utils.theme import inject_theme
-
+from utils.styles import load_styles
 st.set_page_config(
     page_title="InsightDesk",
-    page_icon="🧭",
-    layout="wide",
-    initial_sidebar_state="expanded",
+    layout="wide"
 )
 
-inject_theme()
-render_header()
+#load_styles()
+from pages.overview import (
+    render_overview
+)
+from pages.sentiment import (
+    render_sentiment
+)
 
-page = render_sidebar()
 
-if page == "Overview":
+st.sidebar.title(
+
+    "InsightDesk"
+
+)
+
+
+page = st.sidebar.radio(
+
+    "Navigation",
+
+    [
+
+        "Overview",
+
+        "Sentiment",
+
+        "Clusters",
+
+        "Spikes",
+
+        "Chatbot",
+
+        "Admin"
+
+    ]
+
+)
+
+
+
+if page=="Overview":
+
     render_overview()
-elif page == "Clusters":
-    st.title("Clusters")
-    st.caption("BERTopic complaint clusters")
+# --------------------------------
+# SENTIMENT
+# --------------------------------
+
 elif page == "Sentiment":
-    st.title("Sentiment")
-    st.caption("RoBERTa anger scoring")
+
+    render_sentiment()
+
+
+# --------------------------------
+# CLUSTERS
+# --------------------------------
+
+elif page == "Clusters":
+
+    st.info(
+
+        "Clusters page coming soon."
+
+    )
+
+
+# --------------------------------
+# SPIKES
+# --------------------------------
+
 elif page == "Spikes":
-    st.title("Spikes")
-    st.caption("Z-score anomaly detection")
-elif page == "Diagnostics":
-    st.title("Diagnostics")
-    st.caption("Model health and pipeline status")
+
+    st.info(
+
+        "Spikes page coming soon."
+
+    )
+
+
+# --------------------------------
+# CHATBOT
+# --------------------------------
+
 elif page == "Chatbot":
-    st.title("Chatbot")
-    st.caption("Ask questions about complaint data")
+
+    st.info(
+
+        "Chatbot coming soon."
+
+    )
+
+
+# --------------------------------
+# ADMIN
+# --------------------------------
+
 elif page == "Admin":
-    st.title("Admin")
-    st.caption("Configuration and escalation settings")
+
+    st.info(
+
+        "Admin page coming soon."
+
+    )
