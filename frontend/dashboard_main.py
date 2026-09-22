@@ -1,53 +1,68 @@
 import streamlit as st
+
 from utils.styles import load_styles
+
+from pages.overview import render_overview
+from pages.sentiment import render_sentiment
+from pages.chatbot import render_chatbot
+from pages.overview import render_overview
+from pages.sentiment import render_sentiment
+from pages.clusters import render_clusters
+from pages.case_intelligence import render_case_intelligence
+
+# --------------------------------
+# PAGE CONFIG
+# --------------------------------
+
 st.set_page_config(
     page_title="InsightDesk",
+    page_icon="📊",
     layout="wide"
 )
 
-#load_styles()
-from pages.overview import (
-    render_overview
+
+# --------------------------------
+# GLOBAL STYLES
+# --------------------------------
+
+# Uncomment when you want to enable
+# the existing custom styling.
+# load_styles()
+
+
+# --------------------------------
+# SIDEBAR
+# --------------------------------
+
+st.sidebar.title("InsightDesk")
+
+st.sidebar.caption(
+    "AI Complaint Intelligence"
 )
-from pages.sentiment import (
-    render_sentiment
-)
-
-
-st.sidebar.title(
-
-    "InsightDesk"
-
-)
-
 
 page = st.sidebar.radio(
-
     "Navigation",
-
     [
-
         "Overview",
-
         "Sentiment",
-
         "Clusters",
-
+        "Case Intelligence",
         "Spikes",
-
         "Chatbot",
-
         "Admin"
-
     ]
-
 )
 
 
+# --------------------------------
+# OVERVIEW
+# --------------------------------
 
-if page=="Overview":
+if page == "Overview":
 
     render_overview()
+
+
 # --------------------------------
 # SENTIMENT
 # --------------------------------
@@ -63,47 +78,44 @@ elif page == "Sentiment":
 
 elif page == "Clusters":
 
-    st.info(
+    render_clusters()
 
-        "Clusters page coming soon."
+# --------------------------------
+# CASE INTELLIGENCE
+# --------------------------------
 
-    )
-
-
+elif page == "Case Intelligence":
+    render_case_intelligence()
 # --------------------------------
 # SPIKES
 # --------------------------------
 
 elif page == "Spikes":
 
+    st.title("Spike Detection")
+
     st.info(
-
-        "Spikes page coming soon."
-
+        "Spike analytics page coming soon."
     )
 
 
 # --------------------------------
-# CHATBOT
+# RCA
 # --------------------------------
 
-elif page == "Chatbot":
+elif page == "RCA":
+
+    st.title("Root Cause Analysis")
 
     st.info(
-
-        "Chatbot coming soon."
-
+        "Root cause analysis page coming soon."
     )
 
 
 # --------------------------------
-# ADMIN
+# AI ASSISTANT
 # --------------------------------
 
-elif page == "Admin":
+elif page == "AI Assistant":
 
-    st.info(
-
-        "Admin page coming soon."
-
-    )
+    render_chatbot()

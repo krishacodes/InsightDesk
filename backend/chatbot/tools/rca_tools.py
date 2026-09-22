@@ -1,12 +1,12 @@
 from langchain_core.tools import tool
 
-from backend.services.rca_service import generate_rca
+from backend.database.supabase import get_rca
 
 
 @tool
 def get_case_rca(case_id: int) -> dict:
     """
-    Retrieve or generate Root Cause Analysis for an InsightDesk case.
+    Retrieve the existing Root Cause Analysis for an InsightDesk case.
 
     Use this when the user asks about:
     - root cause
@@ -17,10 +17,13 @@ def get_case_rca(case_id: int) -> dict:
     - severity
     - confidence
     - evidence
+
+    This tool is read-only.
+    It does not generate or modify RCA data.
     """
 
     try:
-        rca = generate_rca(case_id)
+        rca = get_rca(case_id)
 
         if not rca:
             return {
@@ -33,14 +36,31 @@ def get_case_rca(case_id: int) -> dict:
             "found": True,
             "case_id": case_id,
             "rca": {
-                "probable_cause": rca.get("probable_cause"),
-                "affected_segment": rca.get("affected_segment"),
-                "recommended_action": rca.get("recommended_action"),
-                "severity": rca.get("severity"),
-                "confidence": rca.get("confidence"),
-                "source_evidence": rca.get("source_evidence", []),
-                "generated_at": rca.get("generated_at"),
-                "model_used": rca.get("model_used"),
+                "probable_cause": rca.get(
+                    "probable_cause"
+                ),
+                "affected_segment": rca.get(
+                    "affected_segment"
+                ),
+                "recommended_action": rca.get(
+                    "recommended_action"
+                ),
+                "severity": rca.get(
+                    "severity"
+                ),
+                "confidence": rca.get(
+                    "confidence"
+                ),
+                "source_evidence": rca.get(
+                    "source_evidence",
+                    []
+                ),
+                "generated_at": rca.get(
+                    "generated_at"
+                ),
+                "model_used": rca.get(
+                    "model_used"
+                ),
             }
         }
 
@@ -48,6 +68,9 @@ def get_case_rca(case_id: int) -> dict:
         return {
             "found": False,
             "case_id": case_id,
-            "message": f"Unable to retrieve RCA for case {case_id}.",
+            "message": (
+                f"Unable to retrieve RCA "
+                f"for case {case_id}."
+            ),
             "error": str(e)
         }

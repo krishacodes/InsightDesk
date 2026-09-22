@@ -64,7 +64,8 @@ def should_escalate(
     severity = severity.upper()
 
     return severity in (
-
+        "MEDIUM",
+        
         "HIGH",
 
         "CRITICAL"

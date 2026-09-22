@@ -1,89 +1,42 @@
-import sys
-import os
-from xmlrpc import client
-from groq import Groq
-from dotenv import load_dotenv
-sys.path.append(
-    os.path.abspath(
-        os.path.join(
-            os.path.dirname(__file__),
-            "../.."
-        )
-    )
-)
-load_dotenv()
-
-client = Groq(
-    api_key=os.getenv(
-        "GROQ_API_KEY"
-    )
-)
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
+
 from backend.database.supabase import (
     get_case,
     get_rca,
     get_topic,
     get_complaints_by_case,
-    save_rca
+    save_rca,
 )
 
+from backend.services.spike_detection import detect_spike
 
-from backend.services.spike_detection import (
-    detect_spike
+from backend.llm.provider import (
+    generate_json,
+    get_model_name,
+    get_provider,
 )
+
 
 @dataclass
 class RCAResult:
-
     probable_cause: str
-
     affected_segment: str
-
     recommended_action: str
-
     severity: str
-
     confidence: float
-
     source_evidence: list[str]
-
     generated_at: str
-
     model_used: str
-if __name__ == "__main__":
 
-    result = RCAResult(
 
-        probable_cause="ISP outage",
+def fetch_rca_context(case_id):
+    case = get_case(case_id)
 
-        affected_segment="Mumbai",
-
-        recommended_action="Escalate",
-
-        severity="CRITICAL",
-
-        confidence=0.95,
-
-        source_evidence=[
-            "Internet down"
-        ],
-
-        generated_at=
-        datetime.utcnow().isoformat(),
-
-        model_used=
-        "llama-3"
-    )
-
-    print(result)
-def fetch_rca_context(
-    case_id
-):
-
-    case = get_case(
-        case_id
-    )
+    if not case:
+        raise ValueError(
+            f"Case {case_id} not found."
+        )
 
     complaints = get_complaints_by_case(
         case_id
@@ -92,138 +45,92 @@ def fetch_rca_context(
     spike = detect_spike(
         case_id
     )
-    if case["topic_id"] is not None:
 
+    if case.get("topic_id") is not None:
         topic = get_topic(
             case["topic_id"]
         )
-
     else:
-
         topic = {
-            "topic_name":
-            "Unknown",
-
-            "department":
-            "General Support"
+            "topic_name": "Unknown",
+            "department": "General Support",
         }
 
     sentiment = {
-
-        "sentiment":
-        case["sentiment"],
-
-        "confidence":
-        case["confidence_score"],
-
-        "model":
-        case["sentiment_model"]
+        "sentiment": case.get(
+            "sentiment"
+        ),
+        "confidence": case.get(
+            "confidence_score"
+        ),
+        "model": case.get(
+            "sentiment_model"
+        ),
     }
 
     return {
-
-        "case":
-        case,
-
-        "complaints":
-        complaints[-5:],
-
-        "topic":
-        topic,
-
-        "spike":
-        spike,
-
-        "sentiment":
-        sentiment
+        "case": case,
+        "complaints": complaints[-5:],
+        "topic": topic,
+        "spike": spike,
+        "sentiment": sentiment,
     }
 
 
+def build_prompt(context):
+    complaints = []
 
-def build_prompt(
-    context
-):
-    prompt = f"""
-You are an AI Root Cause Analysis assistant for InsightDesk.
+    for complaint in context["complaints"]:
+        text = (
+            complaint.get("text")
+            or complaint.get("complaint_text")
+            or complaint.get("content")
+            or str(complaint)
+        )
 
-Your task is to identify the most probable root cause of a complaint spike.
+        complaints.append(
+            f"- {text}"
+        )
 
-Example 1:
+    complaint_text = "\n".join(
+        complaints
+    )
 
-INPUT:
+    return f"""
+You are the Root Cause Analysis component of InsightDesk,
+a SaaS complaint intelligence system.
 
-Topic:
-Payments
+Analyze ONLY the evidence supplied below.
 
-Sentiment:
-negative
+Do not invent outages, infrastructure failures, geographic
+effects, affected products, or technical causes that are not
+supported by the evidence.
 
-Current Complaint Count:
-25
+If the evidence is insufficient to identify an exact technical
+cause, state the most plausible complaint-level cause and keep
+confidence appropriately low.
 
-Z Score:
-4.8
+Severity must be exactly one of:
+LOW, MEDIUM, HIGH, CRITICAL
 
-Recent Complaints:
-- Payment failed during checkout.
-- Money debited but order not placed.
-- Unable to complete transaction.
+Confidence must be a NUMBER between 0.0 and 1.0.
 
-OUTPUT:
+Return ONLY one valid JSON object.
+Do not use markdown.
+Do not include reasoning outside the JSON.
 
-{{
-    "probable_cause":"Payment gateway outage.",
-    "affected_segment":"Customers performing online transactions.",
-    "recommended_action":"Escalate immediately to Payments Team.",
-    "severity":"CRITICAL",
-    "confidence":0.96,
-    "source_evidence":[
-        "Payment failed",
-        "Money debited",
-        "Transaction unsuccessful"
-    ]
-}}
-
-------------------------------------------------
-
-Example 2:
-
-INPUT:
-
-Topic:
-Authentication
-
-Sentiment:
-negative
-
-Current Complaint Count:
-12
-
-Z Score:
-3.1
-
-Recent Complaints:
-- Unable to login.
-- OTP not received.
-- Login page keeps refreshing.
-
-OUTPUT:
+Required schema:
 
 {{
-    "probable_cause":"Authentication service degradation.",
-    "affected_segment":"Users attempting to login.",
-    "recommended_action":"Investigate OTP and authentication services.",
-    "severity":"HIGH",
-    "confidence":0.91,
-    "source_evidence":[
-        "Unable to login",
-        "OTP not received"
-    ]
+    "probable_cause": "string",
+    "affected_segment": "string",
+    "recommended_action": "string",
+    "severity": "LOW|MEDIUM|HIGH|CRITICAL",
+    "confidence": 0.0,
+    "source_evidence": ["string"]
 }}
 
-------------------------------------------------
-
-NOW ANALYZE THE FOLLOWING CASE:
+CASE EVIDENCE
 
 Representative Complaint:
 {context["case"]["representative_text"]}
@@ -247,106 +154,90 @@ Z Score:
 {context["spike"]["z_score"]}
 
 Recent Complaints:
-{context["complaints"]}
+{complaint_text}
+""".strip()
 
-Return ONLY valid JSON.
 
-{{
-    "probable_cause":"",
-    "affected_segment":"",
-    "recommended_action":"",
-    "severity":"",
-    "confidence":0.0,
-    "source_evidence":[]
-}}
-"""
-    return prompt
-if __name__ == "__main__":
-    context = fetch_rca_context(
-    71
-    )
-
-    print(
-    build_prompt(
-        context
-    )
-    )
-def generate_rca(
-    case_id
-):
-
-    context = fetch_rca_context(
-        case_id
-    )
-
-    prompt = build_prompt(
-        context
-    )
-
-    response = client.chat.completions.create(
-        ...
-    )
-
-    content = (
-        response
-        .choices[0]
-        .message
-        .content
-    )
-
-    content = (
-        content
-        .replace(
-            "```json",
-            ""
+def _normalize_confidence(value):
+    if isinstance(value, (int, float)):
+        return max(
+            0.0,
+            min(1.0, float(value))
         )
-        .replace(
-            "```",
-            ""
-        )
-        .strip()
-    )
-    import json
-    data = json.loads(
-        content
-    )
 
-    return RCAResult(
-        probable_cause=
-        data["probable_cause"],
+    if isinstance(value, str):
+        value = value.strip().lower()
 
-        affected_segment=
-        data["affected_segment"],
+        mapping = {
+            "low": 0.35,
+            "medium": 0.60,
+            "moderate": 0.60,
+            "high": 0.80,
+            "very high": 0.90,
+        }
 
-        recommended_action=
-        data["recommended_action"],
+        if value in mapping:
+            return mapping[value]
 
-        severity=
-        data["severity"],
+        try:
+            numeric = float(value)
 
-        confidence=
-        data["confidence"],
+            if numeric > 1:
+                numeric = numeric / 100
 
-        source_evidence=
-        data["source_evidence"],
+            return max(
+                0.0,
+                min(1.0, numeric)
+            )
 
-        generated_at=
-        datetime.utcnow().isoformat(),
+        except ValueError:
+            pass
 
-        model_used=
-        "llama-3"
+    return 0.50
 
-    )
+
+def _normalize_severity(value):
+    severity = str(
+        value or "MEDIUM"
+    ).strip().upper()
+
+    allowed = {
+        "LOW",
+        "MEDIUM",
+        "HIGH",
+        "CRITICAL",
+    }
+
+    if severity not in allowed:
+        return "MEDIUM"
+
+    return severity
+
+
+def _normalize_evidence(value):
+    if value is None:
+        return []
+
+    if isinstance(value, list):
+        return [
+            str(item)
+            for item in value
+        ][:5]
+
+    return [str(value)]
+
+
 def generate_rca(
-    case_id
+    case_id,
+    force_regenerate=False,
+    save_result=True,
 ):
-
+    # Keep existing cache behaviour by default.
     existing = get_rca(
         case_id
     )
 
-    if existing:
-
+    if existing and not force_regenerate:
         return existing
 
     context = fetch_rca_context(
@@ -357,97 +248,85 @@ def generate_rca(
         context
     )
 
-    response = client.chat.completions.create(
-
-        model=
-        "llama-3.3-70b-versatile",
-
-        messages=[
-            {
-                "role":
-                "user",
-
-                "content":
-                prompt
-            }
-        ],
-
-        temperature=0
+    data = generate_json(
+        prompt
     )
 
-    content = (
-    response
-    .choices[0]
-    .message
-    .content
-    )
+    required_fields = [
+        "probable_cause",
+        "affected_segment",
+        "recommended_action",
+    ]
 
-    content = (
-    content
-    .replace(
-        "```json",
-        ""
-    )
-    .replace(
-        "```",
-        ""
-    )
-    .strip()
-    )
-    print("RAW RESPONSE:")
-    print(content)
-    print("-" * 50)
+    missing = [
+        field
+        for field in required_fields
+        if not data.get(field)
+    ]
 
-    import json
-    data = json.loads(
-    content
-    )
+    if missing:
+        raise RuntimeError(
+            "LLM response missing required "
+            f"fields: {missing}"
+        )
 
     rca = RCAResult(
+        probable_cause=str(
+            data["probable_cause"]
+        ),
 
-    probable_cause=
-    data["probable_cause"],
+        affected_segment=str(
+            data["affected_segment"]
+        ),
 
-    affected_segment=
-    data["affected_segment"],
+        recommended_action=str(
+            data["recommended_action"]
+        ),
 
-    recommended_action=
-    data["recommended_action"],
+        severity=_normalize_severity(
+            data.get("severity")
+        ),
 
-    severity=
-    data["severity"],
+        confidence=_normalize_confidence(
+            data.get("confidence")
+        ),
 
-    confidence=
-    data["confidence"],
+        source_evidence=_normalize_evidence(
+            data.get("source_evidence")
+        ),
 
-    source_evidence=
-    data["source_evidence"],
+        generated_at=datetime.now(
+            timezone.utc
+        ).isoformat(),
 
-    generated_at=
-    datetime.utcnow().isoformat(),
-
-    model_used=
-    "llama-3.3-70b-versatile"
-)
-
-    save_rca(
-    case_id,
-    rca
-)
+        model_used=(
+            f"{get_provider()}:"
+            f"{get_model_name()}"
+        ),
+    )
+    if save_result:
+            save_rca(
+              case_id,
+              rca
+            )
 
     return rca
+
+
 if __name__ == "__main__":
+    print(
+        "Provider:",
+        get_provider()
+    )
+
+    print(
+        "Model:",
+        get_model_name()
+    )
 
     result = generate_rca(
-        71
+        71,
+        force_regenerate=True,
     )
 
-    print(
-        result
-    )
-
-    print(
-        get_rca(
-            71
-        )
-    )
+    print(result)

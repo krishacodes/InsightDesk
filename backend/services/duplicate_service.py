@@ -26,8 +26,12 @@ from backend.database.supabase import (
 from backend.services.sentiment.sentiment_service import (
     enrich_case_with_sentiment
 )
+# Cross-Encoder decision threshold.
+# Calibrated on a manually reviewed 75-pair evaluation set.
+# Selected as a precision-oriented operating point:
+# Precision = 95.24%, Recall = 57.14%, F1 = 71.43%.
 
-SIMILARITY_THRESHOLD = 0.85
+SIMILARITY_THRESHOLD = -2.21
 def increment_report_count(
     case_id: int,
     user_id: str

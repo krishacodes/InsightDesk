@@ -1,3 +1,4 @@
+
 from transformers import pipeline
 
 from backend.services.sentiment.base_model import (
@@ -29,9 +30,9 @@ class RoBERTaAdapter(
         result = self.model(
             text
         )[0]
-
+        sentiment = result["label"].capitalize()
         return SentimentResult(
-            sentiment=result["label"],
+            sentiment=sentiment,
             confidence=float(
                 result["score"]
             ),

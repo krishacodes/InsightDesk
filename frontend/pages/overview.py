@@ -5,267 +5,161 @@ from services.dashboard_api import get_overview_data
 
 
 # ============================================================
-# COLORS
+# OVERVIEW PAGE STYLES
 # ============================================================
 
-BG = "#0B1220"
-CARD = "#111827"
-CARD_HOVER = "#172033"
+def _load_overview_css():
+    """
+    Cosmetic styling only.
 
-BORDER = "#243044"
-
-TEXT = "#F8FAFC"
-MUTED = "#94A3B8"
-
-BLUE = "#3B82F6"
-PURPLE = "#8B5CF6"
-RED = "#EF4444"
-ORANGE = "#F59E0B"
-GREEN = "#22C55E"
-
-
-# ============================================================
-# PAGE CSS
-# ============================================================
-
-def load_overview_styles():
+    All page structure continues to use native Streamlit
+    components. No HTML cards/tables/components are generated.
+    """
 
     st.markdown(
-        f"""
+        """
         <style>
 
-        /* =========================
-           MAIN BACKGROUND
-        ========================= */
+        /* ====================================================
+           PAGE TYPOGRAPHY
+           ==================================================== */
 
-        .stApp {{
-            background: {BG};
-        }}
+        /* Main page title */
+        h1 {
+            color: #172554 !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.02em;
+        }
 
-        .block-container {{
-            padding-top: 2rem;
-            padding-bottom: 3rem;
-            max-width: 1400px;
-        }}
+        /* Section headings */
+        h2, h3 {
+            color: #1E3A5F !important;
+            font-weight: 650 !important;
+            letter-spacing: -0.01em;
+        }
 
-        /* =========================
-           GENERAL TEXT
-        ========================= */
+        /* Smaller markdown headings such as model names */
+        h4 {
+            color: #1E3A5F !important;
+            font-weight: 650 !important;
+        }
 
-        h1, h2, h3, h4, p, span, label {{
-            color: {TEXT};
-        }}
+        /* General text */
+        p {
+            color: #334155;
+        }
 
-        .muted {{
-            color: {MUTED};
-        }}
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* ====================================================
+           CAPTIONS
+           ==================================================== */
 
-        .overview-header {{
-            margin-bottom: 1.8rem;
-        }}
+        div[data-testid="stCaptionContainer"] {
+            color: #64748B !important;
+            margin-top: -0.30rem;
+            margin-bottom: 0.65rem;
+        }
 
-        .overview-title {{
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            color: {TEXT};
-        }}
+        div[data-testid="stCaptionContainer"] p {
+            color: #64748B !important;
+        }
 
-        .overview-subtitle {{
-            font-size: 0.9rem;
-            color: {MUTED};
-        }}
 
-        /* =========================
-           CARDS
-        ========================= */
+        /* ====================================================
+           NATIVE STREAMLIT CARDS / CONTAINERS
+           ==================================================== */
 
-        .dashboard-card {{
-            background: {CARD};
-            border: 1px solid {BORDER};
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-bottom: 1rem;
-        }}
+        div[data-testid="stVerticalBlockBorderWrapper"] {
+            border-radius: 10px;
+            border-color: #E2E8F0 !important;
+            background-color: #FBFCFE;
+        }
 
-        .dashboard-card-title {{
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: {MUTED};
-            margin-bottom: 0.8rem;
-        }}
 
-        /* =========================
-           KPI
-        ========================= */
+        /* ====================================================
+           KPI METRICS
+           ==================================================== */
 
-        .kpi-label {{
-            color: {MUTED};
-            font-size: 0.75rem;
+        div[data-testid="stMetricLabel"] {
+            font-size: 0.78rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }}
+            letter-spacing: 0.025em;
+            color: #64748B !important;
+        }
 
-        .kpi-value {{
-            color: {TEXT};
-            font-size: 2rem;
+        div[data-testid="stMetricLabel"] p {
+            color: #64748B !important;
+        }
+
+        div[data-testid="stMetricValue"] {
             font-weight: 700;
-            margin-top: 0.25rem;
-        }}
+            color: #1D4ED8 !important;
+        }
 
-        .kpi-accent {{
-            width: 30px;
-            height: 3px;
-            border-radius: 3px;
-            margin-top: 0.8rem;
-        }}
 
-        /* =========================
-           SECTION TITLE
-        ========================= */
+        /* ====================================================
+           DATAFRAME / TOPIC TABLE
+           ==================================================== */
 
-        .section-title {{
-            font-size: 1.05rem;
-            font-weight: 650;
-            color: {TEXT};
-            margin-top: 1.4rem;
-            margin-bottom: 0.8rem;
-        }}
+        div[data-testid="stDataFrame"] {
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-        .section-description {{
-            font-size: 0.8rem;
-            color: {MUTED};
-            margin-top: -0.5rem;
-            margin-bottom: 1rem;
-        }}
 
-        /* =========================
-           TOPIC CARDS
-        ========================= */
+        /* ====================================================
+           DIVIDERS
+           ==================================================== */
 
-        .topic-card {{
-            background: {CARD};
-            border: 1px solid {BORDER};
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 0.7rem;
-        }}
+        hr {
+            margin: 1.25rem 0;
+            border-color: #E2E8F0 !important;
+        }
 
-        .topic-name {{
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: {TEXT};
-        }}
 
-        .topic-department {{
-            font-size: 0.75rem;
-            color: {MUTED};
-            margin-top: 0.3rem;
-        }}
+        /* ====================================================
+           SIDEBAR
+           ==================================================== */
 
-        /* =========================
-           SPIKE
-        ========================= */
+        section[data-testid="stSidebar"] {
+            background-color: #F8FAFC;
+            border-right: 1px solid #E2E8F0;
+        }
 
-        .spike-card {{
-            background: rgba(239, 68, 68, 0.08);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-left: 3px solid {RED};
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 0.7rem;
-        }}
+        section[data-testid="stSidebar"] h1,
+        section[data-testid="stSidebar"] h2,
+        section[data-testid="stSidebar"] h3 {
+            color: #172554 !important;
+        }
 
-        .spike-title {{
-            color: {RED};
-            font-weight: 650;
-            font-size: 0.9rem;
-        }}
 
-        .spike-meta {{
-            color: {MUTED};
-            font-size: 0.75rem;
-            margin-top: 0.35rem;
-        }}
+        /* ====================================================
+           RADIO NAVIGATION
+           ==================================================== */
 
-        /* =========================
-           HEALTHY
-        ========================= */
+        div[role="radiogroup"] label {
+            color: #334155 !important;
+        }
 
-        .healthy-card {{
-            background: rgba(34, 197, 94, 0.07);
-            border: 1px solid rgba(34, 197, 94, 0.25);
-            border-radius: 10px;
-            padding: 1rem;
-        }}
+        div[role="radiogroup"] label:hover {
+            color: #1D4ED8 !important;
+        }
 
-        .healthy-title {{
-            color: {GREEN};
-            font-weight: 650;
-        }}
 
-        /* =========================
-           BENCHMARK
-        ========================= */
+        /* ====================================================
+           BUTTONS
+           ==================================================== */
 
-        .benchmark-card {{
-            background: {CARD};
-            border: 1px solid {BORDER};
-            border-radius: 10px;
-            padding: 1rem;
-            margin-bottom: 0.7rem;
-        }}
+        div[data-testid="stButton"] button {
+            border-radius: 8px;
+            border-color: #CBD5E1;
+        }
 
-        .benchmark-model {{
-            font-size: 0.9rem;
-            font-weight: 650;
-            color: {TEXT};
-            margin-bottom: 0.7rem;
-        }}
-
-        .benchmark-label {{
-            color: {MUTED};
-            font-size: 0.7rem;
-        }}
-
-        .benchmark-value {{
-            color: {TEXT};
-            font-size: 0.95rem;
-            font-weight: 600;
-        }}
-
-        /* =========================
-           STREAMLIT METRIC OVERRIDE
-        ========================= */
-
-        div[data-testid="stMetric"] {{
-            background: {CARD};
-            border: 1px solid {BORDER};
-            border-radius: 12px;
-            padding: 1rem;
-        }}
-
-        div[data-testid="stMetricLabel"] {{
-            color: {MUTED} !important;
-        }}
-
-        div[data-testid="stMetricValue"] {{
-            color: {TEXT} !important;
-        }}
-
-        /* =========================
-           DATAFRAME
-        ========================= */
-
-        [data-testid="stDataFrame"] {{
-            border: 1px solid {BORDER};
-            border-radius: 10px;
-        }}
+        div[data-testid="stButton"] button:hover {
+            border-color: #2563EB;
+            color: #1D4ED8;
+        }
 
         </style>
         """,
@@ -278,57 +172,9 @@ def load_overview_styles():
 # ============================================================
 
 def format_number(value):
-
-    return f"{value:,}"
-
-
-def render_kpi(label, value, accent):
-
-    st.markdown(
-        f"""
-        <div class="dashboard-card">
-
-            <div class="kpi-label">
-                {label}
-            </div>
-
-            <div class="kpi-value">
-                {format_number(value) if isinstance(value, int) else value}
-            </div>
-
-            <div
-                class="kpi-accent"
-                style="background:{accent};"
-            ></div>
-
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-
-# ============================================================
-# HEADER
-# ============================================================
-
-def render_header():
-
-    st.markdown(
-        """
-        <div class="overview-header">
-
-            <div class="overview-title">
-                Overview
-            </div>
-
-            <div class="overview-subtitle">
-                AI-powered complaint intelligence and system health
-            </div>
-
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    if isinstance(value, int):
+        return f"{value:,}"
+    return value
 
 
 # ============================================================
@@ -340,32 +186,40 @@ def render_kpis(data):
     col1, col2, col3, col4 = st.columns(4)
 
     with col1:
-        render_kpi(
-            "Complaints",
-            data.get("complaints", 0),
-            BLUE,
-        )
+        with st.container(border=True):
+            st.metric(
+                "Complaints",
+                format_number(
+                    data.get("complaints", 0)
+                ),
+            )
 
     with col2:
-        render_kpi(
-            "Cases",
-            data.get("cases", 0),
-            PURPLE,
-        )
+        with st.container(border=True):
+            st.metric(
+                "Cases",
+                format_number(
+                    data.get("cases", 0)
+                ),
+            )
 
     with col3:
-        render_kpi(
-            "Topics",
-            data.get("topics", 0),
-            BLUE,
-        )
+        with st.container(border=True):
+            st.metric(
+                "Topics",
+                format_number(
+                    data.get("topics", 0)
+                ),
+            )
 
     with col4:
-        render_kpi(
-            "Spikes",
-            data.get("spikes", 0),
-            RED if data.get("spikes", 0) else GREEN,
-        )
+        with st.container(border=True):
+            st.metric(
+                "Active Spikes",
+                format_number(
+                    data.get("spikes", 0)
+                ),
+            )
 
 
 # ============================================================
@@ -374,122 +228,53 @@ def render_kpis(data):
 
 def render_complaint_volume(data):
 
-    st.markdown(
-        """
-        <div class="section-title">
-            Complaint Volume
-        </div>
+    st.subheader("Complaint Volume")
 
-        <div class="section-description">
-            Daily complaint activity across the available dataset
-        </div>
-        """,
-        unsafe_allow_html=True,
+    st.caption(
+        "Daily complaint activity across the available dataset."
     )
 
     volume = data.get(
         "volume_by_day",
-        []
+        [],
     )
 
-    if not volume:
+    with st.container(border=True):
 
-        st.info(
-            "No complaint volume data available."
+        if not volume:
+            st.info(
+                "No complaint volume data available."
+            )
+            return
+
+        dataframe = pd.DataFrame(
+            volume
         )
 
-        return
-    dataframe = pd.DataFrame(volume)
+        if (
+            "date" not in dataframe.columns
+            or "count" not in dataframe.columns
+        ):
+            st.warning(
+                "Complaint volume data is unavailable "
+                "in the expected format."
+            )
+            return
 
-    st.write("DEBUG volume:", volume)
-    st.write("DEBUG columns:", dataframe.columns.tolist())
-    st.write("DEBUG dataframe:", dataframe)
-    dataframe = pd.DataFrame(volume)
-
-    dataframe["date"] = pd.to_datetime(
-        dataframe["date"]
-    )
-
-    dataframe = dataframe.sort_values(
-        "date"
-    )
-
-    dataframe = dataframe.set_index(
-        "date"
-    )
-
-    st.line_chart(
-        dataframe["count"],
-        height=280,
-    )
-
-
-# ============================================================
-# TOPIC INTELLIGENCE
-# ============================================================
-
-def render_topics(data):
-
-    st.markdown(
-        """
-        <div class="section-title">
-            Topic Intelligence
-        </div>
-
-        <div class="section-description">
-            Current complaint clusters and departmental ownership
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
-    topics = data.get(
-        "topics_data",
-        []
-    )
-
-    if not topics:
-
-        st.info(
-            "No topic data available."
+        dataframe["date"] = pd.to_datetime(
+            dataframe["date"]
         )
 
-        return
-
-    # Show a compact table rather than
-    # rendering all 19 topics as huge cards.
-
-    topic_rows = []
-
-    for topic in topics:
-
-        topic_rows.append(
-            {
-                "Topic":
-                    topic.get(
-                        "topic_name",
-                        "Unknown"
-                    ),
-
-                "Department":
-                    topic.get(
-                        "department",
-                        "Unknown"
-                    ),
-
-                "Description":
-                    topic.get(
-                        "description",
-                        ""
-                    ),
-            }
+        dataframe = (
+            dataframe
+            .sort_values("date")
+            .set_index("date")
         )
 
-    st.dataframe(
-        topic_rows,
-        use_container_width=True,
-        hide_index=True,
-    )
+        st.line_chart(
+            dataframe["count"],
+            height=300,
+        )
 
 
 # ============================================================
@@ -498,119 +283,170 @@ def render_topics(data):
 
 def render_spikes(data):
 
-    st.markdown(
-        """
-        <div class="section-title">
-            Spike Alerts
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.subheader("Spike Alerts")
 
     spikes = data.get(
         "spike_cases",
-        []
+        [],
     )
 
     if not spikes:
 
-        st.markdown(
-            """
-            <div class="healthy-card">
+        with st.container(border=True):
 
-                <div class="healthy-title">
-                    ✓ No active spikes
-                </div>
+            st.success(
+                "No active complaint spikes detected."
+            )
 
-                <div class="spike-meta">
-                    No cases currently exceed the spike threshold.
-                </div>
-
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+            st.caption(
+                "No cases currently exceed "
+                "the configured spike threshold."
+            )
 
         return
 
     for spike in spikes:
 
-        severity = (
-            "CRITICAL"
-            if spike.get("critical")
-            else "SPIKE"
+        case_id = spike.get(
+            "case_id",
+            "Unknown",
         )
 
-        st.markdown(
-            f"""
-            <div class="spike-card">
+        current = spike.get(
+            "current",
+            "N/A",
+        )
 
-                <div class="spike-title">
-                    {severity}
-                </div>
+        z_score = spike.get(
+            "z_score",
+            "N/A",
+        )
 
-                <div class="spike-meta">
+        representative_text = spike.get(
+            "representative_text",
+            "",
+        )
 
-                    Case ID:
-                    <strong>
-                        {spike.get("case_id")}
-                    </strong>
+        critical = spike.get(
+            "critical",
+            False,
+        )
 
-                    &nbsp; · &nbsp;
+        with st.container(border=True):
 
-                    Current:
-                    <strong>
-                        {spike.get("current")}
-                    </strong>
+            if critical:
+                st.error(
+                    f"Critical Spike — Case #{case_id}"
+                )
 
-                    &nbsp; · &nbsp;
+            else:
+                st.warning(
+                    f"Spike Detected — Case #{case_id}"
+                )
 
-                    Z-score:
-                    <strong>
-                        {spike.get("z_score")}
-                    </strong>
+            c1, c2 = st.columns(2)
 
-                </div>
+            with c1:
+                st.metric(
+                    "Current Reports",
+                    current,
+                )
 
-                <div class="spike-meta">
-                    {spike.get("representative_text", "")}
-                </div>
+            with c2:
+                st.metric(
+                    "Z-Score",
+                    z_score,
+                )
 
-            </div>
-            """,
-            unsafe_allow_html=True,
+            if representative_text:
+                st.write(
+                    representative_text
+                )
+
+
+# ============================================================
+# TOPIC INTELLIGENCE
+# ============================================================
+
+def render_topics(data):
+
+    st.subheader(
+        "Topic Intelligence"
+    )
+
+    st.caption(
+        "Current complaint clusters and departmental ownership."
+    )
+
+    topics = data.get(
+        "topics_data",
+        [],
+    )
+
+    with st.container(border=True):
+
+        if not topics:
+            st.info(
+                "No topic data available."
+            )
+            return
+
+        rows = []
+
+        for topic in topics:
+
+            rows.append(
+                {
+                    "Topic": topic.get(
+                        "topic_name",
+                        "Unknown",
+                    ),
+
+                    "Department": topic.get(
+                        "department",
+                        "Unknown",
+                    ),
+
+                    "Description": topic.get(
+                        "description",
+                        "",
+                    ),
+                }
+            )
+
+        st.dataframe(
+            rows,
+            use_container_width=True,
+            hide_index=True,
         )
 
 
 # ============================================================
-# BENCHMARKS
+# MODEL BENCHMARKS
 # ============================================================
 
 def render_benchmarks(data):
 
-    st.markdown(
-        """
-        <div class="section-title">
-            Model Benchmarks
-        </div>
+    st.subheader(
+        "Model Benchmarks"
+    )
 
-        <div class="section-description">
-            Performance metrics from the sentiment models
-        </div>
-        """,
-        unsafe_allow_html=True,
+    st.caption(
+        "Performance metrics from the sentiment models."
     )
 
     benchmarks = data.get(
         "benchmarks",
-        []
+        [],
     )
 
     if not benchmarks:
 
-        st.info(
-            "No benchmark data available."
-        )
+        with st.container(border=True):
+
+            st.info(
+                "No benchmark data available."
+            )
 
         return
 
@@ -618,99 +454,87 @@ def render_benchmarks(data):
 
         model_name = benchmark.get(
             "model_name",
-            "Unknown"
+            "Unknown",
         )
 
-        complaints_processed = benchmark.get(
-            "complaints_processed",
-            0
-        )
+        with st.container(border=True):
 
-        latency = benchmark.get(
-            "average_latency_ms",
-            0
-        )
+            st.markdown(
+                f"#### {model_name.upper()}"
+            )
 
-        throughput = benchmark.get(
-            "throughput",
-            0
-        )
+            c1, c2, c3, c4 = st.columns(4)
 
-        memory = benchmark.get(
-            "memory_mb",
-            0
-        )
+            with c1:
 
-        st.markdown(
-            f"""
-            <div class="benchmark-card">
+                st.metric(
+                    "Complaints",
+                    benchmark.get(
+                        "complaints_processed",
+                        0,
+                    ),
+                )
 
-                <div class="benchmark-model">
-                    {model_name.upper()}
-                </div>
+            with c2:
 
-                <div style="
-                    display:grid;
-                    grid-template-columns:
-                    repeat(4, 1fr);
-                    gap:1rem;
-                ">
+                latency = benchmark.get(
+                    "average_latency_ms",
+                    0,
+                )
 
-                    <div>
-                        <div class="benchmark-label">
-                            Complaints
-                        </div>
-                        <div class="benchmark-value">
-                            {complaints_processed:,}
-                        </div>
-                    </div>
+                st.metric(
+                    "Average Latency",
+                    f"{latency:.2f} ms",
+                )
 
-                    <div>
-                        <div class="benchmark-label">
-                            Latency
-                        </div>
-                        <div class="benchmark-value">
-                            {latency:.2f} ms
-                        </div>
-                    </div>
+            with c3:
 
-                    <div>
-                        <div class="benchmark-label">
-                            Throughput
-                        </div>
-                        <div class="benchmark-value">
-                            {throughput:.2f}/sec
-                        </div>
-                    </div>
+                throughput = benchmark.get(
+                    "throughput",
+                    0,
+                )
 
-                    <div>
-                        <div class="benchmark-label">
-                            Memory
-                        </div>
-                        <div class="benchmark-value">
-                            {memory:.2f} MB
-                        </div>
-                    </div>
+                st.metric(
+                    "Throughput",
+                    f"{throughput:.2f}/sec",
+                )
 
-                </div>
+            with c4:
 
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+                memory = benchmark.get(
+                    "memory_mb",
+                    0,
+                )
+
+                st.metric(
+                    "Memory",
+                    f"{memory:.2f} MB",
+                )
 
 
 # ============================================================
-# MAIN OVERVIEW
+# MAIN OVERVIEW PAGE
 # ============================================================
 
 def render_overview():
 
-    load_overview_styles()
+    _load_overview_css()
 
-    # ----------------------------------
-    # LOAD API DATA
-    # ----------------------------------
+    # --------------------------------------------------------
+    # HEADER
+    # --------------------------------------------------------
+
+    st.title(
+        "Overview"
+    )
+
+    st.caption(
+        "AI-powered complaint intelligence and system health."
+    )
+
+    # --------------------------------------------------------
+    # LOAD BACKEND DATA
+    # --------------------------------------------------------
 
     try:
 
@@ -723,34 +547,36 @@ def render_overview():
     except Exception as e:
 
         st.error(
-            f"Unable to connect to InsightDesk API: {e}"
+            "Unable to connect to the InsightDesk backend."
         )
 
         st.info(
-            "Make sure FastAPI is running on "
-            "http://127.0.0.1:8000"
+            "Make sure the backend is running and try again."
         )
+
+        with st.expander(
+            "Technical details"
+        ):
+
+            st.code(
+                str(e)
+            )
 
         return
 
+    # --------------------------------------------------------
+    # KPI CARDS
+    # --------------------------------------------------------
 
-    # ----------------------------------
-    # HEADER
-    # ----------------------------------
+    render_kpis(
+        data
+    )
 
-    render_header()
+    st.divider()
 
-
-    # ----------------------------------
-    # KPIs
-    # ----------------------------------
-
-    render_kpis(data)
-
-
-    # ----------------------------------
-    # VOLUME + SPIKES
-    # ----------------------------------
+    # --------------------------------------------------------
+    # COMPLAINT VOLUME + SPIKES
+    # --------------------------------------------------------
 
     left, right = st.columns(
         [2, 1]
@@ -768,19 +594,21 @@ def render_overview():
             data
         )
 
+    st.divider()
 
-    # ----------------------------------
-    # TOPICS
-    # ----------------------------------
+    # --------------------------------------------------------
+    # TOPIC INTELLIGENCE
+    # --------------------------------------------------------
 
     render_topics(
         data
     )
 
+    st.divider()
 
-    # ----------------------------------
-    # BENCHMARKS
-    # ----------------------------------
+    # --------------------------------------------------------
+    # MODEL BENCHMARKS
+    # --------------------------------------------------------
 
     render_benchmarks(
         data
