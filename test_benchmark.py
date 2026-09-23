@@ -11,6 +11,17 @@ from backend.database.supabase import (
     get_sample_complaints
 )
 
+# ----------------------------------
+# WHICH MODEL THIS RUN IS BENCHMARKING
+# ----------------------------------
+# Set this explicitly and re-run the whole script once per model
+# ("roberta", then "distilbert"). Do NOT rely on analyze_sentiment's
+# default — that was the bug: it silently defaulted to "roberta"
+# regardless of what this script claimed it was benchmarking.
+
+MODEL_NAME = "roberta"  # change to "roberta" for the other run
+
+
 complaints = get_sample_complaints(
     limit=100
 )
@@ -31,7 +42,8 @@ start = time.time()
 for complaint in complaints:
 
     result = analyze_sentiment(
-        complaint
+        complaint,
+        model_name=MODEL_NAME
     )
 
     results.append(result)
@@ -65,6 +77,8 @@ memory_used = (
 
 print("\n========== BENCHMARK REPORT ==========\n")
 
+print(f"Model: {MODEL_NAME}")
+
 print(f"Complaints Processed: {len(complaints)}")
 
 print(f"Total Runtime: {total_time:.2f} seconds")
@@ -97,14 +111,13 @@ for i, result in enumerate(results, start=1):
     )
 
 print("\n======================================")
-from backend.database.supabase import create_benchmark
 
 create_benchmark(
-    model_name="distilbert",
+    model_name=MODEL_NAME,
     complaints_processed=len(complaints),
     average_latency_ms=average_latency,
     throughput=throughput,
     memory_mb=memory_after
 )
 
-print("\nBenchmark saved successfully!")
+print(f"\nBenchmark for '{MODEL_NAME}' saved successfully!")

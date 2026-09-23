@@ -1,0 +1,76 @@
+text_a,text_b,label
+"My internet has been down since yesterday","My internet connection stopped working yesterday",1
+"My internet has been down since yesterday","I have had no internet service since yesterday",1
+"My internet has been down since yesterday","My broadband connection is not working",1
+"My internet has been down since yesterday","My payment failed when I tried to subscribe",0
+"My internet has been down since yesterday","I cannot log into my account",0
+"My internet has been down since yesterday","The mobile application keeps crashing",0
+"My internet connection is not working","There is no internet service at my home",1
+"My WiFi has stopped working","I cannot connect to the internet",1
+"My WiFi has stopped working","My internet service has been unavailable since morning",1
+"My WiFi has stopped working","The app crashes whenever I open it",0
+"I cannot log into my account","I am unable to sign in to my account",1
+"I cannot log into my account","The login page does not accept my password",1
+"I cannot log into my account","I am having trouble accessing my account",1
+"I cannot log into my account","My internet connection is down",0
+"I cannot log into my account","My payment was declined",0
+"I am unable to sign in","The application won't let me log in",1
+"I am unable to sign in","I forgot my password and cannot access my account",1
+"I am unable to sign in","The application keeps crashing after opening",0
+"The app keeps crashing","The application crashes every time I open it",1
+"The app keeps crashing","My mobile application is crashing repeatedly",1
+"The app keeps crashing","The Android app closes unexpectedly",1
+"The app keeps crashing","The website is loading very slowly",0
+"The app keeps crashing","I cannot log into my account",0
+"The application crashes on Android","The Android application keeps crashing",1
+"The application crashes on Android","The app closes whenever I try to use it",1
+"The application crashes on Android","My internet connection is unstable",0
+"My payment failed","My payment was declined",1
+"My payment failed","I was unable to complete the payment",1
+"My payment failed","The transaction was rejected when I tried to pay",1
+"My payment failed","I cannot log into my account",0
+"My payment failed","My internet connection has stopped working",0
+"I have not received my refund","My refund has not arrived yet",1
+"I have not received my refund","I am still waiting for the money to be refunded",1
+"I have not received my refund","My payment was declined",0
+"My password reset email has not arrived","I did not receive the password reset email",1
+"My password reset email has not arrived","The reset link has not been sent to me",1
+"My password reset email has not arrived","I cannot connect to the internet",0
+"The website is extremely slow","The website takes a very long time to load",1
+"The website is extremely slow","The website is responding very slowly",1
+"The website is extremely slow","The Android application keeps crashing",0
+"My payment was declined","I have not received my refund",0
+"My transaction failed","My refund is still pending",0
+"I was charged twice","My payment was declined",0
+"I was charged twice","I have not received my refund",0
+"The payment page is not loading","My payment was declined by the bank",0
+"I cannot log into my account","I did not receive my password reset email",0
+"My password is incorrect","The password reset link has expired",0
+"I cannot sign in","My account has been locked",0
+"My account has been locked","I forgot my password",0
+"The login page keeps loading","My password reset email has not arrived",0
+"My internet is very slow","My internet connection is completely down",0
+"My WiFi disconnects frequently","My internet speed is very slow",0
+"I cannot connect to WiFi","My broadband speed is extremely slow",0
+"My internet connection keeps dropping","There is no internet service at all",0
+"The website is extremely slow","The website is completely unavailable",0
+"The Android app keeps crashing","I cannot log into the Android app",0
+"The app crashes during payment","My payment is being declined",0
+"The application freezes on startup","The application is slow after login",0
+"The app will not open","I cannot sign into the app",0
+"The mobile app crashes","The website crashes when I submit a form",0
+"My refund has not arrived","The refund amount is incorrect",0
+"My refund was rejected","My refund is delayed",0
+"I was charged the wrong amount","I was charged twice",0
+"My subscription payment failed","I want to cancel my subscription",0
+"I cannot access my account","My account details are incorrect",0
+"Internet disconnects every few minutes","My connection keeps dropping repeatedly",1
+"Internet speed becomes unusable at night","Broadband is extremely slow every evening",1
+"The app closes when I try to make a payment","Application crashes on the payment screen",1
+"I get an error whenever I try to sign in","Login fails with an error every time",1
+"Money was deducted but the transaction failed","Amount debited even though payment was unsuccessful",1
+"I was charged twice for the same order","The same transaction was deducted two times",1
+"Password reset link does not work","The link sent for resetting my password is invalid",1
+"My refund has been pending for several days","I am still waiting for my refund",1
+"The website never finishes loading","The site keeps loading indefinitely",1
+"My account gets locked whenever I try to log in","Login attempts keep locking my account",1
