@@ -14,3 +14,25 @@ def get_overview_data():
     response.raise_for_status()
 
     return response.json()
+def get_spikes():
+
+    response = requests.get(
+        f"{API_BASE_URL}/dashboard/spikes",
+        timeout=30,
+    )
+
+    response.raise_for_status()
+
+    return response.json()
+
+
+def escalate_case(case_id):
+
+    response = requests.post(
+        f"{API_BASE_URL}/dashboard/cases/{case_id}/escalate",
+        timeout=30,
+    )
+
+    response.raise_for_status()
+
+    return response.json()
