@@ -1,0 +1,489 @@
+complaint_ref,department,issue_id,complaint_text
+295,Engineering,sync_not_updating,Update: Records updated by a teammate don't reflect on my screen without a manual refresh. This is affecting my daily work.
+262,Engineering,sync_not_updating,Changes I make aren't syncing across devices. Please look into this soon.
+188,Payments,subscription_upgrade_failed,"Just ran into this once more: Upgrade button just spins forever and never completes. Happening consistently, not a one-off."
+162,Payments,invoice_missing_details,Just ran into this once more: Generated invoices are missing the company billing address.
+117,Payments,double_charged,I was charged twice for the same subscription this month. Can someone confirm this is being looked at?
+316,Engineering,connection_drops_frequently,Still happening - The connection keeps dropping while I'm using the app.
+12,Authentication,login_otp_not_received,Still happening - No OTP text message has come through after multiple retries.
+395,Customer Success,live_chat_unavailable,Live chat support shows as available but no one ever responds.
+113,Authentication,cant_change_email,I can't update the email address linked to my account. Can someone confirm this is being looked at?
+296,Engineering,sync_not_updating,Just ran into this once more: Cross-device sync just isn't happening anymore.
+45,Authentication,session_logs_out_randomly,I keep getting logged out randomly in the middle of work.
+382,Customer Success,ticket_reopened_repeatedly,Update: I have to keep reopening the same ticket because it's never really fixed. Can someone confirm this is being looked at?
+160,Payments,invoice_missing_details,Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.
+455,Platform,notifications_not_sent,"No alerts are sent when a ticket status changes, I have to check manually."
+133,Payments,double_charged,This has come up again. My card shows two separate charges for one invoice.
+227,Engineering,app_crashes_on_open,Update: The application crashes immediately every time I open it. This is affecting my daily work.
+242,Engineering,dashboard_extremely_slow,"The dashboard takes over a minute to load basic data. Happening consistently, not a one-off."
+67,Authentication,sso_login_fails,Trying to log in via our identity provider throws a token error.
+201,Payments,card_declined_incorrectly,This has come up again. My card keeps getting declined even though there are sufficient funds. Can someone confirm this is being looked at?
+400,Customer Success,escalation_ignored,Requested a manager review three times with no follow-up at all.
+372,Customer Success,agent_unhelpful,This has come up again. Got a copy-pasted response that had nothing to do with my actual question.
+261,Engineering,sync_not_updating,Still happening - Cross-device sync just isn't happening anymore. Please look into this soon.
+232,Engineering,app_crashes_on_open,Following up on this: The application crashes immediately every time I open it. Please look into this soon.
+217,Engineering,app_crashes_on_open,"Update: The application crashes immediately every time I open it. Happening consistently, not a one-off."
+267,Engineering,sync_not_updating,Just ran into this once more: Changes I make aren't syncing across devices.
+52,Authentication,session_logs_out_randomly,"Just ran into this once more: The app signs me out on its own, forcing me to log back in constantly. Happening consistently, not a one-off."
+13,Authentication,login_otp_not_received,"This has come up again. I never received the OTP when trying to log in. Happening consistently, not a one-off."
+445,Platform,permissions_not_saving,I set a teammate's access level but it reverts back on its own. Can someone confirm this is being looked at?
+206,Payments,card_declined_incorrectly,Following up on this: Payment fails at checkout despite the card working everywhere else.
+230,Engineering,app_crashes_on_open,The moment I open the app it force-closes.
+444,Platform,permissions_not_saving,"This has come up again. Permission changes I make for team members don't save. Happening consistently, not a one-off."
+176,Payments,subscription_upgrade_failed,"Still happening - Upgrade button just spins forever and never completes. Happening consistently, not a one-off."
+11,Authentication,login_otp_not_received,"Update: Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off."
+322,Engineering,connection_drops_frequently,The connection keeps dropping while I'm using the app.
+58,Authentication,session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive. Please look into this soon."
+279,Engineering,sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken.
+6,Authentication,login_otp_not_received,"No OTP text message has come through after multiple retries. Happening consistently, not a one-off."
+482,Platform,cant_bulk_edit,Bulk actions on the tickets list just don't apply to anything selected. Can someone confirm this is being looked at?
+337,Engineering,attachments_fail_to_upload,Following up on this: File attachments fail to upload no matter the file size.
+3,Authentication,login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through."
+148,Payments,refund_not_processed,The refund was approved but the money never came back to my account.
+68,Authentication,sso_login_fails,"Update: SAML login redirects back with an invalid token message. Happening consistently, not a one-off."
+121,Payments,double_charged,This has come up again. Got billed two times for a single month of service.
+477,Platform,analytics_data_wrong,Just ran into this once more: Analytics figures seem to be miscalculated compared to raw data.
+83,Authentication,account_locked_incorrectly,"Following up on this: Account lockout triggered incorrectly and support hasn't unlocked it yet. Happening consistently, not a one-off."
+66,Authentication,sso_login_fails,SSO login just spins and never completes.
+314,Engineering,connection_drops_frequently,Following up on this: I keep getting disconnected and have to reload the page constantly. This is affecting my daily work.
+96,Authentication,account_locked_incorrectly,"Just ran into this once more: Got flagged as suspicious and locked out for no real reason. Happening consistently, not a one-off."
+271,Engineering,sync_not_updating,Cross-device sync just isn't happening anymore.
+397,Customer Success,escalation_ignored,"Still happening - I asked to escalate this issue and nothing has happened since. Happening consistently, not a one-off."
+327,Engineering,search_returns_nothing,"Search returns no results even for terms I know exist in my tickets. Happening consistently, not a one-off."
+94,Authentication,account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password. This is affecting my daily work.
+172,Payments,invoice_missing_details,Still happening - Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.
+312,Engineering,update_broke_feature,Something in the newest release broke a workflow I rely on daily.
+414,Platform,export_fails,Export just spins indefinitely and never produces a file.
+351,Customer Success,no_response_from_support,Reporting this again: I submitted a support ticket three days ago and haven't heard back.
+436,Platform,api_integration_broken,Following up on this: API responses started returning malformed data out of nowhere. Can someone confirm this is being looked at?
+16,Authentication,login_otp_not_received,"Still happening - Two-factor login is stuck because the code never shows up. Happening consistently, not a one-off."
+462,Platform,notifications_not_sent,Notification alerts for updates have completely stopped coming through. This is affecting my daily work.
+338,Engineering,attachments_fail_to_upload,Following up on this: Uploading a screenshot to a ticket just hangs and never finishes.
+65,Authentication,sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.
+226,Engineering,app_crashes_on_open,"Still happening - App refuses to open, just crashes back to the home screen. Please look into this soon."
+423,Platform,export_fails,This has come up again. CSV export has been broken for me the past few days.
+53,Authentication,session_logs_out_randomly,"Update: Random logouts are happening throughout the day, very disruptive."
+335,Engineering,attachments_fail_to_upload,Still happening - File attachments fail to upload no matter the file size. This is affecting my daily work.
+86,Authentication,account_locked_incorrectly,I was locked out of my account even though I entered the correct password. This is affecting my daily work.
+441,Platform,permissions_not_saving,"Update: Permission changes I make for team members don't save. Happening consistently, not a one-off."
+302,Engineering,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Happening consistently, not a one-off."
+376,Customer Success,agent_unhelpful,This has come up again. Got a copy-pasted response that had nothing to do with my actual question.
+447,Platform,permissions_not_saving,Permission changes I make for team members don't save. Can someone confirm this is being looked at?
+128,Payments,double_charged,My card shows two separate charges for one invoice.
+189,Payments,wallet_balance_incorrect,Reporting this again: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?
+166,Payments,invoice_missing_details,Still happening - Generated invoices are missing the company billing address. Can someone confirm this is being looked at?
+384,Customer Success,ticket_reopened_repeatedly,Support marks the ticket as resolved but the problem is still there.
+73,Authentication,sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.
+15,Authentication,login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon."
+122,Payments,double_charged,Still happening - I was charged twice for the same subscription this month. Can someone confirm this is being looked at?
+209,Payments,cannot_cancel_subscription,Still happening - There's no way to actually cancel my subscription from the settings page. This is affecting my daily work.
+410,Platform,export_fails,"Still happening - Exporting reports to CSV fails every time I try. Happening consistently, not a one-off."
+405,Platform,export_fails,Reporting this again: Exporting reports to CSV fails every time I try.
+334,Engineering,attachments_fail_to_upload,Just ran into this once more: Uploading a screenshot to a ticket just hangs and never finishes. Can someone confirm this is being looked at?
+120,Payments,double_charged,There's a duplicate charge on my statement for this plan.
+448,Platform,permissions_not_saving,I set a teammate's access level but it reverts back on its own.
+260,Engineering,sync_not_updating,Following up on this: Records updated by a teammate don't reflect on my screen without a manual refresh.
+228,Engineering,app_crashes_on_open,"Reporting this again: App closes itself right after launch, can't get past the loading screen. Please look into this soon."
+157,Payments,invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes.
+478,Platform,analytics_data_wrong,Just ran into this once more: The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.
+108,Authentication,mfa_setup_fails,"MFA enrollment keeps timing out before I can finish setup. Happening consistently, not a one-off."
+205,Payments,card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.
+474,Platform,analytics_data_wrong,Just ran into this once more: Analytics figures seem to be miscalculated compared to raw data.
+281,Engineering,sync_not_updating,"Just ran into this once more: Cross-device sync just isn't happening anymore. Happening consistently, not a one-off."
+168,Payments,invoice_missing_details,"This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice. Happening consistently, not a one-off."
+215,Payments,cannot_cancel_subscription,Still happening - There's no way to actually cancel my subscription from the settings page.
+135,Payments,double_charged,Just ran into this once more: There's a duplicate charge on my statement for this plan. Can someone confirm this is being looked at?
+235,Engineering,app_crashes_on_open,"The moment I open the app it force-closes. Happening consistently, not a one-off."
+110,Authentication,cant_change_email,"Following up on this: Changing my login email fails with a generic error every time. Happening consistently, not a one-off."
+369,Customer Success,agent_unhelpful,The support agent I spoke to didn't actually solve my problem.
+198,Payments,wallet_balance_incorrect,Following up on this: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?
+149,Payments,refund_not_processed,Just ran into this once more: Refund status shows completed but I don't see the amount in my bank. Please look into this soon.
+56,Authentication,session_logs_out_randomly,My session expires every few minutes even though I'm active. Please look into this soon.
+104,Authentication,mfa_setup_fails,Reporting this again: The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?
+57,Authentication,session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly."
+407,Platform,export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads. This is affecting my daily work.
+103,Authentication,mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step.
+264,Engineering,sync_not_updating,Sync between the web app and mobile app is broken.
+80,Authentication,sso_login_fails,This has come up again. SAML login redirects back with an invalid token message.
+366,Customer Success,agent_unhelpful,"Chat support just gave generic answers that didn't address my issue. Happening consistently, not a one-off."
+375,Customer Success,agent_unhelpful,Just ran into this once more: The agent closed my ticket without actually fixing anything. This is affecting my daily work.
+1,Authentication,login_otp_not_received,I never received the OTP when trying to log in.
+207,Payments,card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.
+433,Platform,api_integration_broken,Update: Our API integration stopped working after the last platform update.
+480,Platform,analytics_data_wrong,Following up on this: Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.
+468,Platform,notifications_not_sent,This has come up again. Push notifications just stopped working a week ago.
+213,Payments,cannot_cancel_subscription,There's no way to actually cancel my subscription from the settings page.
+342,Customer Success,no_response_from_support,No one has responded to my request for help yet.
+476,Platform,analytics_data_wrong,Reporting this again: Report totals in the dashboard don't add up correctly. This is affecting my daily work.
+240,Engineering,dashboard_extremely_slow,"Update: Dashboard is lagging badly, barely usable during peak hours."
+247,Engineering,dashboard_extremely_slow,Still happening - The dashboard takes over a minute to load basic data. This is affecting my daily work.
+167,Payments,invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Please look into this soon."
+484,Platform,cant_bulk_edit,This has come up again. Bulk actions on the tickets list just don't apply to anything selected. Please look into this soon.
+33,Authentication,password_reset_broken,"Can't reset my password, the link expires instantly."
+47,Authentication,session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly."
+10,Authentication,login_otp_not_received,Still happening - Two-factor login is stuck because the code never shows up. Can someone confirm this is being looked at?
+355,Customer Success,no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?
+233,Engineering,app_crashes_on_open,"This has come up again. App closes itself right after launch, can't get past the loading screen. Please look into this soon."
+257,Engineering,sync_not_updating,Changes I make aren't syncing across devices. This is affecting my daily work.
+245,Engineering,dashboard_extremely_slow,"This has come up again. Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work."
+324,Engineering,connection_drops_frequently,Still happening - Network connection drops randomly during active use. Can someone confirm this is being looked at?
+325,Engineering,search_returns_nothing,Just ran into this once more: Search returns no results even for terms I know exist in my tickets.
+268,Engineering,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.
+277,Engineering,sync_not_updating,"This has come up again. Changes I make aren't syncing across devices. Happening consistently, not a one-off."
+417,Platform,export_fails,Reporting this again: Trying to export data throws an error and nothing downloads. Can someone confirm this is being looked at?
+127,Payments,double_charged,I was charged twice for the same subscription this month. Please look into this soon.
+136,Payments,double_charged,Still happening - Got billed two times for a single month of service.
+320,Engineering,connection_drops_frequently,"I keep getting disconnected and have to reload the page constantly. Happening consistently, not a one-off."
+180,Payments,subscription_upgrade_failed,"This has come up again. Upgrade button just spins forever and never completes. Happening consistently, not a one-off."
+222,Engineering,app_crashes_on_open,The application crashes immediately every time I open it.
+473,Platform,analytics_data_wrong,Report totals in the dashboard don't add up correctly.
+178,Payments,subscription_upgrade_failed,Just ran into this once more: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?
+44,Authentication,password_reset_broken,Following up on this: Reset password flow throws a 404 as soon as I click the emailed link.
+362,Customer Success,agent_unhelpful,Reporting this again: Chat support just gave generic answers that didn't address my issue. Can someone confirm this is being looked at?
+63,Authentication,session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive."
+339,Engineering,attachments_fail_to_upload,File attachments fail to upload no matter the file size. Can someone confirm this is being looked at?
+266,Engineering,sync_not_updating,Update: Cross-device sync just isn't happening anymore. Can someone confirm this is being looked at?
+106,Authentication,mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.
+364,Customer Success,agent_unhelpful,Just ran into this once more: Got a copy-pasted response that had nothing to do with my actual question.
+394,Customer Success,live_chat_unavailable,Reporting this again: The chat widget just sits there with no agent picking it up. Can someone confirm this is being looked at?
+225,Engineering,app_crashes_on_open,The moment I open the app it force-closes.
+202,Payments,card_declined_incorrectly,"Update: Payment fails at checkout despite the card working everywhere else. Happening consistently, not a one-off."
+406,Platform,export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded."
+224,Engineering,app_crashes_on_open,"Following up on this: It crashes on startup on my device, happens every single time. Can someone confirm this is being looked at?"
+91,Authentication,account_locked_incorrectly,Still happening - Account lockout triggered incorrectly and support hasn't unlocked it yet. Please look into this soon.
+220,Engineering,app_crashes_on_open,Still happening - The moment I open the app it force-closes.
+306,Engineering,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely."
+388,Customer Success,ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.
+415,Platform,export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try.
+421,Platform,export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded. Can someone confirm this is being looked at?"
+379,Customer Success,ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. Please look into this soon.
+143,Payments,refund_not_processed,The refund was approved but the money never came back to my account.
+115,Authentication,cant_change_email,Update: I can't update the email address linked to my account. This is affecting my daily work.
+393,Customer Success,live_chat_unavailable,Live chat support shows as available but no one ever responds.
+216,Payments,cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?
+23,Authentication,login_otp_not_received,"Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off."
+34,Authentication,password_reset_broken,Reset password flow throws a 404 as soon as I click the emailed link.
+424,Platform,export_fails,Export just spins indefinitely and never produces a file. Please look into this soon.
+298,Engineering,update_broke_feature,"After updating the app, a core feature stopped working entirely. Please look into this soon."
+346,Customer Success,no_response_from_support,"I submitted a support ticket three days ago and haven't heard back. Happening consistently, not a one-off."
+365,Customer Success,agent_unhelpful,Still happening - The support agent I spoke to didn't actually solve my problem.
+356,Customer Success,no_response_from_support,I submitted a support ticket three days ago and haven't heard back.
+2,Authentication,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off."
+299,Engineering,update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off."
+28,Authentication,password_reset_broken,"Just ran into this once more: Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?"
+93,Authentication,account_locked_incorrectly,"My account got locked after one failed login attempt, which seems wrong."
+82,Authentication,account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password.
+229,Engineering,app_crashes_on_open,"Still happening - It crashes on startup on my device, happens every single time. Happening consistently, not a one-off."
+179,Payments,subscription_upgrade_failed,This has come up again. Plan upgrade charged my card but didn't actually upgrade the account. This is affecting my daily work.
+200,Payments,wallet_balance_incorrect,Reporting this again: Wallet shows less credit than what was added last week. Can someone confirm this is being looked at?
+187,Payments,subscription_upgrade_failed,Just ran into this once more: Plan upgrade charged my card but didn't actually upgrade the account.
+40,Authentication,password_reset_broken,"Update: The password reset link in the email doesn't work, it just shows an error page."
+439,Platform,api_integration_broken,Still happening - The webhook integration isn't firing events anymore. Please look into this soon.
+475,Platform,analytics_data_wrong,Following up on this: The analytics dashboard is showing numbers that don't match reality.
+19,Authentication,login_otp_not_received,This has come up again. I never received the OTP when trying to log in. This is affecting my daily work.
+64,Authentication,session_logs_out_randomly,Session keeps dying even while I'm actively typing. This is affecting my daily work.
+76,Authentication,sso_login_fails,Reporting this again: SAML login redirects back with an invalid token message. Can someone confirm this is being looked at?
+159,Payments,invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Can someone confirm this is being looked at?"
+378,Customer Success,ticket_reopened_repeatedly,This has come up again. Support marks the ticket as resolved but the problem is still there.
+402,Customer Success,escalation_ignored,Reporting this again: Requested a manager review three times with no follow-up at all.
+265,Engineering,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Can someone confirm this is being looked at?
+150,Payments,refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago.
+175,Payments,subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account. Can someone confirm this is being looked at?
+456,Platform,notifications_not_sent,Push notifications just stopped working a week ago.
+111,Authentication,cant_change_email,Following up on this: I can't update the email address linked to my account. This is affecting my daily work.
+416,Platform,export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded. Please look into this soon."
+142,Payments,refund_not_processed,"This has come up again. I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off."
+359,Customer Success,no_response_from_support,Reporting this again: I'm still waiting on any response from the support team. Can someone confirm this is being looked at?
+59,Authentication,session_logs_out_randomly,Just ran into this once more: Session keeps dying even while I'm actively typing.
+350,Customer Success,no_response_from_support,Just ran into this once more: Radio silence from support since I opened this ticket.
+347,Customer Success,no_response_from_support,Still happening - No one has responded to my request for help yet. This is affecting my daily work.
+70,Authentication,sso_login_fails,Still happening - SSO login just spins and never completes.
+163,Payments,invoice_missing_details,"This has come up again. Invoice PDF is incomplete, some line items are blank."
+404,Customer Success,escalation_ignored,Following up on this: Requested a manager review three times with no follow-up at all.
+84,Authentication,account_locked_incorrectly,Still happening - Got flagged as suspicious and locked out for no real reason.
+438,Platform,api_integration_broken,"Still happening - API calls are returning errors that weren't happening before. Happening consistently, not a one-off."
+249,Engineering,dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading."
+153,Payments,refund_not_processed,The refund was approved but the money never came back to my account. Can someone confirm this is being looked at?
+381,Customer Success,ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there. Please look into this soon.
+197,Payments,wallet_balance_incorrect,This has come up again. Wallet shows less credit than what was added last week.
+155,Payments,refund_not_processed,This has come up again. Still waiting on a refund that was promised over two weeks ago.
+294,Engineering,sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.
+237,Engineering,dashboard_extremely_slow,"The dashboard takes over a minute to load basic data. Happening consistently, not a one-off."
+60,Authentication,session_logs_out_randomly,Update: I keep getting logged out randomly in the middle of work.
+318,Engineering,connection_drops_frequently,"Still happening - Network connection drops randomly during active use. Happening consistently, not a one-off."
+26,Authentication,password_reset_broken,Just ran into this once more: I clicked forgot password and the reset link is broken. Can someone confirm this is being looked at?
+14,Authentication,login_otp_not_received,"Update: The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off."
+89,Authentication,account_locked_incorrectly,"Reporting this again: My account got locked after one failed login attempt, which seems wrong. Happening consistently, not a one-off."
+191,Payments,wallet_balance_incorrect,Wallet shows less credit than what was added last week. This is affecting my daily work.
+129,Payments,double_charged,Following up on this: Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.
+418,Platform,export_fails,Just ran into this once more: CSV export has been broken for me the past few days.
+186,Payments,subscription_upgrade_failed,Following up on this: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?
+471,Platform,analytics_data_wrong,Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.
+203,Payments,card_declined_incorrectly,Following up on this: My card keeps getting declined even though there are sufficient funds.
+36,Authentication,password_reset_broken,"Update: I clicked forgot password and the reset link is broken. Happening consistently, not a one-off."
+374,Customer Success,agent_unhelpful,Update: Chat support just gave generic answers that didn't address my issue.
+419,Platform,export_fails,Following up on this: Export just spins indefinitely and never produces a file. Please look into this soon.
+291,Engineering,sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore. Please look into this soon.
+85,Authentication,account_locked_incorrectly,"Following up on this: My account got locked after one failed login attempt, which seems wrong."
+317,Engineering,connection_drops_frequently,Reporting this again: I keep getting disconnected and have to reload the page constantly.
+174,Payments,subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out. This is affecting my daily work.
+100,Authentication,mfa_setup_fails,Following up on this: Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.
+313,Engineering,connection_drops_frequently,Just ran into this once more: The connection keeps dropping while I'm using the app. Please look into this soon.
+358,Customer Success,no_response_from_support,This has come up again. Support hasn't replied to my message even after multiple follow-ups.
+146,Payments,refund_not_processed,"Reporting this again: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off."
+62,Authentication,session_logs_out_randomly,"The app signs me out on its own, forcing me to log back in constantly."
+253,Engineering,dashboard_extremely_slow,"Just ran into this once more: Everything is painfully slow, loading a single page takes forever. Happening consistently, not a one-off."
+399,Customer Success,escalation_ignored,This has come up again. I asked to escalate this issue and nothing has happened since. This is affecting my daily work.
+293,Engineering,sync_not_updating,Reporting this again: Data updated on desktop doesn't show up on mobile until much later.
+20,Authentication,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in."
+102,Authentication,mfa_setup_fails,This has come up again. MFA enrollment keeps timing out before I can finish setup.
+373,Customer Success,agent_unhelpful,The support agent I spoke to didn't actually solve my problem. Please look into this soon.
+183,Payments,subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account.
+307,Engineering,update_broke_feature,"This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off."
+459,Platform,notifications_not_sent,"No alerts are sent when a ticket status changes, I have to check manually. This is affecting my daily work."
+37,Authentication,password_reset_broken,This has come up again. Password reset email arrives but the link leads to a blank screen. Please look into this soon.
+151,Payments,refund_not_processed,Just ran into this once more: Refund request was accepted but nothing has actually been credited.
+54,Authentication,session_logs_out_randomly,Reporting this again: Session keeps dying even while I'm actively typing.
+290,Engineering,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. This is affecting my daily work.
+81,Authentication,account_locked_incorrectly,"Update: My account got locked after one failed login attempt, which seems wrong."
+218,Engineering,app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. Happening consistently, not a one-off."
+446,Platform,permissions_not_saving,"Just ran into this once more: Role permissions keep resetting to default after I configure them. Happening consistently, not a one-off."
+46,Authentication,session_logs_out_randomly,Update: My session expires every few minutes even though I'm active.
+360,Customer Success,no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?
+354,Customer Success,no_response_from_support,I'm still waiting on any response from the support team. Can someone confirm this is being looked at?
+398,Customer Success,escalation_ignored,Still happening - Requested a manager review three times with no follow-up at all. This is affecting my daily work.
+140,Payments,refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago. Please look into this soon.
+431,Platform,api_integration_broken,Reporting this again: The webhook integration isn't firing events anymore. Please look into this soon.
+144,Payments,refund_not_processed,"Still happening - Refund status shows completed but I don't see the amount in my bank. Happening consistently, not a one-off."
+328,Engineering,search_returns_nothing,Update: The search bar just comes back empty no matter what I type. This is affecting my daily work.
+367,Customer Success,agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. Please look into this soon.
+139,Payments,refund_not_processed,Update: Refund status shows completed but I don't see the amount in my bank.
+304,Engineering,update_broke_feature,Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.
+479,Platform,analytics_data_wrong,Report totals in the dashboard don't add up correctly. Can someone confirm this is being looked at?
+353,Customer Success,no_response_from_support,Reporting this again: Support hasn't replied to my message even after multiple follow-ups.
+22,Authentication,login_otp_not_received,Just ran into this once more: Two-factor login is stuck because the code never shows up. This is affecting my daily work.
+49,Authentication,session_logs_out_randomly,Session keeps dying even while I'm actively typing.
+434,Platform,api_integration_broken,Reporting this again: API calls are returning errors that weren't happening before. This is affecting my daily work.
+223,Engineering,app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. This is affecting my daily work."
+349,Customer Success,no_response_from_support,Reporting this again: I'm still waiting on any response from the support team.
+43,Authentication,password_reset_broken,"This has come up again. Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?"
+88,Authentication,account_locked_incorrectly,Reporting this again: Got flagged as suspicious and locked out for no real reason. This is affecting my daily work.
+319,Engineering,connection_drops_frequently,The connection keeps dropping while I'm using the app.
+29,Authentication,password_reset_broken,Still happening - Reset password flow throws a 404 as soon as I click the emailed link. Can someone confirm this is being looked at?
+244,Engineering,dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading."
+422,Platform,export_fails,Following up on this: Trying to export data throws an error and nothing downloads. Please look into this soon.
+352,Customer Success,no_response_from_support,Reporting this again: No one has responded to my request for help yet.
+308,Engineering,update_broke_feature,Following up on this: Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.
+429,Platform,api_integration_broken,Update: Our API integration stopped working after the last platform update. Please look into this soon.
+17,Authentication,login_otp_not_received,Signing in fails every time because the SMS code doesn't arrive.
+42,Authentication,password_reset_broken,"Password reset email arrives but the link leads to a blank screen. Happening consistently, not a one-off."
+481,Platform,cant_bulk_edit,"Reporting this again: There's no way to bulk update multiple tickets at once, only one at a time."
+452,Platform,permissions_not_saving,Role permissions keep resetting to default after I configure them.
+396,Customer Success,live_chat_unavailable,Following up on this: The chat widget just sits there with no agent picking it up. Please look into this soon.
+341,Customer Success,no_response_from_support,This has come up again. I submitted a support ticket three days ago and haven't heard back. This is affecting my daily work.
+208,Payments,card_declined_incorrectly,Update: Payment fails at checkout despite the card working everywhere else. This is affecting my daily work.
+315,Engineering,connection_drops_frequently,Reporting this again: Network connection drops randomly during active use.
+432,Platform,api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere.
+391,Customer Success,live_chat_unavailable,Still happening - Live chat support shows as available but no one ever responds.
+137,Payments,refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund. Can someone confirm this is being looked at?
+182,Payments,subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out.
+130,Payments,double_charged,"There's a duplicate charge on my statement for this plan. Happening consistently, not a one-off."
+270,Engineering,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Please look into this soon.
+99,Authentication,mfa_setup_fails,MFA enrollment keeps timing out before I can finish setup. This is affecting my daily work.
+454,Platform,notifications_not_sent,Just ran into this once more: Notification alerts for updates have completely stopped coming through.
+461,Platform,notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me. Please look into this soon.
+470,Platform,analytics_data_wrong,This has come up again. Report totals in the dashboard don't add up correctly.
+50,Authentication,session_logs_out_randomly,This has come up again. I keep getting logged out randomly in the middle of work.
+55,Authentication,session_logs_out_randomly,Just ran into this once more: I keep getting logged out randomly in the middle of work.
+92,Authentication,account_locked_incorrectly,Got flagged as suspicious and locked out for no real reason. Please look into this soon.
+221,Engineering,app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen."
+258,Engineering,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later. Please look into this soon.
+305,Engineering,update_broke_feature,The latest update broke a feature that was working fine before.
+147,Payments,refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund.
+428,Platform,api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere. Can someone confirm this is being looked at?
+485,Platform,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Happening consistently, not a one-off."
+450,Platform,permissions_not_saving,This has come up again. Permission changes I make for team members don't save.
+311,Engineering,update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off."
+7,Authentication,login_otp_not_received,Update: I never received the OTP when trying to log in. Can someone confirm this is being looked at?
+211,Payments,cannot_cancel_subscription,Reporting this again: There's no way to actually cancel my subscription from the settings page. Please look into this soon.
+389,Customer Success,live_chat_unavailable,Just ran into this once more: Live chat support shows as available but no one ever responds.
+273,Engineering,sync_not_updating,Following up on this: Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.
+326,Engineering,search_returns_nothing,The search bar just comes back empty no matter what I type. Please look into this soon.
+449,Platform,permissions_not_saving,Reporting this again: Role permissions keep resetting to default after I configure them.
+250,Engineering,dashboard_extremely_slow,"Dashboard is lagging badly, barely usable during peak hours."
+248,Engineering,dashboard_extremely_slow,"Following up on this: Everything is painfully slow, loading a single page takes forever. This is affecting my daily work."
+331,Engineering,search_returns_nothing,Still happening - Search returns no results even for terms I know exist in my tickets. Can someone confirm this is being looked at?
+192,Payments,wallet_balance_incorrect,Just ran into this once more: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?
+234,Engineering,app_crashes_on_open,"Update: It crashes on startup on my device, happens every single time. This is affecting my daily work."
+259,Engineering,sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken. Please look into this soon.
+409,Platform,export_fails,Still happening - Export just spins indefinitely and never produces a file. Please look into this soon.
+5,Authentication,login_otp_not_received,Following up on this: Signing in fails every time because the SMS code doesn't arrive.
+78,Authentication,sso_login_fails,SSO login just spins and never completes.
+35,Authentication,password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon."
+119,Payments,double_charged,"Billing deducted the amount twice in the same billing cycle. Happening consistently, not a one-off."
+323,Engineering,connection_drops_frequently,This has come up again. I keep getting disconnected and have to reload the page constantly.
+71,Authentication,sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.
+368,Customer Success,agent_unhelpful,"Got a copy-pasted response that had nothing to do with my actual question. Happening consistently, not a one-off."
+4,Authentication,login_otp_not_received,Two-factor login is stuck because the code never shows up. Please look into this soon.
+472,Platform,analytics_data_wrong,The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.
+39,Authentication,password_reset_broken,Update: Reset password flow throws a 404 as soon as I click the emailed link.
+18,Authentication,login_otp_not_received,No OTP text message has come through after multiple retries.
+466,Platform,notifications_not_sent,Notification alerts for updates have completely stopped coming through.
+31,Authentication,password_reset_broken,I clicked forgot password and the reset link is broken. Please look into this soon.
+343,Customer Success,no_response_from_support,Just ran into this once more: Support hasn't replied to my message even after multiple follow-ups. This is affecting my daily work.
+278,Engineering,sync_not_updating,This has come up again. Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.
+458,Platform,notifications_not_sent,"Still happening - Notification alerts for updates have completely stopped coming through. Happening consistently, not a one-off."
+411,Platform,export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded."
+280,Engineering,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.
+72,Authentication,sso_login_fails,Just ran into this once more: SAML login redirects back with an invalid token message.
+340,Engineering,attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.
+181,Payments,subscription_upgrade_failed,Just ran into this once more: Upgrading my plan keeps failing at the payment step.
+87,Authentication,account_locked_incorrectly,Following up on this: Account lockout triggered incorrectly and support hasn't unlocked it yet.
+236,Engineering,app_crashes_on_open,"App refuses to open, just crashes back to the home screen. This is affecting my daily work."
+252,Engineering,dashboard_extremely_slow,Just ran into this once more: The dashboard takes over a minute to load basic data. Please look into this soon.
+329,Engineering,search_returns_nothing,Update: Search returns no results even for terms I know exist in my tickets. Please look into this soon.
+251,Engineering,dashboard_extremely_slow,Reporting this again: Loading times have gotten unbearable over the last few weeks. This is affecting my daily work.
+132,Payments,double_charged,I was charged twice for the same subscription this month. Please look into this soon.
+173,Payments,subscription_upgrade_failed,This has come up again. Upgrading my plan keeps failing at the payment step.
+336,Engineering,attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.
+282,Engineering,sync_not_updating,Update: Changes I make aren't syncing across devices. This is affecting my daily work.
+256,Engineering,dashboard_extremely_slow,"Loading times have gotten unbearable over the last few weeks. Happening consistently, not a one-off."
+126,Payments,double_charged,Update: Got billed two times for a single month of service. This is affecting my daily work.
+292,Engineering,sync_not_updating,Still happening - Changes I make aren't syncing across devices.
+386,Customer Success,ticket_reopened_repeatedly,"Reporting this again: My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off."
+118,Payments,double_charged,My card shows two separate charges for one invoice. This is affecting my daily work.
+169,Payments,invoice_missing_details,Just ran into this once more: The invoice doesn't show a proper tax breakdown for accounting purposes. Please look into this soon.
+101,Authentication,mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?
+79,Authentication,sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.
+152,Payments,refund_not_processed,"Still happening - I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off."
+442,Platform,permissions_not_saving,"Reporting this again: I set a teammate's access level but it reverts back on its own. Happening consistently, not a one-off."
+297,Engineering,update_broke_feature,Reporting this again: The latest update broke a feature that was working fine before.
+300,Engineering,update_broke_feature,Something in the newest release broke a workflow I rely on daily.
+284,Engineering,sync_not_updating,Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?
+401,Customer Success,escalation_ignored,Following up on this: I asked to escalate this issue and nothing has happened since.
+9,Authentication,login_otp_not_received,"This has come up again. OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon."
+75,Authentication,sso_login_fails,Reporting this again: Trying to log in via our identity provider throws a token error.
+488,Platform,cant_bulk_edit,Reporting this again: Bulk actions on the tickets list just don't apply to anything selected.
+289,Engineering,sync_not_updating,Following up on this: Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?
+24,Authentication,login_otp_not_received,No OTP text message has come through after multiple retries. This is affecting my daily work.
+443,Platform,permissions_not_saving,Role permissions keep resetting to default after I configure them. Please look into this soon.
+161,Payments,invoice_missing_details,"Still happening - The invoice doesn't show a proper tax breakdown for accounting purposes. Happening consistently, not a one-off."
+430,Platform,api_integration_broken,Following up on this: API calls are returning errors that weren't happening before.
+392,Customer Success,live_chat_unavailable,Still happening - The chat widget just sits there with no agent picking it up. Please look into this soon.
+465,Platform,notifications_not_sent,"Just ran into this once more: I'm not getting notified when a new ticket is assigned to me. Happening consistently, not a one-off."
+241,Engineering,dashboard_extremely_slow,Loading times have gotten unbearable over the last few weeks.
+370,Customer Success,agent_unhelpful,Chat support just gave generic answers that didn't address my issue.
+51,Authentication,session_logs_out_randomly,My session expires every few minutes even though I'm active. This is affecting my daily work.
+385,Customer Success,ticket_reopened_repeatedly,Just ran into this once more: I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.
+255,Engineering,dashboard_extremely_slow,"Reporting this again: Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work."
+263,Engineering,sync_not_updating,"Data updated on desktop doesn't show up on mobile until much later. Happening consistently, not a one-off."
+185,Payments,subscription_upgrade_failed,"This has come up again. Upgrading my plan keeps failing at the payment step. Happening consistently, not a one-off."
+134,Payments,double_charged,Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.
+158,Payments,invoice_missing_details,Update: Generated invoices are missing the company billing address. Can someone confirm this is being looked at?
+184,Payments,subscription_upgrade_failed,Upgrade button just spins forever and never completes.
+333,Engineering,attachments_fail_to_upload,"File attachments fail to upload no matter the file size. Happening consistently, not a one-off."
+274,Engineering,sync_not_updating,Sync between the web app and mobile app is broken.
+239,Engineering,dashboard_extremely_slow,"Update: Performance has gotten really bad, pages hang for a long time before loading."
+195,Payments,wallet_balance_incorrect,"Following up on this: My account wallet balance is showing an incorrect amount. Happening consistently, not a one-off."
+145,Payments,refund_not_processed,Just ran into this once more: Still waiting on a refund that was promised over two weeks ago.
+165,Payments,invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes. This is affecting my daily work.
+283,Engineering,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.
+123,Payments,double_charged,My card shows two separate charges for one invoice.
+204,Payments,card_declined_incorrectly,This has come up again. Payment fails at checkout despite the card working everywhere else.
+453,Platform,notifications_not_sent,I'm not getting notified when a new ticket is assigned to me. Please look into this soon.
+361,Customer Success,agent_unhelpful,This has come up again. The support agent I spoke to didn't actually solve my problem. This is affecting my daily work.
+420,Platform,export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try. Please look into this soon.
+464,Platform,notifications_not_sent,"Update: Push notifications just stopped working a week ago. Happening consistently, not a one-off."
+437,Platform,api_integration_broken,"Still happening - Our API integration stopped working after the last platform update. Happening consistently, not a one-off."
+408,Platform,export_fails,CSV export has been broken for me the past few days.
+457,Platform,notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me.
+383,Customer Success,ticket_reopened_repeatedly,Reporting this again: My ticket keeps getting closed before the issue is actually resolved. This is affecting my daily work.
+61,Authentication,session_logs_out_randomly,This has come up again. My session expires every few minutes even though I'm active.
+380,Customer Success,ticket_reopened_repeatedly,"My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off."
+426,Platform,api_integration_broken,API calls are returning errors that weren't happening before.
+109,Authentication,cant_change_email,Reporting this again: I can't update the email address linked to my account. Please look into this soon.
+8,Authentication,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in."
+156,Payments,refund_not_processed,Refund request was accepted but nothing has actually been credited.
+171,Payments,invoice_missing_details,"Invoice PDF is incomplete, some line items are blank."
+107,Authentication,mfa_setup_fails,Just ran into this once more: The authenticator app won't pair no matter how many times I scan the code. This is affecting my daily work.
+246,Engineering,dashboard_extremely_slow,This has come up again. Loading times have gotten unbearable over the last few weeks. Please look into this soon.
+112,Authentication,cant_change_email,Changing my login email fails with a generic error every time.
+287,Engineering,sync_not_updating,"Just ran into this once more: Changes I make aren't syncing across devices. Happening consistently, not a one-off."
+469,Platform,analytics_data_wrong,This has come up again. The analytics dashboard is showing numbers that don't match reality.
+427,Platform,api_integration_broken,The webhook integration isn't firing events anymore. This is affecting my daily work.
+301,Engineering,update_broke_feature,The latest update broke a feature that was working fine before.
+390,Customer Success,live_chat_unavailable,Update: The chat widget just sits there with no agent picking it up.
+412,Platform,export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads.
+97,Authentication,mfa_setup_fails,"Update: Setting up two-factor authentication fails at the QR code step. Happening consistently, not a one-off."
+38,Authentication,password_reset_broken,"Can't reset my password, the link expires instantly."
+21,Authentication,login_otp_not_received,"Following up on this: OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon."
+309,Engineering,update_broke_feature,This has come up again. The latest update broke a feature that was working fine before. Can someone confirm this is being looked at?
+310,Engineering,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Please look into this soon."
+345,Customer Success,no_response_from_support,This has come up again. Radio silence from support since I opened this ticket.
+194,Payments,wallet_balance_incorrect,Following up on this: Wallet shows less credit than what was added last week.
+138,Payments,refund_not_processed,Reporting this again: The refund was approved but the money never came back to my account.
+27,Authentication,password_reset_broken,Still happening - Password reset email arrives but the link leads to a blank screen. This is affecting my daily work.
+98,Authentication,mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code.
+425,Platform,api_integration_broken,Following up on this: Our API integration stopped working after the last platform update.
+371,Customer Success,agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. This is affecting my daily work.
+275,Engineering,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.
+48,Authentication,session_logs_out_randomly,"This has come up again. Random logouts are happening throughout the day, very disruptive. Can someone confirm this is being looked at?"
+190,Payments,wallet_balance_incorrect,"Still happening - The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off."
+231,Engineering,app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen."
+41,Authentication,password_reset_broken,Update: I clicked forgot password and the reset link is broken.
+332,Engineering,search_returns_nothing,The search bar just comes back empty no matter what I type. Can someone confirm this is being looked at?
+170,Payments,invoice_missing_details,Generated invoices are missing the company billing address. This is affecting my daily work.
+105,Authentication,mfa_setup_fails,Following up on this: MFA enrollment keeps timing out before I can finish setup. Can someone confirm this is being looked at?
+131,Payments,double_charged,Got billed two times for a single month of service.
+125,Payments,double_charged,Update: There's a duplicate charge on my statement for this plan.
+199,Payments,wallet_balance_incorrect,Still happening - The credit balance doesn't match what I actually topped up.
+69,Authentication,sso_login_fails,Still happening - Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?
+272,Engineering,sync_not_updating,"Changes I make aren't syncing across devices. Happening consistently, not a one-off."
+483,Platform,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time."
+463,Platform,notifications_not_sent,"This has come up again. No alerts are sent when a ticket status changes, I have to check manually. Can someone confirm this is being looked at?"
+487,Platform,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Can someone confirm this is being looked at?"
+288,Engineering,sync_not_updating,Just ran into this once more: Data updated on desktop doesn't show up on mobile until much later. Can someone confirm this is being looked at?
+30,Authentication,password_reset_broken,"The password reset link in the email doesn't work, it just shows an error page."
+238,Engineering,dashboard_extremely_slow,"Everything is painfully slow, loading a single page takes forever."
+413,Platform,export_fails,Just ran into this once more: CSV export has been broken for me the past few days.
+74,Authentication,sso_login_fails,Following up on this: SSO login just spins and never completes.
+363,Customer Success,agent_unhelpful,Following up on this: The agent closed my ticket without actually fixing anything.
+440,Platform,api_integration_broken,Update: API responses started returning malformed data out of nowhere.
+460,Platform,notifications_not_sent,"Still happening - Push notifications just stopped working a week ago. Happening consistently, not a one-off."
+116,Authentication,cant_change_email,Changing my login email fails with a generic error every time. This is affecting my daily work.
+435,Platform,api_integration_broken,Still happening - The webhook integration isn't firing events anymore.
+124,Payments,double_charged,Billing deducted the amount twice in the same billing cycle.
+243,Engineering,dashboard_extremely_slow,"Update: Everything is painfully slow, loading a single page takes forever. Please look into this soon."
+276,Engineering,sync_not_updating,"Cross-device sync just isn't happening anymore. Happening consistently, not a one-off."
+387,Customer Success,ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there.
+95,Authentication,account_locked_incorrectly,Just ran into this once more: Account lockout triggered incorrectly and support hasn't unlocked it yet. This is affecting my daily work.
+193,Payments,wallet_balance_incorrect,"Update: The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off."
+486,Platform,cant_bulk_edit,Just ran into this once more: Bulk actions on the tickets list just don't apply to anything selected.
+77,Authentication,sso_login_fails,Update: Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?
+210,Payments,cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off."
+214,Payments,cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off."
+357,Customer Success,no_response_from_support,No one has responded to my request for help yet.
+164,Payments,invoice_missing_details,This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice.
+269,Engineering,sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.
+403,Customer Success,escalation_ignored,Update: I asked to escalate this issue and nothing has happened since.
+196,Payments,wallet_balance_incorrect,The credit balance doesn't match what I actually topped up. Please look into this soon.
+344,Customer Success,no_response_from_support,I'm still waiting on any response from the support team.
+330,Engineering,search_returns_nothing,Update: The search bar just comes back empty no matter what I type.
+177,Payments,subscription_upgrade_failed,Upgrading my plan keeps failing at the payment step.
+25,Authentication,password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon."
+254,Engineering,dashboard_extremely_slow,"Following up on this: Performance has gotten really bad, pages hang for a long time before loading."
+285,Engineering,sync_not_updating,Reporting this again: Records updated by a teammate don't reflect on my screen without a manual refresh.
+219,Engineering,app_crashes_on_open,"It crashes on startup on my device, happens every single time. Please look into this soon."
+348,Customer Success,no_response_from_support,Following up on this: Support hasn't replied to my message even after multiple follow-ups.
+321,Engineering,connection_drops_frequently,"Network connection drops randomly during active use. Happening consistently, not a one-off."
+90,Authentication,account_locked_incorrectly,Just ran into this once more: I was locked out of my account even though I entered the correct password.
+467,Platform,notifications_not_sent,"Just ran into this once more: No alerts are sent when a ticket status changes, I have to check manually."
+377,Customer Success,ticket_reopened_repeatedly,Update: My ticket keeps getting closed before the issue is actually resolved.
+451,Platform,permissions_not_saving,I set a teammate's access level but it reverts back on its own.
+303,Engineering,update_broke_feature,Reporting this again: This version introduced a bug that wasn't there before the update. Can someone confirm this is being looked at?
+286,Engineering,sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore.
+32,Authentication,password_reset_broken,Reporting this again: Password reset email arrives but the link leads to a blank screen. Can someone confirm this is being looked at?
+141,Payments,refund_not_processed,"Update: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off."
+154,Payments,refund_not_processed,This has come up again. Refund status shows completed but I don't see the amount in my bank. This is affecting my daily work.
+212,Payments,cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?
+114,Authentication,cant_change_email,Reporting this again: Changing my login email fails with a generic error every time.

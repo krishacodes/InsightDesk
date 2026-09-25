@@ -94,22 +94,23 @@ def get_complaint(
 # ==========================================================
 
 def create_case(
-    representative_text: str,
-    user_id: str
+    data: dict
 ):
     """
     Create a brand-new case.
-    """
-    payload = {
-        "representative_text": representative_text,
-        "report_count": 1,
-        "user_ids": [user_id],
-        "last_reported_at": datetime.now(timezone.utc).isoformat()
-    }
 
+    `data` is a fully-built payload (representative_text,
+    report_count, user_ids, created_at, last_reported_at, etc.).
+    Caller controls all fields - matches create_complaint()'s
+    existing passthrough pattern. This replaces the previous
+    (representative_text, user_id) signature, which did not match
+    how this function was actually being called from
+    duplicate_service.py (a single dict argument) and would have
+    raised a TypeError at every new-case creation.
+    """
     response = (
         supabase.table("cases")
-        .insert(payload)
+        .insert(data)
         .execute()
     )
     print("CREATE CASE RESPONSE:")
@@ -690,20 +691,31 @@ def get_sample_complaints(
     ]
 def create_case_history(
     case_id: int,
-    report_count: int
+    report_count: int,
+    recorded_at: datetime = None
 ):
+    """
+    recorded_at:
+        None (default) - DB default (now()) applies, unchanged
+        from previous behavior.
+        a datetime - historical ingestion: records the complaint's
+        real event time instead of insertion time.
+    """
+
+    payload = {
+        "case_id": case_id,
+        "report_count": report_count
+    }
+
+    if recorded_at is not None:
+        payload["recorded_at"] = recorded_at.isoformat()
 
     response = (
         supabase
         .table(
             "case_history"
         )
-        .insert(
-            {
-                "case_id": case_id,
-                "report_count": report_count
-            }
-        )
+        .insert(payload)
         .execute()
     )
 
@@ -782,7 +794,8 @@ def get_topics():
     return response.data
 def upsert_complaint_window(
     case_id: int,
-    window_hours: int = 6
+    window_hours: int = 6,
+    reference_time: datetime = None
 ):
     """
     Create or update a complaint window
@@ -793,11 +806,22 @@ def upsert_complaint_window(
     06:00 - 12:00
     12:00 - 18:00
     18:00 - 24:00
+
+    reference_time:
+        None (default) - live submission, uses current wall-clock
+        time. Unchanged from previous behavior.
+        a datetime - historical ingestion, buckets into the window
+        containing that historical timestamp instead of "now".
     """
 
-    now = datetime.now(
-        timezone.utc
+    now = (
+        reference_time
+        if reference_time is not None
+        else datetime.now(timezone.utc)
     )
+
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
 
     # Round down to nearest
     # 6-hour boundary

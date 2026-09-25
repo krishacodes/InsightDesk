@@ -26,19 +26,67 @@ from backend.database.supabase import (
 from backend.services.sentiment.sentiment_service import (
     enrich_case_with_sentiment
 )
-# Cross-Encoder decision threshold.
-# Calibrated on a manually reviewed 75-pair evaluation set.
-# Selected as a precision-oriented operating point:
-# Precision = 95.24%, Recall = 57.14%, F1 = 71.43%.
+# STS-B Cross-Encoder duplicate-decision threshold.
+#
+# Calibrated on 150 generator-labelled complaint pairs:
+# 75 duplicate and 75 non-duplicate.
+#
+# At this operating point on the calibration set:
+# Precision = 92.59%
+# Recall    = 33.33%
+#
+# The STS-B output is a bounded semantic similarity score,
+# NOT a duplicate probability.
 
-SIMILARITY_THRESHOLD = -2.21
+SIMILARITY_THRESHOLD = 0.5858
+
+def _ensure_utc(dt):
+    """
+    Normalize a naive datetime (e.g. parsed from a plain CSV date)
+    to UTC-aware, so all stored timestamps are consistent whether
+    they originate from historical ingestion or live submission.
+    """
+    if dt is None:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
+def _parse_case_timestamp(value):
+    """
+    Parse a case's stored created_at/last_reported_at (ISO string
+    or datetime) back into a UTC-aware datetime for min/max
+    comparison. Returns None if missing/unparseable.
+    """
+    if value is None:
+        return None
+    if isinstance(value, datetime):
+        return _ensure_utc(value)
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return _ensure_utc(dt)
+
+
 def increment_report_count(
     case_id: int,
-    user_id: str
+    user_id: str,
+    complaint_event_time: datetime = None
 ):
     """
     Increment report count and maintain
     case history for spike detection.
+
+    complaint_event_time:
+        None (default) - live submission. Unchanged from before:
+        last_reported_at = current UTC time, created_at untouched,
+        case_history recorded_at uses the DB default.
+        a datetime - historical ingestion. created_at/last_reported_at
+        are widened via min/max against the case's existing values,
+        independent of ingestion order, and case_history records
+        this same event time.
     """
 
     case = get_case(case_id)
@@ -55,11 +103,29 @@ def increment_report_count(
     updates = {
         "report_count": new_count,
         "user_ids": users,
-        "last_reported_at":
-            datetime.now(
-                timezone.utc
-            ).isoformat()
     }
+
+    if complaint_event_time is not None:
+        event_time = _ensure_utc(complaint_event_time)
+
+        existing_created_at = _parse_case_timestamp(case.get("created_at"))
+        existing_last_reported_at = _parse_case_timestamp(case.get("last_reported_at"))
+
+        new_created_at = (
+            min(existing_created_at, event_time)
+            if existing_created_at is not None
+            else event_time
+        )
+        new_last_reported_at = (
+            max(existing_last_reported_at, event_time)
+            if existing_last_reported_at is not None
+            else event_time
+        )
+
+        updates["created_at"] = new_created_at.isoformat()
+        updates["last_reported_at"] = new_last_reported_at.isoformat()
+    else:
+        updates["last_reported_at"] = datetime.now(timezone.utc).isoformat()
 
     response = update_case(
         case_id,
@@ -70,7 +136,8 @@ def increment_report_count(
 
     create_case_history(
         case_id=case_id,
-        report_count=new_count
+        report_count=new_count,
+        recorded_at=complaint_event_time
     )
     print("History created!")
 
@@ -117,7 +184,7 @@ def process_complaint(complaint):
     # ----------------------------------------------------
 
     complaint_record = create_complaint(
-        complaint.model_dump()
+        complaint.model_dump(exclude_none=True, mode="json")
     )
 
     complaint_id = complaint_record["complaint_id"]
@@ -171,35 +238,19 @@ def process_complaint(complaint):
         and similarity_score >= SIMILARITY_THRESHOLD
     ):
 
-        # Same user has already reported this case recently
-        if user_reported_case_recently(
-            complaint.user_id,
-            best_case_id
-        ):
-
-            merge_duplicate_report(
-                complaint_id,
-                best_case_id
-            )
-            enrich_case_with_sentiment(
-                best_case_id
-            )
-
-
-            return {
-                "complaint_id": complaint_id,
-                "case_id": best_case_id,
-                "is_duplicate": True,
-                "status": "Merged with recent report"
-            }
-
-        # Genuine new report for an existing case
+        # Recalibration policy: duplicate = f(complaint semantics) only.
+        # user_id/time-based suppression (user_reported_case_recently /
+        # merge_duplicate_report) is intentionally bypassed - every
+        # complaint that semantically matches an existing case is
+        # counted and windowed, regardless of who submitted it or when.
         increment_report_count(
             best_case_id,
-            complaint.user_id
+            complaint.user_id,
+            complaint_event_time=complaint.created_at
         )
         upsert_complaint_window(
-        best_case_id
+            best_case_id,
+            reference_time=complaint.created_at
         )
         assign_case_to_complaint(
             complaint_id,
@@ -221,13 +272,25 @@ def process_complaint(complaint):
     # Create a new case record in the database. Populate basic fields
     # such as representative text, initial report count and user ids,
     # and timestamps.
+    #
+    # complaint.created_at is None for live submissions (falls back
+    # to current time, unchanged from before) or a historical event
+    # time for CSV ingestion (both created_at and last_reported_at
+    # are initialized from that same value).
+    if complaint.created_at is not None:
+        case_created_at = _ensure_utc(complaint.created_at)
+        case_last_reported_at = case_created_at
+    else:
+        case_created_at = datetime.now(timezone.utc)
+        case_last_reported_at = case_created_at
+
     new_case = create_case(
         {
             "representative_text": cleaned_text,
             "report_count": 1,
             "user_ids": [complaint.user_id],
-            "created_at": datetime.now(timezone.utc).isoformat(),
-            "last_reported_at": datetime.now(timezone.utc).isoformat(),
+            "created_at": case_created_at.isoformat(),
+            "last_reported_at": case_last_reported_at.isoformat(),
         }
     )
 
@@ -235,7 +298,8 @@ def process_complaint(complaint):
 
     # Ensure complaint window/upsert is created for this case
     upsert_complaint_window(
-        case_id
+        case_id,
+        reference_time=complaint.created_at
     )
     # Store representative embedding in Pinecone
     store_case_embedding(
@@ -260,5 +324,3 @@ def process_complaint(complaint):
         "is_duplicate": False,
         "status": "New case created"
     }
-
-

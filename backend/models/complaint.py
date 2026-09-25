@@ -11,6 +11,7 @@ class ComplaintCreate(BaseModel):
     product: Optional[str] = None
     company_size: Optional[str] = None
     is_synthetic: bool = False
+    created_at: Optional[datetime] = None
 
 
 class ComplaintDB(ComplaintCreate):

@@ -1,0 +1,13 @@
+case_id,complaints,issue_count,issue_ids,departments
+1468,10,3,no_response_from_support | refund_not_processed | ticket_reopened_repeatedly,Customer Success | Payments
+1481,7,2,permissions_not_saving | sync_not_updating,Engineering | Platform
+1482,7,2,card_declined_incorrectly | login_otp_not_received,Authentication | Payments
+1459,6,2,export_fails | subscription_upgrade_failed,Payments | Platform
+1464,5,2,live_chat_unavailable | no_response_from_support,Customer Success
+1473,5,2,cannot_cancel_subscription | card_declined_incorrectly,Payments
+1492,5,2,connection_drops_frequently | dashboard_extremely_slow,Engineering
+1493,5,2,escalation_ignored | no_response_from_support,Customer Success
+1510,5,2,cant_change_email | password_reset_broken,Authentication
+1519,5,2,notifications_not_sent | update_broke_feature,Engineering | Platform
+1477,3,2,app_crashes_on_open | update_broke_feature,Engineering
+1525,3,2,connection_drops_frequently | dashboard_extremely_slow,Engineering

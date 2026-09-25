@@ -31,6 +31,14 @@ index = pc.Index(
     os.getenv("PINECONE_INDEX")
 )
 
+# Namespace isolation: empty string = Pinecone's default namespace
+# (what the existing main/claude-review demo data lives in).
+# Set PINECONE_NAMESPACE in .env on this branch to a distinct
+# value (e.g. "helpdesk-recalibration") so new vectors never mix
+# with the existing demo's embeddings, and queries here only ever
+# retrieve from this branch's own data.
+NAMESPACE = os.getenv("PINECONE_NAMESPACE", "")
+
 # ==========================================================
 # Embedding Functions
 # ==========================================================
@@ -58,7 +66,8 @@ def retrieve_similar_cases(
     response = index.query(
         vector=embedding,
         top_k=top_k,
-        include_metadata=True
+        include_metadata=True,
+        namespace=NAMESPACE
     )
 
     return response.get("matches", [])
@@ -100,7 +109,8 @@ def store_case_embedding(
                 "values": embedding,
                 "metadata": metadata
             }
-        ]
+        ],
+        namespace=NAMESPACE
     )
 
 
@@ -138,5 +148,6 @@ def delete_case_embedding(case_id: int):
     """
 
     index.delete(
-        ids=[str(case_id)]
+        ids=[str(case_id)],
+        namespace=NAMESPACE
     )

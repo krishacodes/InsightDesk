@@ -4,7 +4,7 @@ from sentence_transformers import CrossEncoder
 # Load Cross Encoder Model
 # --------------------------------------------------------
 
-MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+MODEL_NAME = "cross-encoder/stsb-distilroberta-base"
 
 model = CrossEncoder(MODEL_NAME)
 

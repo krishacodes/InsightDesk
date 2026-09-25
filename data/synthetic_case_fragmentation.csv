@@ -1,0 +1,33 @@
+issue_id,department,complaints,final_cases,new_case_complaints,duplicate_complaints,largest_case_size,largest_case_coverage,fragmentation_ratio
+no_response_from_support,Customer Success,20,8,4,16,4,0.2,0.4
+update_broke_feature,Engineering,16,6,3,13,6,0.375,0.375
+cannot_cancel_subscription,Payments,8,3,2,6,4,0.5,0.375
+cant_bulk_edit,Platform,8,3,2,6,4,0.5,0.375
+card_declined_incorrectly,Payments,8,3,2,6,4,0.5,0.375
+app_crashes_on_open,Engineering,20,7,5,15,4,0.2,0.35
+dashboard_extremely_slow,Engineering,20,7,5,15,4,0.2,0.35
+password_reset_broken,Authentication,20,7,5,15,6,0.3,0.35
+connection_drops_frequently,Engineering,12,4,4,8,5,0.4166666666666667,0.3333333333333333
+api_integration_broken,Platform,16,5,3,13,5,0.3125,0.3125
+notifications_not_sent,Platform,16,5,4,12,5,0.3125,0.3125
+sso_login_fails,Authentication,16,5,3,13,4,0.25,0.3125
+refund_not_processed,Payments,20,6,4,16,5,0.25,0.3
+session_logs_out_randomly,Authentication,20,6,5,15,4,0.2,0.3
+login_otp_not_received,Authentication,24,6,6,18,6,0.25,0.25
+double_charged,Payments,20,5,5,15,8,0.4,0.25
+export_fails,Platform,20,5,4,16,7,0.35,0.25
+account_locked_incorrectly,Authentication,16,4,4,12,7,0.4375,0.25
+agent_unhelpful,Customer Success,16,4,3,13,4,0.25,0.25
+invoice_missing_details,Payments,16,4,4,12,4,0.25,0.25
+subscription_upgrade_failed,Payments,16,4,4,12,5,0.3125,0.25
+analytics_data_wrong,Platform,12,3,3,9,5,0.4166666666666667,0.25
+mfa_setup_fails,Authentication,12,3,3,9,4,0.3333333333333333,0.25
+permissions_not_saving,Platform,12,3,3,9,5,0.4166666666666667,0.25
+wallet_balance_incorrect,Payments,12,3,3,9,5,0.4166666666666667,0.25
+attachments_fail_to_upload,Engineering,8,2,2,6,4,0.5,0.25
+cant_change_email,Authentication,8,2,2,6,4,0.5,0.25
+escalation_ignored,Customer Success,8,2,2,6,4,0.5,0.25
+live_chat_unavailable,Customer Success,8,2,2,6,4,0.5,0.25
+search_returns_nothing,Engineering,8,2,2,6,4,0.5,0.25
+sync_not_updating,Engineering,40,7,5,35,12,0.3,0.175
+ticket_reopened_repeatedly,Customer Success,12,2,2,10,8,0.6666666666666666,0.16666666666666666

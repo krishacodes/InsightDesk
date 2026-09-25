@@ -1,0 +1,15 @@
+metric,value
+existing_case_test_count,422.0
+retrieval_success_rate,0.9360189573459715
+rerank_success_given_retrieval,0.7670886075949367
+no_valid_case_test_count,0.0
+0.5858_existing_correct_merge_rate,0.6895734597156398
+0.5858_existing_false_merge_count,2.0
+0.5858_existing_uncertain_merge_count,105.0
+0.5858_no_case_correct_rejection_rate,
+0.5858_no_case_merge_count,0.0
+0.6469_existing_correct_merge_rate,0.6635071090047393
+0.6469_existing_false_merge_count,2.0
+0.6469_existing_uncertain_merge_count,92.0
+0.6469_no_case_correct_rejection_rate,
+0.6469_no_case_merge_count,0.0
