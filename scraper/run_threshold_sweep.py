@@ -1,531 +1,221 @@
 """
-Threshold calibration for InsightDesk duplicate detection.
+Scores every pair in data/calibration_pairs.csv using the SAME
+cross-encoder model your live pipeline uses (ms-marco-MiniLM-L-6-v2),
+then sweeps a range of candidate thresholds and reports Precision,
+Recall, F1, False Positives and False Negatives at each one.
 
-Uses the already-scored independent synthetic calibration set:
+This produces the exact table needed to justify the new operating
+threshold in your report, replacing the old -2.21 (which was
+calibrated on a single-product corpus - see earlier session notes).
 
-    data/calibration_pairs_scored.csv
-
-Ground truth:
-    75 duplicate pairs
-    75 non-duplicate pairs
-        - 50 hard negatives
-        - 25 easy negatives
-
-Scores were produced using the SAME cross-encoder as the live pipeline:
-    cross-encoder/ms-marco-MiniLM-L-6-v2
-
-This script:
-1. Evaluates the existing threshold (-2.21).
-2. Sweeps the complete observed score decision space.
-3. Computes TP, FP, TN, FN, Precision, Recall and F1.
-4. Finds the maximum-F1 operating point.
-5. Finds precision-constrained operating points.
-6. Saves the full sweep and a compact report table.
-
-IMPORTANT:
-The maximum-F1 threshold is NOT automatically selected for production.
-InsightDesk gives greater importance to false-positive control because
-a false merge can contaminate downstream case-level analytics.
-
-Run from project root:
-
+Run from the project root, AFTER filling in every blank true_label
+in data/calibration_pairs.csv:
     python scraper/run_threshold_sweep.py
 """
 
+import csv
 from pathlib import Path
+from sentence_transformers import CrossEncoder
 
-import numpy as np
-import pandas as pd
+CALIBRATION_PATH = Path("data/calibration_pairs.csv")
+OUTPUT_TABLE_PATH = Path("data/threshold_sweep_results.csv")
+OUTPUT_MARKDOWN_PATH = Path("data/threshold_sweep_results.md")
 
+# Same model as backend/services/cross_encoder.py - must match the
+# live pipeline exactly, or this calibration doesn't transfer.
+MODEL_NAME = "cross-encoder/stsb-distilroberta-base"
 
-# ---------------------------------------------------------
-# Configuration
-# ---------------------------------------------------------
-
-INPUT_PATH = Path("data/calibration_pairs_scored.csv")
-
-FULL_OUTPUT_PATH = Path("data/threshold_sweep_results.csv")
-SUMMARY_OUTPUT_PATH = Path("data/threshold_candidates.csv")
-MARKDOWN_OUTPUT_PATH = Path("data/threshold_sweep_results.md")
-
-OLD_THRESHOLD = -2.21
-
-PRECISION_FLOORS = [
-    0.90,
-    0.95,
-    0.97,
-    0.98,
-    0.99,
-    1.00,
+# STS-B outputs a bounded 0-1 similarity score, unlike MS-MARCO's
+# unbounded raw logit - the sweep range must match. Includes your
+# three already-decided candidate operating points (0.5858, 0.6469,
+# 0.7377) plus the max-F1 point (0.1963) for the full comparison
+# table.
+CANDIDATE_THRESHOLDS = [round(t, 4) for t in
+    [0.05, 0.10, 0.15, 0.1963, 0.25, 0.30, 0.35, 0.40, 0.45,
+     0.50, 0.5858, 0.60, 0.6469, 0.70, 0.7377, 0.80, 0.90]
 ]
 
 
-# ---------------------------------------------------------
-# Metrics
-# ---------------------------------------------------------
+def load_pairs():
+    with open(CALIBRATION_PATH, encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
 
-def evaluate(scores, labels, threshold):
-    """
-    Predict duplicate when:
+    missing_labels = [r for r in rows if not r["true_label"].strip()]
+    if missing_labels:
+        raise SystemExit(
+            f"{len(missing_labels)} rows still have an empty true_label. "
+            f"Fill in every 'real' source row (duplicate / not_duplicate) "
+            f"in {CALIBRATION_PATH} before running this script."
+        )
 
-        cross_encoder_score >= threshold
-    """
+    for r in rows:
+        label = r["true_label"].strip().lower()
+        if label not in ("duplicate", "not_duplicate"):
+            raise SystemExit(
+                f"Pair {r['pair_id']} has invalid true_label: {r['true_label']!r}. "
+                f"Must be exactly 'duplicate' or 'not_duplicate'."
+            )
+        r["true_is_duplicate"] = (label == "duplicate")
 
-    predictions = scores >= threshold
+    return rows
 
-    tp = int(((predictions == 1) & (labels == 1)).sum())
-    fp = int(((predictions == 1) & (labels == 0)).sum())
-    tn = int(((predictions == 0) & (labels == 0)).sum())
-    fn = int(((predictions == 0) & (labels == 1)).sum())
 
-    precision = (
-        tp / (tp + fp)
-        if (tp + fp) > 0
-        else 0.0
-    )
+def score_pairs(rows):
+    print(f"Loading {MODEL_NAME} ...")
+    model = CrossEncoder(MODEL_NAME)
 
-    recall = (
-        tp / (tp + fn)
-        if (tp + fn) > 0
-        else 0.0
-    )
+    sentence_pairs = [(r["text_a"], r["text_b"]) for r in rows]
+    print(f"Scoring {len(sentence_pairs)} pairs ...")
+    scores = model.predict(sentence_pairs)
 
-    f1 = (
-        2 * precision * recall / (precision + recall)
-        if (precision + recall) > 0
-        else 0.0
-    )
+    for r, score in zip(rows, scores):
+        r["score"] = float(score)
+
+    return rows
+
+
+def evaluate_at_threshold(rows, threshold):
+    tp = fp = tn = fn = 0
+    for r in rows:
+        predicted_duplicate = r["score"] >= threshold
+        actual_duplicate = r["true_is_duplicate"]
+
+        if predicted_duplicate and actual_duplicate:
+            tp += 1
+        elif predicted_duplicate and not actual_duplicate:
+            fp += 1
+        elif not predicted_duplicate and not actual_duplicate:
+            tn += 1
+        else:
+            fn += 1
+
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    f1 = (2 * precision * recall / (precision + recall)
+          if (precision + recall) > 0 else 0.0)
 
     return {
-        "threshold": float(threshold),
-        "TP": tp,
-        "FP": fp,
-        "TN": tn,
-        "FN": fn,
-        "precision": precision,
-        "recall": recall,
-        "f1": f1,
+        "threshold": threshold,
+        "TP": tp, "FP": fp, "TN": tn, "FN": fn,
+        "precision": round(precision, 4),
+        "recall": round(recall, 4),
+        "f1": round(f1, 4),
     }
 
-
-# ---------------------------------------------------------
-# Loading
-# ---------------------------------------------------------
-
-def load_data():
-
-    if not INPUT_PATH.exists():
-        raise FileNotFoundError(
-            f"{INPUT_PATH} not found. "
-            "Run score_calibration_pairs.py first."
-        )
-
-    df = pd.read_csv(INPUT_PATH)
-
-    required = {
-        "true_label",
-        "cross_encoder_score",
-        "pair_type",
-    }
-
-    missing = required - set(df.columns)
-
-    if missing:
-        raise ValueError(
-            f"Missing required columns: {sorted(missing)}"
-        )
-
-    valid_labels = {
-        "duplicate",
-        "not_duplicate",
-    }
-
-    actual_labels = set(
-        df["true_label"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
-    )
-
-    invalid = actual_labels - valid_labels
-
-    if invalid:
-        raise ValueError(
-            f"Invalid true_label values: {invalid}"
-        )
-
-    if df["cross_encoder_score"].isna().any():
-        raise ValueError(
-            "Some cross_encoder_score values are missing."
-        )
-
-    df["true_binary"] = (
-        df["true_label"]
-        .astype(str)
-        .str.strip()
-        .str.lower()
-        .eq("duplicate")
-        .astype(int)
-    )
-
-    return df
-
-
-# ---------------------------------------------------------
-# Exact threshold sweep
-# ---------------------------------------------------------
-
-def build_thresholds(scores):
-    """
-    Classification changes only when a threshold crosses an observed
-    score.
-
-    We therefore evaluate every unique observed score, plus values
-    immediately below the minimum and above the maximum.
-
-    OLD_THRESHOLD is explicitly included for direct comparison.
-    """
-
-    unique_scores = np.sort(np.unique(scores))
-
-    epsilon = 1e-6
-
-    thresholds = np.concatenate([
-        [unique_scores[0] - epsilon],
-        unique_scores,
-        [unique_scores[-1] + epsilon],
-        [OLD_THRESHOLD],
-    ])
-
-    return np.sort(np.unique(thresholds))
-
-
-# ---------------------------------------------------------
-# Precision-constrained candidates
-# ---------------------------------------------------------
-
-def find_precision_candidate(sweep, floor):
-    """
-    Among thresholds satisfying the requested precision floor,
-    choose maximum recall.
-
-    Tie-breaking:
-        1. higher recall
-        2. higher F1
-        3. fewer false positives
-        4. higher threshold
-    """
-
-    eligible = sweep[
-        sweep["precision"] >= floor
-    ].copy()
-
-    # Ignore the trivial classifier that predicts zero duplicates.
-    eligible = eligible[
-        (eligible["TP"] + eligible["FP"]) > 0
-    ]
-
-    if eligible.empty:
-        return None
-
-    eligible = eligible.sort_values(
-        by=[
-            "recall",
-            "f1",
-            "FP",
-            "threshold",
-        ],
-        ascending=[
-            False,
-            False,
-            True,
-            False,
-        ],
-    )
-
-    return eligible.iloc[0]
-
-
-# ---------------------------------------------------------
-# Formatting
-# ---------------------------------------------------------
-
-def format_row(name, row):
-
-    return {
-        "operating_point": name,
-        "threshold": round(float(row["threshold"]), 6),
-        "TP": int(row["TP"]),
-        "FP": int(row["FP"]),
-        "TN": int(row["TN"]),
-        "FN": int(row["FN"]),
-        "precision": round(float(row["precision"]), 4),
-        "recall": round(float(row["recall"]), 4),
-        "f1": round(float(row["f1"]), 4),
-    }
-
-
-# ---------------------------------------------------------
-# Main
-# ---------------------------------------------------------
 
 def main():
+    rows = load_pairs()
+    n_dup = sum(1 for r in rows if r["true_is_duplicate"])
+    n_nondup = len(rows) - n_dup
+    print(f"Loaded {len(rows)} labeled pairs ({n_dup} duplicate, {n_nondup} not_duplicate)")
 
-    df = load_data()
+    rows = score_pairs(rows)
 
-    scores = df["cross_encoder_score"].to_numpy(dtype=float)
-    labels = df["true_binary"].to_numpy(dtype=int)
+    # Save per-pair scores so future ground-truth corrections can
+    # recompute metrics WITHOUT re-running the model (see
+    # recompute_metrics_with_corrections.py). This is the one thing
+    # this script was previously missing - only the aggregate sweep
+    # table was being saved, not individual pair scores.
+    scored_pairs_path = Path("data/calibration_pairs_scored.csv")
+    with open(scored_pairs_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "pair_id", "text_a", "text_b", "true_label", "score"
+        ])
+        writer.writeheader()
+        for r in rows:
+            writer.writerow({
+                "pair_id": r["pair_id"],
+                "text_a": r["text_a"],
+                "text_b": r["text_b"],
+                "true_label": r["true_label"],
+                "score": r["score"],
+            })
+    print(f"Saved per-pair scores to {scored_pairs_path}")
 
-    n_total = len(df)
-    n_duplicate = int(labels.sum())
-    n_nonduplicate = n_total - n_duplicate
+    scores = [r["score"] for r in rows]
+    print(f"\nScore distribution: min={min(scores):.2f}  max={max(scores):.2f}  "
+          f"mean={sum(scores)/len(scores):.2f}")
 
-    print("\nCALIBRATION DATASET")
-    print("-----------------------------------------")
-    print(f"Total pairs          : {n_total}")
-    print(f"Duplicate            : {n_duplicate}")
-    print(f"Not duplicate        : {n_nonduplicate}")
+    # Two separate grids, for two separate purposes:
+    #
+    # 1. CANDIDATE_THRESHOLDS (the curated, round-number list) - for
+    #    the printed/paper-facing summary table. Readable, but each
+    #    value is an approximation and may not land exactly on a
+    #    true decision boundary in the data.
+    #
+    # 2. observed_thresholds (every unique score actually produced
+    #    by the model) - guarantees hitting every real decision
+    #    boundary exactly, with no rounding gap. Used to find the
+    #    TRUE best-F1 and best-precision-oriented operating points,
+    #    which may differ from what the curated grid finds by a
+    #    pair or two (exactly the kind of discrepancy that showed
+    #    up comparing this run to an earlier, differently-derived
+    #    "0.5858" report).
+    observed_thresholds = sorted(set(r["score"] for r in rows))
 
-    print("\nPAIR TYPES")
-    print("-----------------------------------------")
-    print(df["pair_type"].value_counts().to_string())
+    results = [evaluate_at_threshold(rows, t) for t in CANDIDATE_THRESHOLDS]
+    results_full_grid = [evaluate_at_threshold(rows, t) for t in observed_thresholds]
 
-    duplicate_scores = scores[labels == 1]
-    nonduplicate_scores = scores[labels == 0]
+    results_sorted_by_f1 = sorted(results_full_grid, key=lambda r: -r["f1"])
+    best_f1 = results_sorted_by_f1[0]
 
-    print("\nSCORE DISTRIBUTIONS")
-    print("-----------------------------------------")
-
-    print("Duplicate:")
-    print(f"  min                : {duplicate_scores.min():.4f}")
-    print(f"  mean               : {duplicate_scores.mean():.4f}")
-    print(f"  max                : {duplicate_scores.max():.4f}")
-
-    print("\nNot duplicate:")
-    print(f"  min                : {nonduplicate_scores.min():.4f}")
-    print(f"  mean               : {nonduplicate_scores.mean():.4f}")
-    print(f"  max                : {nonduplicate_scores.max():.4f}")
-
-    # -----------------------------------------------------
-    # Sweep
-    # -----------------------------------------------------
-
-    thresholds = build_thresholds(scores)
-
-    results = [
-        evaluate(scores, labels, threshold)
-        for threshold in thresholds
-    ]
-
-    sweep = pd.DataFrame(results)
-
-    sweep = sweep.sort_values(
-        "threshold"
-    ).reset_index(drop=True)
-
-    # -----------------------------------------------------
-    # Existing threshold
-    # -----------------------------------------------------
-
-    old_result = evaluate(
-        scores,
-        labels,
-        OLD_THRESHOLD,
+    # precision-oriented pick: highest recall among thresholds with
+    # precision >= 0.90, matching the ORIGINAL -2.21 calibration's
+    # own stated policy (see backend/services/duplicate_service.py
+    # comment: "Selected as a precision-oriented operating point")
+    precision_oriented = [r for r in results_full_grid if r["precision"] >= 0.90]
+    best_precision_oriented = (
+        max(precision_oriented, key=lambda r: r["recall"])
+        if precision_oriented else None
     )
 
-    # -----------------------------------------------------
-    # Maximum F1
-    # -----------------------------------------------------
+    with open(OUTPUT_TABLE_PATH, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=[
+            "threshold", "TP", "FP", "TN", "FN", "precision", "recall", "f1"
+        ])
+        writer.writeheader()
+        writer.writerows(results)
 
-    best_f1_row = (
-        sweep
-        .sort_values(
-            by=[
-                "f1",
-                "precision",
-                "recall",
-                "threshold",
-            ],
-            ascending=[
-                False,
-                False,
-                False,
-                False,
-            ],
-        )
-        .iloc[0]
-    )
+    with open(OUTPUT_MARKDOWN_PATH, "w", encoding="utf-8") as f:
+        f.write(f"# Duplicate-Detection Threshold Sweep\n\n")
+        f.write(f"Calibration set: {len(rows)} pairs "
+                f"({n_dup} duplicate, {n_nondup} not_duplicate)\n\n")
+        f.write(f"Model: `{MODEL_NAME}`\n\n")
+        f.write("| Threshold | TP | FP | TN | FN | Precision | Recall | F1 |\n")
+        f.write("|---|---|---|---|---|---|---|---|\n")
+        for r in results:
+            marker = ""
+            if r["threshold"] == best_f1["threshold"]:
+                marker += " **(best F1)**"
+            if best_precision_oriented and r["threshold"] == best_precision_oriented["threshold"]:
+                marker += " **(chosen: precision-oriented)**"
+            f.write(f"| {r['threshold']} | {r['TP']} | {r['FP']} | {r['TN']} | {r['FN']} "
+                    f"| {r['precision']} | {r['recall']} | {r['f1']}{marker} |\n")
 
-    # -----------------------------------------------------
-    # Precision-oriented candidates
-    # -----------------------------------------------------
+    print("\n" + "=" * 70)
+    print(f"{'Threshold':>10} {'TP':>4} {'FP':>4} {'TN':>4} {'FN':>4} "
+          f"{'Precision':>10} {'Recall':>8} {'F1':>8}")
+    print("-" * 70)
+    for r in results:
+        print(f"{r['threshold']:>10} {r['TP']:>4} {r['FP']:>4} {r['TN']:>4} {r['FN']:>4} "
+              f"{r['precision']:>10} {r['recall']:>8} {r['f1']:>8}")
+    print("=" * 70)
 
-    summary_rows = []
+    print(f"\nBest F1: threshold={best_f1['threshold']}  "
+          f"P={best_f1['precision']}  R={best_f1['recall']}  F1={best_f1['f1']}")
 
-    summary_rows.append(
-        format_row(
-            "Existing threshold",
-            old_result,
-        )
-    )
+    if best_precision_oriented:
+        print(f"Best precision-oriented (P>=0.90, max recall): "
+              f"threshold={best_precision_oriented['threshold']}  "
+              f"P={best_precision_oriented['precision']}  "
+              f"R={best_precision_oriented['recall']}  "
+              f"F1={best_precision_oriented['f1']}")
+    else:
+        print("No threshold in the sweep reaches P>=0.90 - "
+              "widen CANDIDATE_THRESHOLDS or review calibration set quality.")
 
-    summary_rows.append(
-        format_row(
-            "Maximum F1",
-            best_f1_row,
-        )
-    )
-
-    for floor in PRECISION_FLOORS:
-
-        candidate = find_precision_candidate(
-            sweep,
-            floor,
-        )
-
-        if candidate is not None:
-
-            summary_rows.append(
-                format_row(
-                    f"Precision >= {floor:.2f}",
-                    candidate,
-                )
-            )
-
-    summary = pd.DataFrame(summary_rows)
-
-    # Remove identical operating points that may satisfy
-    # several precision floors, while preserving labels in
-    # the full console output.
-    summary.to_csv(
-        SUMMARY_OUTPUT_PATH,
-        index=False,
-    )
-
-    sweep.to_csv(
-        FULL_OUTPUT_PATH,
-        index=False,
-    )
-
-    # -----------------------------------------------------
-    # Console output
-    # -----------------------------------------------------
-
-    print("\nEXISTING THRESHOLD")
-    print("-----------------------------------------")
-
-    old_display = format_row(
-        "Existing threshold",
-        old_result,
-    )
-
-    for key, value in old_display.items():
-        if key != "operating_point":
-            print(f"{key:<20}: {value}")
-
-    print("\nCANDIDATE OPERATING POINTS")
-    print("-----------------------------------------")
-
-    print(
-        summary.to_string(
-            index=False
-        )
-    )
-
-    # -----------------------------------------------------
-    # Markdown report
-    # -----------------------------------------------------
-
-    with open(
-        MARKDOWN_OUTPUT_PATH,
-        "w",
-        encoding="utf-8",
-    ) as f:
-
-        f.write(
-            "# Duplicate-Detection Threshold Calibration\n\n"
-        )
-
-        f.write(
-            f"Calibration dataset: **{n_total} independently "
-            f"labelled synthetic pairs** "
-            f"({n_duplicate} duplicate, "
-            f"{n_nonduplicate} non-duplicate).\n\n"
-        )
-
-        f.write(
-            "Ground-truth labels were derived from "
-            "generator-assigned issue identifiers established "
-            "before duplicate-detection inference.\n\n"
-        )
-
-        f.write(
-            "Model: "
-            "`cross-encoder/ms-marco-MiniLM-L-6-v2`\n\n"
-        )
-
-        f.write(
-            "A pair is predicted as duplicate when "
-            "`cross_encoder_score >= threshold`.\n\n"
-        )
-
-        f.write(
-            "Raw cross-encoder outputs are ranking logits, "
-            "not calibrated probabilities.\n\n"
-        )
-
-        f.write(
-            "## Candidate operating points\n\n"
-        )
-
-        f.write(
-            "| Operating point | Threshold | TP | FP | TN | FN | "
-            "Precision | Recall | F1 |\n"
-        )
-
-        f.write(
-            "|---|---:|---:|---:|---:|---:|---:|---:|---:|\n"
-        )
-
-        for _, row in summary.iterrows():
-
-            f.write(
-                f"| {row['operating_point']} "
-                f"| {row['threshold']} "
-                f"| {int(row['TP'])} "
-                f"| {int(row['FP'])} "
-                f"| {int(row['TN'])} "
-                f"| {int(row['FN'])} "
-                f"| {row['precision']:.4f} "
-                f"| {row['recall']:.4f} "
-                f"| {row['f1']:.4f} |\n"
-            )
-
-        f.write(
-            "\n## Threshold-selection principle\n\n"
-        )
-
-        f.write(
-            "The maximum-F1 operating point is reported as a "
-            "reference rather than automatically selected. "
-            "InsightDesk treats false-positive duplicate merges "
-            "as particularly costly because an incorrect merge "
-            "can propagate into case counts, sentiment analysis, "
-            "spike detection and root-cause analysis. "
-            "Precision-constrained operating points are therefore "
-            "reported separately for threshold selection.\n"
-        )
-
-    print("\nFILES SAVED")
-    print("-----------------------------------------")
-    print(f"Full sweep : {FULL_OUTPUT_PATH}")
-    print(f"Candidates : {SUMMARY_OUTPUT_PATH}")
-    print(f"Report     : {MARKDOWN_OUTPUT_PATH}")
-
-    print(
-        "\nNOTE: No new production threshold has been "
-        "automatically selected."
-    )
+    print(f"\nSaved: {OUTPUT_TABLE_PATH}")
+    print(f"Saved: {OUTPUT_MARKDOWN_PATH} (paste directly into your report)")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,457 @@
+query_index,issue_id,complaint_text,founder_rank,founder_score,centroid_rank,centroid_score,medoid_rank,medoid_score
+1,sync_not_updating,Changes I make aren't syncing across devices. Please look into this soon.,1,0.41658279299736023,1,0.7360811233520508,1,0.6340684294700623
+2,sync_not_updating,Just ran into this once more: Cross-device sync just isn't happening anymore.,8,0.26641979813575745,1,0.7373337745666504,1,0.6524827480316162
+3,sync_not_updating,Still happening - Cross-device sync just isn't happening anymore. Please look into this soon.,5,0.330837219953537,1,0.7805756330490112,1,0.6721057295799255
+4,sync_not_updating,Just ran into this once more: Changes I make aren't syncing across devices.,1,0.3612281084060669,1,0.7378702163696289,1,0.6403102874755859
+5,sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken.,11,0.23363065719604492,1,0.705194354057312,1,0.5721426606178284
+6,sync_not_updating,Cross-device sync just isn't happening anymore.,4,0.306904137134552,1,0.7617200016975403,1,0.6541237235069275
+7,sync_not_updating,Following up on this: Records updated by a teammate don't reflect on my screen without a manual refresh.,1,0.8887938261032104,1,0.657763659954071,2,0.3581503927707672
+8,sync_not_updating,"Just ran into this once more: Cross-device sync just isn't happening anymore. Happening consistently, not a one-off.",9,0.29207199811935425,1,0.7364922761917114,1,0.6936185956001282
+9,sync_not_updating,Sync between the web app and mobile app is broken.,3,0.2613273561000824,1,0.6917450428009033,1,0.5431630611419678
+10,sync_not_updating,Changes I make aren't syncing across devices. This is affecting my daily work.,1,0.5068537592887878,1,0.7149646282196045,1,0.5329526662826538
+11,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.,1,0.4824485182762146,1,0.6845980286598206,1,0.4153828024864197
+12,sync_not_updating,"This has come up again. Changes I make aren't syncing across devices. Happening consistently, not a one-off.",1,0.43007323145866394,1,0.7761088609695435,1,0.6721057295799255
+13,sync_not_updating,Update: Cross-device sync just isn't happening anymore. Can someone confirm this is being looked at?,4,0.3873370587825775,1,0.7634859085083008,1,0.6357253193855286
+14,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Can someone confirm this is being looked at?,1,0.8858457207679749,1,0.6719526648521423,2,0.3908253014087677
+15,sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.,2,0.342356413602829,1,0.7150181531906128,1,0.5062665343284607
+16,sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore. Please look into this soon.,5,0.3292311429977417,1,0.7803949117660522,1,0.6701535582542419
+17,sync_not_updating,Reporting this again: Data updated on desktop doesn't show up on mobile until much later.,1,0.5218756198883057,1,0.6750410795211792,2,0.36551403999328613
+18,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. This is affecting my daily work.,1,0.97212815284729,1,0.6702643632888794,2,0.3514167368412018
+19,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Please look into this soon.,1,0.9150217771530151,1,0.6584903001785278,2,0.38691529631614685
+20,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later. Please look into this soon.,1,0.4888979196548462,1,0.6884694695472717,1,0.42706388235092163
+21,sync_not_updating,Following up on this: Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.,1,0.5871875286102295,1,0.7022926211357117,2,0.40391984581947327
+22,sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken. Please look into this soon.,8,0.26633939146995544,1,0.6984202265739441,1,0.5925611853599548
+23,sync_not_updating,This has come up again. Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.,1,0.5631197690963745,1,0.6920590996742249,1,0.4178841710090637
+24,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.,1,0.9294183254241943,1,0.6652925610542297,2,0.37255269289016724
+25,sync_not_updating,Update: Changes I make aren't syncing across devices. This is affecting my daily work.,1,0.5728014707565308,1,0.743204653263092,1,0.5445308089256287
+26,sync_not_updating,Still happening - Changes I make aren't syncing across devices.,1,0.3890690505504608,1,0.7490732669830322,1,0.633216142654419
+27,sync_not_updating,Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?,6,0.26560938358306885,1,0.6875656247138977,1,0.5366047620773315
+28,sync_not_updating,Following up on this: Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?,7,0.281686395406723,1,0.6889391541481018,1,0.5333684086799622
+29,sync_not_updating,"Data updated on desktop doesn't show up on mobile until much later. Happening consistently, not a one-off.",1,0.4969831109046936,1,0.7176870107650757,1,0.45743313431739807
+30,sync_not_updating,Sync between the web app and mobile app is broken.,3,0.2613273561000824,1,0.6917450428009033,1,0.5431630611419678
+31,sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.,1,0.4824485182762146,1,0.6845980286598206,1,0.4153828024864197
+32,sync_not_updating,"Just ran into this once more: Changes I make aren't syncing across devices. Happening consistently, not a one-off.",2,0.3694591522216797,1,0.7432776093482971,1,0.643951952457428
+33,sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.,1,0.9294183254241943,1,0.6652925610542297,2,0.37255269289016724
+34,sync_not_updating,"Changes I make aren't syncing across devices. Happening consistently, not a one-off.",1,0.4087199568748474,1,0.7357043027877808,1,0.5993654727935791
+35,sync_not_updating,Just ran into this once more: Data updated on desktop doesn't show up on mobile until much later. Can someone confirm this is being looked at?,2,0.42560675740242004,1,0.6862974762916565,1,0.45412516593933105
+36,sync_not_updating,"Cross-device sync just isn't happening anymore. Happening consistently, not a one-off.",5,0.33309683203697205,1,0.7572861313819885,1,0.6921637654304504
+37,sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.,2,0.342356413602829,1,0.7150182127952576,1,0.5062665343284607
+38,sync_not_updating,Reporting this again: Records updated by a teammate don't reflect on my screen without a manual refresh.,1,0.8797731399536133,1,0.6190179586410522,6,0.3060079514980316
+39,sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore.,6,0.31713545322418213,1,0.7696208357810974,1,0.6647427678108215
+40,subscription_upgrade_failed,"Still happening - Upgrade button just spins forever and never completes. Happening consistently, not a one-off.",1,0.9493781924247742,1,0.6870272159576416,1,0.5379116535186768
+41,subscription_upgrade_failed,"This has come up again. Upgrade button just spins forever and never completes. Happening consistently, not a one-off.",1,0.9092377424240112,1,0.6878621578216553,1,0.5821918249130249
+42,subscription_upgrade_failed,Just ran into this once more: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?,5,0.3489863872528076,1,0.6260644793510437,1,0.47312313318252563
+43,subscription_upgrade_failed,This has come up again. Plan upgrade charged my card but didn't actually upgrade the account. This is affecting my daily work.,6,0.3736037313938141,1,0.6891542077064514,1,0.5975664258003235
+44,subscription_upgrade_failed,Just ran into this once more: Plan upgrade charged my card but didn't actually upgrade the account.,2,0.4688146412372589,1,0.7332642674446106,1,0.6106845736503601
+45,subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account. Can someone confirm this is being looked at?,7,0.3458395004272461,1,0.6611137986183167,1,0.5387778878211975
+46,subscription_upgrade_failed,Following up on this: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?,9,0.2958095073699951,1,0.636954128742218,1,0.515683650970459
+47,subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out. This is affecting my daily work.,13,0.2081824392080307,1,0.5050022602081299,2,0.378587543964386
+48,subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account.,7,0.33116960525512695,1,0.6599718332290649,1,0.5509995818138123
+49,subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out.,8,0.24600094556808472,1,0.5869195461273193,1,0.4614180624485016
+50,subscription_upgrade_failed,Just ran into this once more: Upgrading my plan keeps failing at the payment step.,1,0.5808157920837402,1,0.8377255201339722,1,0.917579174041748
+51,subscription_upgrade_failed,This has come up again. Upgrading my plan keeps failing at the payment step.,1,0.5368403792381287,1,0.8455525636672974,1,0.9601577520370483
+52,subscription_upgrade_failed,"This has come up again. Upgrading my plan keeps failing at the payment step. Happening consistently, not a one-off.",1,0.5810071229934692,1,0.8479797840118408,1,0.9601577520370483
+53,subscription_upgrade_failed,Upgrade button just spins forever and never completes.,1,0.9240890145301819,1,0.6777558326721191,1,0.5662132501602173
+54,subscription_upgrade_failed,Upgrading my plan keeps failing at the payment step.,1,0.5068131685256958,1,0.8235461115837097,1,0.913231372833252
+55,invoice_missing_details,Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.,1,0.5279924869537354,1,0.8089134097099304,1,0.6675986051559448
+56,invoice_missing_details,Still happening - Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.,1,0.5420205593109131,1,0.8097400069236755,1,0.6720313429832458
+57,invoice_missing_details,Still happening - Generated invoices are missing the company billing address. Can someone confirm this is being looked at?,1,0.9439737796783447,1,0.7526099681854248,1,0.5265721678733826
+58,invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes.,1,0.4384472668170929,1,0.7689874768257141,1,0.6329385638237
+59,invoice_missing_details,"This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice. Happening consistently, not a one-off.",1,0.5370253920555115,1,0.7906583547592163,1,0.6766454577445984
+60,invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Please look into this soon.",1,0.47836071252822876,1,0.7465150952339172,1,0.6086680293083191
+61,invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Can someone confirm this is being looked at?",1,0.4938952326774597,1,0.7678593993186951,1,0.6261566281318665
+62,invoice_missing_details,"This has come up again. Invoice PDF is incomplete, some line items are blank.",1,0.5134323239326477,1,0.7656837105751038,1,0.5893833637237549
+63,invoice_missing_details,Just ran into this once more: The invoice doesn't show a proper tax breakdown for accounting purposes. Please look into this soon.,1,0.529730498790741,1,0.7969928979873657,1,0.6667444705963135
+64,invoice_missing_details,"Still happening - The invoice doesn't show a proper tax breakdown for accounting purposes. Happening consistently, not a one-off.",1,0.4900791645050049,1,0.8181858658790588,1,0.6720313429832458
+65,invoice_missing_details,Update: Generated invoices are missing the company billing address. Can someone confirm this is being looked at?,1,0.8883050680160522,1,0.6759599447250366,1,0.4246000647544861
+66,invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes. This is affecting my daily work.,1,0.3936794400215149,1,0.7269220948219299,1,0.584765613079071
+67,invoice_missing_details,"Invoice PDF is incomplete, some line items are blank.",1,0.46246448159217834,1,0.732258141040802,1,0.4899296760559082
+68,invoice_missing_details,Generated invoices are missing the company billing address. This is affecting my daily work.,1,0.8291049003601074,1,0.6523398160934448,1,0.4858175814151764
+69,invoice_missing_details,This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice.,1,0.5260670185089111,1,0.7665244340896606,1,0.6188457608222961
+70,double_charged,This has come up again. My card shows two separate charges for one invoice.,1,0.5800678730010986,1,0.7467785477638245,1,0.5800678730010986
+71,double_charged,This has come up again. Got billed two times for a single month of service.,1,0.7720943093299866,1,0.7712751030921936,1,0.7720943093299866
+72,double_charged,My card shows two separate charges for one invoice.,1,0.5262749195098877,1,0.7153836488723755,2,0.5262749195098877
+73,double_charged,Still happening - I was charged twice for the same subscription this month. Can someone confirm this is being looked at?,1,0.9700658917427063,1,0.812187910079956,1,0.9700658917427063
+74,double_charged,There's a duplicate charge on my statement for this plan.,1,0.43412771821022034,1,0.6246069669723511,1,0.43412771821022034
+75,double_charged,Just ran into this once more: There's a duplicate charge on my statement for this plan. Can someone confirm this is being looked at?,1,0.5762891173362732,1,0.6989859342575073,1,0.5762891173362732
+76,double_charged,I was charged twice for the same subscription this month. Please look into this soon.,1,0.9293412566184998,1,0.8202432990074158,1,0.9293412566184998
+77,double_charged,Still happening - Got billed two times for a single month of service.,1,0.7793457508087158,1,0.8046000599861145,1,0.7793457508087158
+78,double_charged,Following up on this: Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.,1,0.49050667881965637,1,0.6941617131233215,1,0.49050667881965637
+79,double_charged,"There's a duplicate charge on my statement for this plan. Happening consistently, not a one-off.",1,0.5275736451148987,1,0.7167865037918091,1,0.5275736451148987
+80,double_charged,"Billing deducted the amount twice in the same billing cycle. Happening consistently, not a one-off.",1,0.5828079581260681,1,0.7632229924201965,1,0.5828079581260681
+81,double_charged,I was charged twice for the same subscription this month. Please look into this soon.,1,0.9293412566184998,1,0.8202432990074158,1,0.9293412566184998
+82,double_charged,Update: Got billed two times for a single month of service. This is affecting my daily work.,1,0.6635313034057617,1,0.7516210675239563,1,0.6635313034057617
+83,double_charged,My card shows two separate charges for one invoice. This is affecting my daily work.,1,0.5237336754798889,1,0.7481163144111633,2,0.5237336754798889
+84,double_charged,Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.,1,0.5178753733634949,1,0.7157807350158691,1,0.5178753733634949
+85,double_charged,My card shows two separate charges for one invoice.,1,0.5262749195098877,1,0.7153836488723755,2,0.5262749195098877
+86,double_charged,Got billed two times for a single month of service.,1,0.7831065654754639,1,0.8100190162658691,1,0.7831065654754639
+87,double_charged,Update: There's a duplicate charge on my statement for this plan.,1,0.42875099182128906,1,0.6145389676094055,1,0.42875099182128906
+88,double_charged,Billing deducted the amount twice in the same billing cycle.,1,0.5653570294380188,1,0.7554611563682556,1,0.5653570294380188
+89,connection_drops_frequently,The connection keeps dropping while I'm using the app.,1,0.9833551049232483,1,0.7701684832572937,1,0.5731241703033447
+90,connection_drops_frequently,Following up on this: I keep getting disconnected and have to reload the page constantly. This is affecting my daily work.,6,0.3938533365726471,1,0.6736667156219482,3,0.487978458404541
+91,connection_drops_frequently,Still happening - Network connection drops randomly during active use. Can someone confirm this is being looked at?,1,0.5810457468032837,1,0.7782184481620789,1,0.5810457468032837
+92,connection_drops_frequently,"I keep getting disconnected and have to reload the page constantly. Happening consistently, not a one-off.",2,0.43462687730789185,1,0.7094182968139648,1,0.5165403485298157
+93,connection_drops_frequently,"Still happening - Network connection drops randomly during active use. Happening consistently, not a one-off.",1,0.5803872346878052,1,0.8023927211761475,1,0.5803872346878052
+94,connection_drops_frequently,Reporting this again: I keep getting disconnected and have to reload the page constantly.,3,0.38780006766319275,1,0.633652925491333,7,0.39891767501831055
+95,connection_drops_frequently,Just ran into this once more: The connection keeps dropping while I'm using the app. Please look into this soon.,1,0.874163031578064,1,0.7299330830574036,1,0.5242413282394409
+96,connection_drops_frequently,The connection keeps dropping while I'm using the app.,1,0.9833551049232483,1,0.7701684832572937,1,0.5731241703033447
+97,connection_drops_frequently,Reporting this again: Network connection drops randomly during active use.,1,0.5174275040626526,1,0.7754932641983032,1,0.5174275040626526
+98,connection_drops_frequently,This has come up again. I keep getting disconnected and have to reload the page constantly.,1,0.47248944640159607,1,0.6959429979324341,1,0.44706982374191284
+99,connection_drops_frequently,"Network connection drops randomly during active use. Happening consistently, not a one-off.",1,0.5307974219322205,1,0.7631897926330566,1,0.5307974219322205
+100,login_otp_not_received,"This has come up again. I never received the OTP when trying to log in. Happening consistently, not a one-off.",1,0.7125380039215088,1,0.7516830563545227,1,0.7125380039215088
+101,login_otp_not_received,"Update: Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off.",1,0.499558687210083,1,0.70282381772995,1,0.499558687210083
+102,login_otp_not_received,"No OTP text message has come through after multiple retries. Happening consistently, not a one-off.",1,0.954612135887146,1,0.7226468324661255,1,0.7012091875076294
+103,login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through.",1,0.6039474010467529,1,0.6922358274459839,1,0.6039474010467529
+104,login_otp_not_received,"Still happening - Two-factor login is stuck because the code never shows up. Happening consistently, not a one-off.",6,0.33484897017478943,2,0.5627283453941345,10,0.33484897017478943
+105,login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,0.6020327210426331,1,0.6927083730697632,1,0.6020327210426331
+106,login_otp_not_received,I never received the OTP when trying to log in.,1,0.6557084918022156,1,0.68985515832901,1,0.6557084918022156
+107,login_otp_not_received,Still happening - Two-factor login is stuck because the code never shows up. Can someone confirm this is being looked at?,12,0.32438281178474426,2,0.6046512126922607,15,0.32438281178474426
+108,login_otp_not_received,"Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off.",1,0.48642677068710327,1,0.7217968702316284,1,0.48642677068710327
+109,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off.",3,0.37844118475914,1,0.7262483239173889,4,0.37844118475914
+110,login_otp_not_received,This has come up again. I never received the OTP when trying to log in. This is affecting my daily work.,1,0.646493673324585,1,0.7024713158607483,1,0.646493673324585
+111,login_otp_not_received,"Update: The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off.",4,0.3974177837371826,1,0.7290261387825012,5,0.3974177837371826
+112,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in.",6,0.32891154289245605,1,0.6817073822021484,6,0.32891154289245605
+113,login_otp_not_received,Just ran into this once more: Two-factor login is stuck because the code never shows up. This is affecting my daily work.,11,0.2937481105327606,4,0.5302638411521912,18,0.2937481105327606
+114,login_otp_not_received,Signing in fails every time because the SMS code doesn't arrive.,1,0.4640309512615204,1,0.707561731338501,1,0.4640309512615204
+115,login_otp_not_received,Update: I never received the OTP when trying to log in. Can someone confirm this is being looked at?,1,0.5999389290809631,1,0.6503138542175293,1,0.5999389290809631
+116,login_otp_not_received,Following up on this: Signing in fails every time because the SMS code doesn't arrive.,1,0.4944007992744446,1,0.7346295714378357,1,0.4944007992744446
+117,login_otp_not_received,Two-factor login is stuck because the code never shows up. Please look into this soon.,6,0.2908169627189636,2,0.5505388975143433,10,0.2908169627189636
+118,login_otp_not_received,No OTP text message has come through after multiple retries.,1,0.9800786375999451,1,0.7225019931793213,1,0.6795580983161926
+119,login_otp_not_received,"This has come up again. OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,0.6059100031852722,1,0.6929818391799927,1,0.6059100031852722
+120,login_otp_not_received,No OTP text message has come through after multiple retries. This is affecting my daily work.,1,0.8404809832572937,1,0.65053790807724,1,0.5835251808166504
+121,login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in.",6,0.32891154289245605,1,0.6817073822021484,6,0.32891154289245605
+122,login_otp_not_received,"Following up on this: OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,0.5913892984390259,1,0.6794213056564331,1,0.5913892984390259
+123,live_chat_unavailable,Reporting this again: The chat widget just sits there with no agent picking it up. Can someone confirm this is being looked at?,1,0.5162630081176758,1,0.7336883544921875,1,0.5279608368873596
+124,live_chat_unavailable,Live chat support shows as available but no one ever responds.,1,1.0,1,0.8420324921607971,1,0.5707629323005676
+125,live_chat_unavailable,Following up on this: The chat widget just sits there with no agent picking it up. Please look into this soon.,1,0.5073467493057251,1,0.7624018788337708,1,0.5010036826133728
+126,live_chat_unavailable,Still happening - Live chat support shows as available but no one ever responds.,1,0.9737622737884521,1,0.8454291820526123,1,0.5972784161567688
+127,live_chat_unavailable,Just ran into this once more: Live chat support shows as available but no one ever responds.,1,0.941287636756897,1,0.8411126732826233,1,0.5967720150947571
+128,live_chat_unavailable,Still happening - The chat widget just sits there with no agent picking it up. Please look into this soon.,1,0.5707629323005676,1,0.8294357061386108,1,0.5707629323005676
+129,live_chat_unavailable,Update: The chat widget just sits there with no agent picking it up.,1,0.5089588761329651,1,0.7400537133216858,1,0.5096397995948792
+130,cant_change_email,"Following up on this: Changing my login email fails with a generic error every time. Happening consistently, not a one-off.",1,0.47352293133735657,1,0.7856801748275757,4,0.4912242591381073
+131,cant_change_email,Update: I can't update the email address linked to my account. This is affecting my daily work.,1,0.7528377175331116,1,0.7458127737045288,1,0.42999646067619324
+132,cant_change_email,Following up on this: I can't update the email address linked to my account. This is affecting my daily work.,1,0.7603954076766968,1,0.7586456537246704,1,0.4254334568977356
+133,cant_change_email,Reporting this again: I can't update the email address linked to my account. Please look into this soon.,1,0.8000211715698242,1,0.7445672154426575,3,0.4448019564151764
+134,cant_change_email,Changing my login email fails with a generic error every time.,2,0.45414313673973083,1,0.7788715958595276,4,0.4254334568977356
+135,cant_change_email,Changing my login email fails with a generic error every time. This is affecting my daily work.,4,0.3972667157649994,1,0.8007868528366089,5,0.4448019564151764
+136,cant_change_email,Reporting this again: Changing my login email fails with a generic error every time.,2,0.41750603914260864,1,0.7732961177825928,5,0.42414718866348267
+137,session_logs_out_randomly,"Just ran into this once more: The app signs me out on its own, forcing me to log back in constantly. Happening consistently, not a one-off.",1,0.5153617262840271,1,0.6170294284820557,2,0.5153617262840271
+138,session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive. Please look into this soon.",1,0.5900445580482483,1,0.6962434649467468,1,0.5900445580482483
+139,session_logs_out_randomly,"Update: Random logouts are happening throughout the day, very disruptive.",1,0.5665518641471863,1,0.6745012998580933,1,0.5665518641471863
+140,session_logs_out_randomly,My session expires every few minutes even though I'm active. Please look into this soon.,1,0.5034937858581543,1,0.7112575173377991,1,0.5034937858581543
+141,session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly.",1,0.5150511860847473,1,0.6162756681442261,1,0.5150511860847473
+142,session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly.",1,0.5150511860847473,1,0.6162756681442261,1,0.5150511860847473
+143,session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive.",1,0.6345332264900208,1,0.713121771812439,1,0.6345332264900208
+144,session_logs_out_randomly,Session keeps dying even while I'm actively typing. This is affecting my daily work.,1,0.5121303796768188,1,0.7102668285369873,1,0.5121303796768188
+145,session_logs_out_randomly,Just ran into this once more: Session keeps dying even while I'm actively typing.,2,0.43414226174354553,1,0.6606261730194092,1,0.43414226174354553
+146,session_logs_out_randomly,Update: I keep getting logged out randomly in the middle of work.,1,0.841408908367157,1,0.7309938073158264,1,0.841408908367157
+147,session_logs_out_randomly,"The app signs me out on its own, forcing me to log back in constantly.",1,0.5331685543060303,1,0.6228712797164917,1,0.5331685543060303
+148,session_logs_out_randomly,Reporting this again: Session keeps dying even while I'm actively typing.,1,0.47221851348876953,1,0.676491916179657,2,0.47221851348876953
+149,session_logs_out_randomly,Update: My session expires every few minutes even though I'm active.,2,0.43376946449279785,1,0.6538421511650085,1,0.43376946449279785
+150,session_logs_out_randomly,Session keeps dying even while I'm actively typing.,2,0.4584783613681793,1,0.6806639432907104,1,0.4584783613681793
+151,session_logs_out_randomly,This has come up again. I keep getting logged out randomly in the middle of work.,1,0.9311003088951111,1,0.7769993543624878,1,0.9311003088951111
+152,session_logs_out_randomly,Just ran into this once more: I keep getting logged out randomly in the middle of work.,1,0.9056640267372131,1,0.7428016662597656,1,0.9056640267372131
+153,session_logs_out_randomly,My session expires every few minutes even though I'm active. This is affecting my daily work.,1,0.5468121767044067,1,0.7056811451911926,1,0.5468121767044067
+154,session_logs_out_randomly,This has come up again. My session expires every few minutes even though I'm active.,1,0.5598713159561157,1,0.7549883127212524,1,0.5598713159561157
+155,session_logs_out_randomly,"This has come up again. Random logouts are happening throughout the day, very disruptive. Can someone confirm this is being looked at?",1,0.5569429993629456,1,0.6686224341392517,1,0.5569429993629456
+156,ticket_reopened_repeatedly,Support marks the ticket as resolved but the problem is still there.,2,0.566907525062561,1,0.7578718066215515,3,0.5078847408294678
+157,ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.,1,0.7567497491836548,1,0.7799249887466431,1,0.6640498042106628
+158,ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. Please look into this soon.,1,0.8576643466949463,1,0.777704119682312,1,0.6559165716171265
+159,ticket_reopened_repeatedly,This has come up again. Support marks the ticket as resolved but the problem is still there.,2,0.555355966091156,1,0.7043027877807617,5,0.45756006240844727
+160,ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there. Please look into this soon.,2,0.5879185795783997,1,0.7957906126976013,2,0.5521077513694763
+161,ticket_reopened_repeatedly,"Reporting this again: My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off.",1,0.6358498930931091,1,0.8258417844772339,1,0.6682315468788147
+162,ticket_reopened_repeatedly,Just ran into this once more: I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.,1,0.7626596093177795,1,0.8120046257972717,1,0.6682315468788147
+163,ticket_reopened_repeatedly,Reporting this again: My ticket keeps getting closed before the issue is actually resolved. This is affecting my daily work.,2,0.5736937522888184,1,0.7935104370117188,2,0.5736937522888184
+164,ticket_reopened_repeatedly,"My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off.",1,0.6507553458213806,1,0.8187026381492615,1,0.5473389029502869
+165,ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there.,2,0.585191011428833,1,0.8004932999610901,2,0.5473389029502869
+166,ticket_reopened_repeatedly,Update: My ticket keeps getting closed before the issue is actually resolved.,1,0.7260558009147644,1,0.7980495691299438,1,0.6448229551315308
+167,notifications_not_sent,Notification alerts for updates have completely stopped coming through. This is affecting my daily work.,2,0.5464013814926147,1,0.7654603719711304,1,0.5379862785339355
+168,notifications_not_sent,This has come up again. Push notifications just stopped working a week ago.,3,0.4104330241680145,1,0.715981125831604,2,0.5018631219863892
+169,notifications_not_sent,Push notifications just stopped working a week ago.,2,0.4138448238372803,1,0.7126984000205994,2,0.47791022062301636
+170,notifications_not_sent,"No alerts are sent when a ticket status changes, I have to check manually. This is affecting my daily work.",1,0.9026134014129639,1,0.7340388894081116,1,0.8189946413040161
+171,notifications_not_sent,Just ran into this once more: Notification alerts for updates have completely stopped coming through.,1,0.4940513074398041,1,0.7654018998146057,1,0.6171965003013611
+172,notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me. Please look into this soon.,1,0.6503175497055054,1,0.6887280941009521,1,0.66786789894104
+173,notifications_not_sent,Notification alerts for updates have completely stopped coming through.,1,0.5576409101486206,1,0.7855464816093445,1,0.5823550224304199
+174,notifications_not_sent,"Still happening - Notification alerts for updates have completely stopped coming through. Happening consistently, not a one-off.",1,0.5325875282287598,1,0.7920394539833069,1,0.5720614194869995
+175,notifications_not_sent,"Just ran into this once more: I'm not getting notified when a new ticket is assigned to me. Happening consistently, not a one-off.",1,0.6096925735473633,1,0.7123678922653198,1,0.7204483151435852
+176,notifications_not_sent,I'm not getting notified when a new ticket is assigned to me. Please look into this soon.,1,0.6899296641349792,1,0.6828073859214783,1,0.6947813034057617
+177,notifications_not_sent,"Update: Push notifications just stopped working a week ago. Happening consistently, not a one-off.",1,0.4437774419784546,1,0.7465665340423584,3,0.49348631501197815
+178,notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me.,2,0.616599977016449,1,0.6661893725395203,2,0.6313048005104065
+179,notifications_not_sent,"This has come up again. No alerts are sent when a ticket status changes, I have to check manually. Can someone confirm this is being looked at?",1,0.8919095396995544,1,0.7604626417160034,1,0.891159176826477
+180,notifications_not_sent,"Still happening - Push notifications just stopped working a week ago. Happening consistently, not a one-off.",4,0.4010982811450958,1,0.7319507598876953,3,0.4773804545402527
+181,notifications_not_sent,"Just ran into this once more: No alerts are sent when a ticket status changes, I have to check manually.",1,0.9198333024978638,1,0.8288685083389282,1,0.5720614194869995
+182,app_crashes_on_open,Following up on this: The application crashes immediately every time I open it. Please look into this soon.,1,0.5756460428237915,1,0.7236799001693726,1,0.6662427186965942
+183,app_crashes_on_open,"Update: The application crashes immediately every time I open it. Happening consistently, not a one-off.",1,0.8703126907348633,1,0.7516255974769592,1,0.6027547121047974
+184,app_crashes_on_open,The moment I open the app it force-closes.,1,0.39522209763526917,1,0.6819489002227783,1,0.5813068151473999
+185,app_crashes_on_open,"Still happening - App refuses to open, just crashes back to the home screen. Please look into this soon.",1,0.5766257047653198,1,0.8406960964202881,1,0.7385137677192688
+186,app_crashes_on_open,"Reporting this again: App closes itself right after launch, can't get past the loading screen. Please look into this soon.",1,0.4617965519428253,1,0.7232884168624878,1,0.6201236248016357
+187,app_crashes_on_open,"The moment I open the app it force-closes. Happening consistently, not a one-off.",1,0.43563753366470337,1,0.7212545275688171,1,0.5767393112182617
+188,app_crashes_on_open,"This has come up again. App closes itself right after launch, can't get past the loading screen. Please look into this soon.",2,0.4059816002845764,1,0.765785276889801,1,0.6805347204208374
+189,app_crashes_on_open,The application crashes immediately every time I open it.,1,0.727502167224884,1,0.8160904049873352,1,0.7385137677192688
+190,app_crashes_on_open,The moment I open the app it force-closes.,1,0.39522209763526917,1,0.6819489002227783,1,0.5813068151473999
+191,app_crashes_on_open,"Following up on this: It crashes on startup on my device, happens every single time. Can someone confirm this is being looked at?",3,0.3859952688217163,1,0.5940412282943726,1,0.45688092708587646
+192,app_crashes_on_open,Still happening - The moment I open the app it force-closes.,1,0.4468214511871338,1,0.7497801780700684,1,0.6457266807556152
+193,app_crashes_on_open,"Still happening - It crashes on startup on my device, happens every single time. Happening consistently, not a one-off.",1,0.4591866731643677,1,0.6115347743034363,1,0.4529950022697449
+194,app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. Happening consistently, not a one-off.",1,0.4613083004951477,1,0.7623127102851868,1,0.6214624643325806
+195,app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. This is affecting my daily work.",1,0.6112795472145081,1,0.7747699618339539,1,0.6313502192497253
+196,app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen.",1,0.5809336304664612,1,0.8259286880493164,1,0.9326207637786865
+197,app_crashes_on_open,"Update: It crashes on startup on my device, happens every single time. This is affecting my daily work.",1,0.7663861513137817,1,0.6124196648597717,3,0.42077183723449707
+198,app_crashes_on_open,"App refuses to open, just crashes back to the home screen. This is affecting my daily work.",1,0.7124188542366028,1,0.7978312373161316,1,0.8807830214500427
+199,app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen.",1,0.5809336304664612,1,0.8259286880493164,1,0.9326207637786865
+200,app_crashes_on_open,"It crashes on startup on my device, happens every single time. Please look into this soon.",1,0.46356841921806335,1,0.6209113001823425,1,0.45502969622612
+201,dashboard_extremely_slow,"Update: Dashboard is lagging badly, barely usable during peak hours.",1,0.6143718361854553,1,0.7071421146392822,1,0.495836079120636
+202,dashboard_extremely_slow,Still happening - The dashboard takes over a minute to load basic data. This is affecting my daily work.,1,0.8822057247161865,1,0.7456948161125183,1,0.606421947479248
+203,dashboard_extremely_slow,"This has come up again. Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work.",1,0.6075753569602966,1,0.7110190391540527,1,0.5234037637710571
+204,dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading.",1,0.4429493248462677,1,0.7634511590003967,1,0.6534069776535034
+205,dashboard_extremely_slow,"The dashboard takes over a minute to load basic data. Happening consistently, not a one-off.",1,1.0,1,0.7739517688751221,1,0.5637964606285095
+206,dashboard_extremely_slow,"Just ran into this once more: Everything is painfully slow, loading a single page takes forever. Happening consistently, not a one-off.",1,0.5426004528999329,1,0.7673318386077881,1,0.764176070690155
+207,dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading.",1,0.4429493248462677,1,0.7634511590003967,1,0.6534069776535034
+208,dashboard_extremely_slow,"Dashboard is lagging badly, barely usable during peak hours.",1,0.6359816193580627,1,0.7142171859741211,1,0.4799482226371765
+209,dashboard_extremely_slow,"Following up on this: Everything is painfully slow, loading a single page takes forever. This is affecting my daily work.",1,0.5637964606285095,1,0.8012611865997314,1,0.5637964606285095
+210,dashboard_extremely_slow,Just ran into this once more: The dashboard takes over a minute to load basic data. Please look into this soon.,1,0.9031822681427002,1,0.749465823173523,1,0.5342724323272705
+211,dashboard_extremely_slow,Reporting this again: Loading times have gotten unbearable over the last few weeks. This is affecting my daily work.,1,0.5197100043296814,1,0.6697491407394409,1,0.5738006830215454
+212,dashboard_extremely_slow,"Loading times have gotten unbearable over the last few weeks. Happening consistently, not a one-off.",1,0.5931264758110046,1,0.7514621615409851,1,0.5959620475769043
+213,dashboard_extremely_slow,Loading times have gotten unbearable over the last few weeks.,1,0.569378137588501,1,0.7731090188026428,1,0.6145887970924377
+214,dashboard_extremely_slow,"Reporting this again: Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work.",1,0.6058090925216675,1,0.6768420338630676,1,0.5077478885650635
+215,dashboard_extremely_slow,"Update: Performance has gotten really bad, pages hang for a long time before loading.",3,0.41599664092063904,1,0.7255667448043823,1,0.6225501298904419
+216,dashboard_extremely_slow,This has come up again. Loading times have gotten unbearable over the last few weeks. Please look into this soon.,1,0.5167302489280701,1,0.7323158979415894,1,0.5890235900878906
+217,dashboard_extremely_slow,"Everything is painfully slow, loading a single page takes forever.",1,0.5386970639228821,1,0.7797665596008301,1,0.8455841541290283
+218,dashboard_extremely_slow,"Update: Everything is painfully slow, loading a single page takes forever. Please look into this soon.",1,0.47350189089775085,1,0.7115597128868103,1,0.7794089317321777
+219,dashboard_extremely_slow,"Following up on this: Performance has gotten really bad, pages hang for a long time before loading.",1,0.46074825525283813,1,0.7685340642929077,1,0.7411778569221497
+220,sso_login_fails,"Update: SAML login redirects back with an invalid token message. Happening consistently, not a one-off.",1,0.47796666622161865,1,0.7105205059051514,1,0.5081058740615845
+221,sso_login_fails,SSO login just spins and never completes.,3,0.390109658241272,1,0.6921103000640869,2,0.43203872442245483
+222,sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.,1,0.5217612981796265,1,0.7599256038665771,1,0.5525190234184265
+223,sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.,1,0.5217612981796265,1,0.7599256038665771,1,0.5525190234184265
+224,sso_login_fails,This has come up again. SAML login redirects back with an invalid token message.,1,0.5105519890785217,1,0.7571520805358887,1,0.5407594442367554
+225,sso_login_fails,Reporting this again: SAML login redirects back with an invalid token message. Can someone confirm this is being looked at?,1,0.5037243962287903,1,0.7395925521850586,2,0.5298110842704773
+226,sso_login_fails,Still happening - SSO login just spins and never completes.,5,0.39393317699432373,1,0.7121411561965942,2,0.4576420187950134
+227,sso_login_fails,SSO login just spins and never completes.,3,0.390109658241272,1,0.6921103000640869,2,0.43203872442245483
+228,sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.,1,0.9818409085273743,1,0.7741380929946899,1,0.5405468940734863
+229,sso_login_fails,Just ran into this once more: SAML login redirects back with an invalid token message.,1,0.5035917162895203,1,0.7627377510070801,1,0.5405468940734863
+230,sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.,1,0.9818409085273743,1,0.7741380929946899,1,0.5405468940734863
+231,sso_login_fails,Reporting this again: Trying to log in via our identity provider throws a token error.,1,0.9022257328033447,1,0.7584396004676819,1,0.5488993525505066
+232,sso_login_fails,Still happening - Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?,1,0.5006853342056274,1,0.7413191795349121,2,0.5397474765777588
+233,sso_login_fails,Following up on this: SSO login just spins and never completes.,4,0.38709554076194763,1,0.6688340306282043,1,0.42896151542663574
+234,sso_login_fails,Update: Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?,1,0.48462915420532227,1,0.6722686886787415,1,0.496372252702713
+235,card_declined_incorrectly,Following up on this: Payment fails at checkout despite the card working everywhere else.,1,0.5029619932174683,1,0.7949478030204773,2,0.5085411667823792
+236,card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.,1,0.837195098400116,1,0.8035421967506409,1,0.5351266860961914
+237,card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.,1,0.837195098400116,1,0.8035421967506409,1,0.5351266860961914
+238,card_declined_incorrectly,"Update: Payment fails at checkout despite the card working everywhere else. Happening consistently, not a one-off.",1,0.4120480418205261,1,0.7464521527290344,2,0.47916337847709656
+239,card_declined_incorrectly,Following up on this: My card keeps getting declined even though there are sufficient funds.,1,0.8391870856285095,1,0.8035886883735657,2,0.5694506764411926
+240,card_declined_incorrectly,Update: Payment fails at checkout despite the card working everywhere else. This is affecting my daily work.,7,0.33906272053718567,1,0.6836519241333008,2,0.41574692726135254
+241,card_declined_incorrectly,This has come up again. Payment fails at checkout despite the card working everywhere else.,1,0.6202326416969299,1,0.8099281787872314,2,0.5351266860961914
+242,escalation_ignored,"Still happening - I asked to escalate this issue and nothing has happened since. Happening consistently, not a one-off.",9,0.36208295822143555,1,0.7321188449859619,9,0.3787652850151062
+243,escalation_ignored,Reporting this again: Requested a manager review three times with no follow-up at all.,1,0.9329318404197693,1,0.7635231018066406,3,0.4311639964580536
+244,escalation_ignored,Following up on this: Requested a manager review three times with no follow-up at all.,1,0.9502784013748169,1,0.7586235404014587,2,0.46801257133483887
+245,escalation_ignored,This has come up again. I asked to escalate this issue and nothing has happened since. This is affecting my daily work.,6,0.3627174496650696,1,0.7252365350723267,2,0.41902774572372437
+246,escalation_ignored,Still happening - Requested a manager review three times with no follow-up at all. This is affecting my daily work.,1,0.8752104043960571,1,0.7473799586296082,2,0.384400874376297
+247,escalation_ignored,Following up on this: I asked to escalate this issue and nothing has happened since.,5,0.39269396662712097,1,0.7596931457519531,3,0.4311639964580536
+248,escalation_ignored,Update: I asked to escalate this issue and nothing has happened since.,9,0.33997562527656555,1,0.6820578575134277,9,0.36158040165901184
+249,agent_unhelpful,This has come up again. Got a copy-pasted response that had nothing to do with my actual question.,1,1.0,1,0.47400468587875366,11,0.22383613884449005
+250,agent_unhelpful,The support agent I spoke to didn't actually solve my problem.,20,0.1627623289823532,1,0.7099176645278931,1,0.945887565612793
+251,agent_unhelpful,"Chat support just gave generic answers that didn't address my issue. Happening consistently, not a one-off.",7,0.2784562408924103,1,0.6649821996688843,2,0.523039698600769
+252,agent_unhelpful,Just ran into this once more: The agent closed my ticket without actually fixing anything. This is affecting my daily work.,32,0.04313788190484047,2,0.56910240650177,2,0.512193500995636
+253,agent_unhelpful,Reporting this again: Chat support just gave generic answers that didn't address my issue. Can someone confirm this is being looked at?,5,0.3690539300441742,1,0.6583319306373596,3,0.48170915246009827
+254,agent_unhelpful,Just ran into this once more: Got a copy-pasted response that had nothing to do with my actual question.,1,0.7756587266921997,1,0.5064531564712524,5,0.2819657325744629
+255,agent_unhelpful,Still happening - The support agent I spoke to didn't actually solve my problem.,21,0.22383613884449005,1,0.7802026867866516,1,0.8189672231674194
+256,agent_unhelpful,Update: Chat support just gave generic answers that didn't address my issue.,6,0.2889901101589203,1,0.6363077759742737,2,0.5017952919006348
+257,agent_unhelpful,The support agent I spoke to didn't actually solve my problem. Please look into this soon.,25,0.1648656278848648,1,0.7336456775665283,1,0.9482603073120117
+258,agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. Please look into this soon.,29,0.08521874994039536,2,0.5508825182914734,3,0.4771994352340698
+259,agent_unhelpful,"Got a copy-pasted response that had nothing to do with my actual question. Happening consistently, not a one-off.",1,0.6811186671257019,1,0.49622011184692383,7,0.27577492594718933
+260,agent_unhelpful,Chat support just gave generic answers that didn't address my issue.,4,0.3153667747974396,1,0.6588112115859985,2,0.5123839974403381
+261,agent_unhelpful,This has come up again. The support agent I spoke to didn't actually solve my problem. This is affecting my daily work.,14,0.27925530076026917,1,0.7479529976844788,1,0.8189672231674194
+262,agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. This is affecting my daily work.,32,0.0005054325447417796,2,0.500823438167572,3,0.43630316853523254
+263,agent_unhelpful,Following up on this: The agent closed my ticket without actually fixing anything.,26,0.10608822852373123,2,0.5032799243927002,2,0.47057414054870605
+264,permissions_not_saving,"This has come up again. Permission changes I make for team members don't save. Happening consistently, not a one-off.",1,0.5361270904541016,1,0.8177977800369263,1,0.5523618459701538
+265,permissions_not_saving,"Update: Permission changes I make for team members don't save. Happening consistently, not a one-off.",1,0.4876152575016022,1,0.7871993780136108,1,0.9495852589607239
+266,permissions_not_saving,Permission changes I make for team members don't save. Can someone confirm this is being looked at?,1,0.6329933404922485,1,0.7114214897155762,1,0.8000673055648804
+267,permissions_not_saving,I set a teammate's access level but it reverts back on its own.,1,0.8991069793701172,1,0.743881344795227,1,0.532687246799469
+268,permissions_not_saving,"Just ran into this once more: Role permissions keep resetting to default after I configure them. Happening consistently, not a one-off.",1,0.40261170268058777,1,0.7559579014778137,1,0.5943482518196106
+269,permissions_not_saving,Role permissions keep resetting to default after I configure them.,1,0.39719146490097046,1,0.753882110118866,1,0.5523618459701538
+270,permissions_not_saving,This has come up again. Permission changes I make for team members don't save.,1,0.5470578670501709,1,0.7976781129837036,1,0.9485316872596741
+271,permissions_not_saving,Reporting this again: Role permissions keep resetting to default after I configure them.,1,0.39841440320014954,1,0.732114315032959,1,0.5349368453025818
+272,permissions_not_saving,"Reporting this again: I set a teammate's access level but it reverts back on its own. Happening consistently, not a one-off.",1,0.8088914155960083,1,0.7304208874702454,1,0.6033721566200256
+273,permissions_not_saving,Role permissions keep resetting to default after I configure them. Please look into this soon.,1,0.3961223065853119,1,0.7532113790512085,1,0.5598008036613464
+274,permissions_not_saving,I set a teammate's access level but it reverts back on its own.,1,0.8991069793701172,1,0.743881344795227,1,0.532687246799469
+275,cant_bulk_edit,This has come up again. Bulk actions on the tickets list just don't apply to anything selected. Please look into this soon.,1,0.9153025150299072,1,0.8210901021957397,1,0.5673876404762268
+276,cant_bulk_edit,"Reporting this again: There's no way to bulk update multiple tickets at once, only one at a time.",1,0.5244537591934204,1,0.794469952583313,1,0.5482127070426941
+277,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Happening consistently, not a one-off.",1,0.5497825741767883,1,0.8225471377372742,1,0.6007254719734192
+278,cant_bulk_edit,Reporting this again: Bulk actions on the tickets list just don't apply to anything selected.,1,0.8626445531845093,1,0.8162829279899597,1,0.5635268092155457
+279,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time.",1,0.5249314308166504,1,0.8092061877250671,1,0.5723029971122742
+280,cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Can someone confirm this is being looked at?",1,0.6335763335227966,1,0.8088035583496094,1,0.5552937388420105
+281,cant_bulk_edit,Just ran into this once more: Bulk actions on the tickets list just don't apply to anything selected.,1,0.899696946144104,1,0.8294265866279602,1,0.6007254719734192
+282,attachments_fail_to_upload,Following up on this: Uploading a screenshot to a ticket just hangs and never finishes.,1,0.5220988392829895,1,0.7801276445388794,1,0.3944682478904724
+283,attachments_fail_to_upload,Still happening - File attachments fail to upload no matter the file size. This is affecting my daily work.,1,0.7582184076309204,1,0.6780755519866943,1,0.3800777196884155
+284,attachments_fail_to_upload,Just ran into this once more: Uploading a screenshot to a ticket just hangs and never finishes. Can someone confirm this is being looked at?,2,0.42938369512557983,1,0.734535813331604,2,0.42938369512557983
+285,attachments_fail_to_upload,File attachments fail to upload no matter the file size. Can someone confirm this is being looked at?,1,0.8569950461387634,1,0.7495600581169128,1,0.4150371849536896
+286,attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.,1,0.4621140956878662,1,0.7914655804634094,1,0.4621140956878662
+287,attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.,1,0.4621140956878662,1,0.7914655804634094,1,0.4621140956878662
+288,attachments_fail_to_upload,"File attachments fail to upload no matter the file size. Happening consistently, not a one-off.",1,0.8572452664375305,1,0.7288405895233154,1,0.3984549045562744
+289,refund_not_processed,Just ran into this once more: Refund status shows completed but I don't see the amount in my bank. Please look into this soon.,2,0.5294771194458008,1,0.738114595413208,1,0.5537572503089905
+290,refund_not_processed,The refund was approved but the money never came back to my account.,1,1.0,1,0.7810978293418884,1,0.5433060526847839
+291,refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago.,2,0.5433060526847839,1,0.8081064820289612,1,0.6220641136169434
+292,refund_not_processed,"This has come up again. I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off.",1,0.5832566618919373,1,0.7917937636375427,1,0.6770905256271362
+293,refund_not_processed,The refund was approved but the money never came back to my account. Can someone confirm this is being looked at?,1,0.9246312379837036,1,0.8007181286811829,1,0.5802066922187805
+294,refund_not_processed,This has come up again. Still waiting on a refund that was promised over two weeks ago.,1,0.5463489890098572,1,0.7545908689498901,1,0.5866097807884216
+295,refund_not_processed,"Reporting this again: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off.",1,0.6114591956138611,1,0.8085806369781494,1,0.6220641136169434
+296,refund_not_processed,Just ran into this once more: Refund request was accepted but nothing has actually been credited.,1,0.6325253248214722,1,0.8024900555610657,1,0.6160619854927063
+297,refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago. Please look into this soon.,1,0.5295788645744324,1,0.7991302609443665,1,0.601697564125061
+298,refund_not_processed,"Still happening - Refund status shows completed but I don't see the amount in my bank. Happening consistently, not a one-off.",1,0.5657300353050232,1,0.783134937286377,1,0.6057251691818237
+299,refund_not_processed,Update: Refund status shows completed but I don't see the amount in my bank.,1,0.5495443344116211,1,0.7354113459587097,1,0.5064182877540588
+300,refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund. Can someone confirm this is being looked at?,2,0.5087052583694458,1,0.730099618434906,1,0.5086864233016968
+301,refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund.,1,0.5210607647895813,1,0.7121710181236267,1,0.488005667924881
+302,refund_not_processed,"Still happening - I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off.",1,0.5632454752922058,1,0.7874883413314819,1,0.5722147822380066
+303,refund_not_processed,Just ran into this once more: Still waiting on a refund that was promised over two weeks ago.,1,0.4986719787120819,1,0.6898118257522583,1,0.5045251250267029
+304,refund_not_processed,Refund request was accepted but nothing has actually been credited.,1,0.6602197289466858,1,0.7721145749092102,1,0.5595595836639404
+305,refund_not_processed,Reporting this again: The refund was approved but the money never came back to my account.,1,0.904064953327179,1,0.7954276204109192,1,0.5785717964172363
+306,refund_not_processed,"Update: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off.",1,0.5898554921150208,1,0.7847001552581787,1,0.5674272179603577
+307,refund_not_processed,This has come up again. Refund status shows completed but I don't see the amount in my bank. This is affecting my daily work.,1,0.5113542079925537,1,0.7069827318191528,1,0.5466910004615784
+308,analytics_data_wrong,Just ran into this once more: The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.,1,0.6529664993286133,1,0.8141564726829529,1,0.6529664993286133
+309,analytics_data_wrong,Just ran into this once more: Analytics figures seem to be miscalculated compared to raw data.,1,1.0000001192092896,1,0.8092523217201233,1,0.6414382457733154
+310,analytics_data_wrong,Following up on this: Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.,1,0.9092832803726196,1,0.7848172783851624,1,0.6259458661079407
+311,analytics_data_wrong,Reporting this again: Report totals in the dashboard don't add up correctly. This is affecting my daily work.,1,0.5107995867729187,1,0.7631386518478394,1,0.5594912171363831
+312,analytics_data_wrong,Report totals in the dashboard don't add up correctly.,1,0.5185078382492065,1,0.7809075713157654,1,0.5888123512268066
+313,analytics_data_wrong,Following up on this: The analytics dashboard is showing numbers that don't match reality.,1,0.5948283076286316,1,0.798048198223114,1,0.5948283076286316
+314,analytics_data_wrong,Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.,1,0.9540606737136841,1,0.7874264717102051,1,0.6190726161003113
+315,analytics_data_wrong,Report totals in the dashboard don't add up correctly. Can someone confirm this is being looked at?,1,0.5166831612586975,1,0.7810912132263184,1,0.6017599105834961
+316,analytics_data_wrong,This has come up again. Report totals in the dashboard don't add up correctly.,1,0.5003625750541687,1,0.7741907238960266,1,0.6557679176330566
+317,analytics_data_wrong,The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.,1,0.590694010257721,1,0.7981886267662048,1,0.590694010257721
+318,analytics_data_wrong,This has come up again. The analytics dashboard is showing numbers that don't match reality.,1,0.6414382457733154,1,0.8308470249176025,1,0.6414382457733154
+319,account_locked_incorrectly,"Just ran into this once more: Got flagged as suspicious and locked out for no real reason. Happening consistently, not a one-off.",1,0.4929909408092499,1,0.6527791619300842,1,0.5474828481674194
+320,account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password. This is affecting my daily work.,1,0.5400147438049316,1,0.8032824993133545,1,0.8189965486526489
+321,account_locked_incorrectly,I was locked out of my account even though I entered the correct password. This is affecting my daily work.,1,0.5775631666183472,1,0.7846263647079468,1,0.6967281699180603
+322,account_locked_incorrectly,Still happening - Account lockout triggered incorrectly and support hasn't unlocked it yet. Please look into this soon.,1,0.9276036024093628,1,0.810454785823822,1,0.6678689122200012
+323,account_locked_incorrectly,"My account got locked after one failed login attempt, which seems wrong.",1,0.6252532005310059,1,0.8375856280326843,1,0.8855512738227844
+324,account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password.,1,0.5696483254432678,1,0.8225058317184448,1,0.8819456696510315
+325,account_locked_incorrectly,Still happening - Got flagged as suspicious and locked out for no real reason.,1,0.5265029072761536,1,0.7329275012016296,1,0.5779311060905457
+326,account_locked_incorrectly,"Reporting this again: My account got locked after one failed login attempt, which seems wrong. Happening consistently, not a one-off.",1,0.6573013663291931,1,0.8724285960197449,1,0.748135507106781
+327,account_locked_incorrectly,"Following up on this: My account got locked after one failed login attempt, which seems wrong.",1,0.6975682973861694,1,0.8160122036933899,1,0.8241105675697327
+328,account_locked_incorrectly,"Update: My account got locked after one failed login attempt, which seems wrong.",1,0.622183084487915,1,0.7842143177986145,1,0.7773823142051697
+329,account_locked_incorrectly,Reporting this again: Got flagged as suspicious and locked out for no real reason. This is affecting my daily work.,2,0.3903197646141052,1,0.6802710294723511,1,0.6372962594032288
+330,account_locked_incorrectly,Got flagged as suspicious and locked out for no real reason. Please look into this soon.,1,0.47204792499542236,1,0.7010539770126343,1,0.5505699515342712
+331,account_locked_incorrectly,Following up on this: Account lockout triggered incorrectly and support hasn't unlocked it yet.,1,0.9754703640937805,1,0.7890660762786865,1,0.6381479501724243
+332,account_locked_incorrectly,Just ran into this once more: Account lockout triggered incorrectly and support hasn't unlocked it yet. This is affecting my daily work.,1,0.8145051002502441,1,0.7923755049705505,1,0.630357027053833
+333,account_locked_incorrectly,Just ran into this once more: I was locked out of my account even though I entered the correct password.,1,0.6279710531234741,1,0.8381584286689758,1,0.748135507106781
+334,search_returns_nothing,Just ran into this once more: Search returns no results even for terms I know exist in my tickets.,1,0.9139585494995117,1,0.7631842494010925,3,0.4562150835990906
+335,search_returns_nothing,Update: The search bar just comes back empty no matter what I type. This is affecting my daily work.,4,0.3396229147911072,1,0.6969344019889832,2,0.3945114016532898
+336,search_returns_nothing,The search bar just comes back empty no matter what I type. Please look into this soon.,1,0.39773282408714294,1,0.7521240711212158,1,0.4190032184123993
+337,search_returns_nothing,Still happening - Search returns no results even for terms I know exist in my tickets. Can someone confirm this is being looked at?,1,0.9063625931739807,1,0.7955307960510254,1,0.5242335200309753
+338,search_returns_nothing,Update: Search returns no results even for terms I know exist in my tickets. Please look into this soon.,1,0.8861468434333801,1,0.7892695069313049,3,0.4332984387874603
+339,search_returns_nothing,The search bar just comes back empty no matter what I type. Can someone confirm this is being looked at?,1,0.4249942898750305,1,0.7646855711936951,1,0.4332984387874603
+340,search_returns_nothing,Update: The search bar just comes back empty no matter what I type.,1,0.3456083834171295,1,0.7454123497009277,1,0.4315490126609802
+341,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Happening consistently, not a one-off.",9,0.3461274206638336,1,0.7373833656311035,1,0.6306719183921814
+342,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely.",8,0.3221077024936676,1,0.7099494934082031,1,0.6224501729011536
+343,update_broke_feature,"After updating the app, a core feature stopped working entirely. Please look into this soon.",4,0.3287573754787445,1,0.6868102550506592,1,0.6684110760688782
+344,update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,0.4806326627731323,1,0.7770879864692688,1,0.5838786363601685
+345,update_broke_feature,"This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,0.4726316034793854,1,0.7112260460853577,1,0.5767273306846619
+346,update_broke_feature,Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.,1,0.9390720725059509,1,0.6438361406326294,1,0.49674344062805176
+347,update_broke_feature,Following up on this: Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.,1,0.9233153462409973,1,0.6540502309799194,1,0.4913545548915863
+348,update_broke_feature,The latest update broke a feature that was working fine before.,1,0.5525870323181152,1,0.8283882141113281,1,1.0
+349,update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,0.4806326627731323,1,0.7770879864692688,1,0.5838786363601685
+350,update_broke_feature,Reporting this again: The latest update broke a feature that was working fine before.,2,0.4952702224254608,1,0.7998846173286438,1,0.8031678199768066
+351,update_broke_feature,Something in the newest release broke a workflow I rely on daily.,1,1.0000001192092896,1,0.6975951790809631,1,0.5525870323181152
+352,update_broke_feature,The latest update broke a feature that was working fine before.,1,0.5525870323181152,1,0.8283882141113281,1,1.0
+353,update_broke_feature,This has come up again. The latest update broke a feature that was working fine before. Can someone confirm this is being looked at?,5,0.4043188989162445,1,0.6948339939117432,1,0.7392149567604065
+354,update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Please look into this soon.",8,0.3102415204048157,1,0.7048965096473694,1,0.6123356223106384
+355,update_broke_feature,Reporting this again: This version introduced a bug that wasn't there before the update. Can someone confirm this is being looked at?,2,0.4529285430908203,1,0.7389987707138062,1,0.5570052266120911
+356,export_fails,This has come up again. CSV export has been broken for me the past few days.,1,0.5367788672447205,1,0.7778839468955994,1,0.5896943807601929
+357,export_fails,"Still happening - Exporting reports to CSV fails every time I try. Happening consistently, not a one-off.",1,0.676216185092926,1,0.8232767581939697,1,0.5783441662788391
+358,export_fails,Reporting this again: Exporting reports to CSV fails every time I try.,1,0.6251693964004517,1,0.7901358008384705,1,0.5482751131057739
+359,export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads. This is affecting my daily work.,1,0.647689163684845,1,0.8152580261230469,1,0.6427891254425049
+360,export_fails,Reporting this again: Trying to export data throws an error and nothing downloads. Can someone confirm this is being looked at?,1,0.6286633014678955,1,0.8226513266563416,1,0.6170558333396912
+361,export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded.",1,0.6079769730567932,1,0.7319974899291992,1,0.4606904685497284
+362,export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try.,1,0.6501315832138062,1,0.8275139331817627,1,0.6125924587249756
+363,export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded. Can someone confirm this is being looked at?",1,0.557013988494873,1,0.6923862099647522,1,0.42775958776474
+364,export_fails,Export just spins indefinitely and never produces a file. Please look into this soon.,1,0.9546763896942139,1,0.8069483637809753,1,0.6478804349899292
+365,export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded. Please look into this soon.",1,0.5890321731567383,1,0.7208895683288574,1,0.4257950484752655
+366,export_fails,Just ran into this once more: CSV export has been broken for me the past few days.,1,0.584210991859436,1,0.8132239580154419,1,0.6042702198028564
+367,export_fails,Following up on this: Export just spins indefinitely and never produces a file. Please look into this soon.,1,0.8530921339988708,1,0.7626189589500427,1,0.5622348785400391
+368,export_fails,Following up on this: Trying to export data throws an error and nothing downloads. Please look into this soon.,1,0.6478403210639954,1,0.8258830904960632,1,0.6125924587249756
+369,export_fails,Still happening - Export just spins indefinitely and never produces a file. Please look into this soon.,1,0.9306179285049438,1,0.8225533366203308,1,0.6480190753936768
+370,export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded.",1,0.5819246172904968,1,0.6981217265129089,1,0.40970078110694885
+371,export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try. Please look into this soon.,1,0.6345471739768982,1,0.8257521390914917,1,0.6205828189849854
+372,export_fails,CSV export has been broken for me the past few days.,1,0.5253192186355591,1,0.7205885648727417,1,0.5279500484466553
+373,export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads.,1,0.6484012603759766,1,0.810177206993103,1,0.5787808299064636
+374,export_fails,Just ran into this once more: CSV export has been broken for me the past few days.,1,0.584210991859436,1,0.8132239580154419,1,0.6042702198028564
+375,no_response_from_support,No one has responded to my request for help yet.,3,0.41603049635887146,1,0.6797791719436646,2,0.41603049635887146
+376,no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?,1,0.5670192837715149,1,0.6109157800674438,1,0.5670192837715149
+377,no_response_from_support,"I submitted a support ticket three days ago and haven't heard back. Happening consistently, not a one-off.",1,0.8651730418205261,1,0.749998152256012,5,0.4903106689453125
+378,no_response_from_support,I submitted a support ticket three days ago and haven't heard back.,1,0.9093891382217407,1,0.7823430299758911,1,0.5432133674621582
+379,no_response_from_support,Reporting this again: I'm still waiting on any response from the support team. Can someone confirm this is being looked at?,1,0.6486861109733582,1,0.7956843972206116,1,0.6486861109733582
+380,no_response_from_support,Just ran into this once more: Radio silence from support since I opened this ticket.,1,0.5249095559120178,1,0.5584363341331482,8,0.2634051740169525
+381,no_response_from_support,Still happening - No one has responded to my request for help yet. This is affecting my daily work.,4,0.42920273542404175,1,0.6187694668769836,4,0.42920273542404175
+382,no_response_from_support,This has come up again. Support hasn't replied to my message even after multiple follow-ups.,1,0.5943716168403625,1,0.7907419800758362,2,0.5943716168403625
+383,no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?,1,0.5670192837715149,1,0.6109157800674438,1,0.5670192837715149
+384,no_response_from_support,I'm still waiting on any response from the support team. Can someone confirm this is being looked at?,1,0.49888545274734497,1,0.7180033326148987,1,0.49888545274734497
+385,no_response_from_support,Reporting this again: Support hasn't replied to my message even after multiple follow-ups.,1,0.7100797891616821,1,0.7623321413993835,1,0.7100797891616821
+386,no_response_from_support,Reporting this again: I'm still waiting on any response from the support team.,1,0.6573613286018372,1,0.7926560044288635,1,0.6573613286018372
+387,no_response_from_support,Reporting this again: No one has responded to my request for help yet.,1,0.6244716048240662,1,0.7251864671707153,1,0.6244716048240662
+388,no_response_from_support,This has come up again. I submitted a support ticket three days ago and haven't heard back. This is affecting my daily work.,1,0.8258873820304871,1,0.7710739374160767,2,0.5297922492027283
+389,no_response_from_support,Just ran into this once more: Support hasn't replied to my message even after multiple follow-ups. This is affecting my daily work.,1,0.5673240423202515,1,0.7334002256393433,3,0.5673240423202515
+390,no_response_from_support,This has come up again. Radio silence from support since I opened this ticket.,1,0.5602840781211853,1,0.6061064600944519,6,0.31695640087127686
+391,no_response_from_support,No one has responded to my request for help yet.,3,0.41603049635887146,1,0.6797791719436646,2,0.41603049635887146
+392,no_response_from_support,I'm still waiting on any response from the support team.,1,0.4994027018547058,1,0.7280750274658203,1,0.4994027018547058
+393,no_response_from_support,Following up on this: Support hasn't replied to my message even after multiple follow-ups.,1,0.5325317978858948,1,0.7110134959220886,1,0.5325317978858948
+394,api_integration_broken,Update: Our API integration stopped working after the last platform update.,1,0.42642703652381897,1,0.6989964246749878,2,0.42642703652381897
+395,api_integration_broken,Still happening - The webhook integration isn't firing events anymore. Please look into this soon.,5,0.2759009599685669,1,0.6241019368171692,7,0.2759009599685669
+396,api_integration_broken,"Still happening - API calls are returning errors that weren't happening before. Happening consistently, not a one-off.",1,0.6095078587532043,1,0.7181658744812012,1,0.49604612588882446
+397,api_integration_broken,Reporting this again: The webhook integration isn't firing events anymore. Please look into this soon.,5,0.32285845279693604,1,0.6348831653594971,1,0.44635865092277527
+398,api_integration_broken,Reporting this again: API calls are returning errors that weren't happening before. This is affecting my daily work.,2,0.461837500333786,1,0.6238467693328857,5,0.40302395820617676
+399,api_integration_broken,Update: Our API integration stopped working after the last platform update. Please look into this soon.,1,0.439303994178772,1,0.7131884098052979,2,0.439303994178772
+400,api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere.,1,0.9356318712234497,1,0.7222060561180115,1,0.4478646516799927
+401,api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere. Can someone confirm this is being looked at?,1,0.9414269924163818,1,0.7192105054855347,1,0.4394744038581848
+402,api_integration_broken,Following up on this: API calls are returning errors that weren't happening before.,1,0.69864422082901,1,0.6957536339759827,1,0.41232267022132874
+403,api_integration_broken,"Still happening - Our API integration stopped working after the last platform update. Happening consistently, not a one-off.",1,0.45953133702278137,1,0.759005069732666,2,0.45953133702278137
+404,api_integration_broken,API calls are returning errors that weren't happening before.,1,0.6043158173561096,1,0.6850993633270264,1,0.44109711050987244
+405,api_integration_broken,The webhook integration isn't firing events anymore. This is affecting my daily work.,10,0.22383780777454376,1,0.5592347383499146,15,0.22383780777454376
+406,api_integration_broken,Following up on this: Our API integration stopped working after the last platform update.,1,0.5488308072090149,1,0.735096275806427,1,0.5488308072090149
+407,api_integration_broken,Update: API responses started returning malformed data out of nowhere.,1,0.8531402945518494,1,0.7037515640258789,1,0.5202040076255798
+408,api_integration_broken,Still happening - The webhook integration isn't firing events anymore.,8,0.26047152280807495,1,0.6156406402587891,10,0.26047152280807495
+409,wallet_balance_incorrect,Following up on this: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?,1,0.8716868758201599,1,0.7523749470710754,1,0.6389235258102417
+410,wallet_balance_incorrect,Reporting this again: Wallet shows less credit than what was added last week. Can someone confirm this is being looked at?,1,0.7445666193962097,1,0.8173456192016602,1,0.8434579372406006
+411,wallet_balance_incorrect,This has come up again. Wallet shows less credit than what was added last week.,2,0.5733477473258972,1,0.7705477476119995,1,0.5521913766860962
+412,wallet_balance_incorrect,Wallet shows less credit than what was added last week. This is affecting my daily work.,1,0.5100774168968201,1,0.7037155032157898,1,0.8213742971420288
+413,wallet_balance_incorrect,Just ran into this once more: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?,1,0.9003779292106628,1,0.7640367746353149,1,0.5661687254905701
+414,wallet_balance_incorrect,"Following up on this: My account wallet balance is showing an incorrect amount. Happening consistently, not a one-off.",1,0.7478336691856384,1,0.7461699843406677,1,0.5124281048774719
+415,wallet_balance_incorrect,Following up on this: Wallet shows less credit than what was added last week.,1,0.5647046566009521,1,0.826947808265686,1,0.8434579372406006
+416,wallet_balance_incorrect,"Still happening - The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off.",1,0.4941277801990509,1,0.7864087224006653,1,0.5911000967025757
+417,wallet_balance_incorrect,Still happening - The credit balance doesn't match what I actually topped up.,1,0.48617449402809143,1,0.7828150391578674,1,0.5983982086181641
+418,wallet_balance_incorrect,"Update: The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off.",1,0.504802405834198,1,0.7727479934692383,1,0.6038694381713867
+419,wallet_balance_incorrect,The credit balance doesn't match what I actually topped up. Please look into this soon.,1,0.4656755030155182,1,0.7417760491371155,1,0.5684731602668762
+420,cannot_cancel_subscription,Still happening - There's no way to actually cancel my subscription from the settings page.,1,0.8861148357391357,1,0.8650259971618652,1,0.6288768649101257
+421,cannot_cancel_subscription,There's no way to actually cancel my subscription from the settings page.,1,0.8110121488571167,1,0.76579350233078,1,0.4928971529006958
+422,cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?,1,0.5194367170333862,1,0.8044058680534363,1,0.6123054623603821
+423,cannot_cancel_subscription,Reporting this again: There's no way to actually cancel my subscription from the settings page. Please look into this soon.,1,0.7864017486572266,1,0.745145857334137,2,0.4887179732322693
+424,cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off.",1,0.6110288500785828,1,0.8086094260215759,1,0.6288768649101257
+425,cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off.",1,0.6110288500785828,1,0.8086094260215759,1,0.6288768649101257
+426,cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?,1,0.5194367170333862,1,0.8044058680534363,1,0.6123054623603821
+427,mfa_setup_fails,Reporting this again: The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?,1,0.40474987030029297,1,0.7249594926834106,1,0.5213801264762878
+428,mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step.,1,0.40578070282936096,1,0.7313602566719055,1,0.4649614989757538
+429,mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.,1,0.45372799038887024,1,0.7863186597824097,1,0.5600295066833496
+430,mfa_setup_fails,Following up on this: Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.,1,0.43805447220802307,1,0.765252947807312,1,0.544419527053833
+431,mfa_setup_fails,This has come up again. MFA enrollment keeps timing out before I can finish setup.,1,0.9494336247444153,1,0.7399218082427979,1,0.4946589469909668
+432,mfa_setup_fails,MFA enrollment keeps timing out before I can finish setup. This is affecting my daily work.,1,0.9137781262397766,1,0.6629262566566467,1,0.46350613236427307
+433,mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?,1,0.4258190095424652,1,0.7483872175216675,1,0.5130754113197327
+434,mfa_setup_fails,Just ran into this once more: The authenticator app won't pair no matter how many times I scan the code. This is affecting my daily work.,1,0.46818575263023376,1,0.7656694054603577,1,0.5600295066833496
+435,mfa_setup_fails,"Update: Setting up two-factor authentication fails at the QR code step. Happening consistently, not a one-off.",1,0.42955970764160156,1,0.7046864032745361,1,0.45314598083496094
+436,mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code.,1,0.4331473708152771,1,0.7535659670829773,1,0.524441123008728
+437,mfa_setup_fails,Following up on this: MFA enrollment keeps timing out before I can finish setup. Can someone confirm this is being looked at?,1,0.9387123584747314,1,0.7254537343978882,2,0.4537286162376404
+438,password_reset_broken,Following up on this: Reset password flow throws a 404 as soon as I click the emailed link.,1,0.5880357623100281,1,0.8451433181762695,1,0.7605103850364685
+439,password_reset_broken,Reset password flow throws a 404 as soon as I click the emailed link.,1,0.6084138751029968,1,0.8366953134536743,1,0.758830189704895
+440,password_reset_broken,"Just ran into this once more: Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?",1,0.8347824215888977,1,0.8072417378425598,1,0.7065712809562683
+441,password_reset_broken,"Update: The password reset link in the email doesn't work, it just shows an error page.",1,0.6449058651924133,1,0.8723376393318176,1,0.9036771059036255
+442,password_reset_broken,Just ran into this once more: I clicked forgot password and the reset link is broken. Can someone confirm this is being looked at?,1,0.5926715731620789,1,0.8271456956863403,1,0.7440292835235596
+443,password_reset_broken,"Update: I clicked forgot password and the reset link is broken. Happening consistently, not a one-off.",1,0.6433860659599304,1,0.8291067481040955,1,0.7134250998497009
+444,password_reset_broken,This has come up again. Password reset email arrives but the link leads to a blank screen. Please look into this soon.,1,0.6017842292785645,1,0.8670154213905334,1,0.8165344595909119
+445,password_reset_broken,"This has come up again. Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?",1,0.8536069393157959,1,0.8342888951301575,1,0.7199699878692627
+446,password_reset_broken,Still happening - Reset password flow throws a 404 as soon as I click the emailed link. Can someone confirm this is being looked at?,1,0.5648802518844604,1,0.845277726650238,1,0.7850843071937561
+447,password_reset_broken,"Password reset email arrives but the link leads to a blank screen. Happening consistently, not a one-off.",1,0.599220335483551,1,0.837302565574646,1,0.7971448302268982
+448,password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon.",1,0.665571928024292,1,0.9109293818473816,1,1.0000001192092896
+449,password_reset_broken,Update: Reset password flow throws a 404 as soon as I click the emailed link.,1,0.6050572991371155,1,0.8399300575256348,1,0.7359481453895569
+450,password_reset_broken,I clicked forgot password and the reset link is broken. Please look into this soon.,1,0.6722443699836731,1,0.8462753295898438,1,0.7533586025238037
+451,password_reset_broken,"Can't reset my password, the link expires instantly.",1,1.0000001192092896,1,0.7693314552307129,1,0.665571928024292
+452,password_reset_broken,Still happening - Password reset email arrives but the link leads to a blank screen. This is affecting my daily work.,1,0.5782036185264587,1,0.809769868850708,1,0.7946455478668213
+453,password_reset_broken,Update: I clicked forgot password and the reset link is broken.,1,0.6288605332374573,1,0.810816764831543,1,0.6915587186813354
+454,password_reset_broken,"The password reset link in the email doesn't work, it just shows an error page.",1,0.6648028492927551,1,0.895047664642334,1,0.9623713493347168
+455,password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon.",1,0.665571928024292,1,0.9109293222427368,1,1.0000001192092896
+456,password_reset_broken,Reporting this again: Password reset email arrives but the link leads to a blank screen. Can someone confirm this is being looked at?,1,0.5677648186683655,1,0.8350657224655151,1,0.7976494431495667

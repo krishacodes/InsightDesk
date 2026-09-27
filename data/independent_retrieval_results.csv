@@ -1,0 +1,457 @@
+issue_id,complaint_text,rank,status
+sync_not_updating,Changes I make aren't syncing across devices. Please look into this soon.,1,found
+sync_not_updating,Just ran into this once more: Cross-device sync just isn't happening anymore.,8,found
+sync_not_updating,Still happening - Cross-device sync just isn't happening anymore. Please look into this soon.,5,found
+sync_not_updating,Just ran into this once more: Changes I make aren't syncing across devices.,1,found
+sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken.,11,found
+sync_not_updating,Cross-device sync just isn't happening anymore.,4,found
+sync_not_updating,Following up on this: Records updated by a teammate don't reflect on my screen without a manual refresh.,1,found
+sync_not_updating,"Just ran into this once more: Cross-device sync just isn't happening anymore. Happening consistently, not a one-off.",9,found
+sync_not_updating,Sync between the web app and mobile app is broken.,3,found
+sync_not_updating,Changes I make aren't syncing across devices. This is affecting my daily work.,1,found
+sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.,1,found
+sync_not_updating,"This has come up again. Changes I make aren't syncing across devices. Happening consistently, not a one-off.",1,found
+sync_not_updating,Update: Cross-device sync just isn't happening anymore. Can someone confirm this is being looked at?,4,found
+sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Can someone confirm this is being looked at?,1,found
+sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.,2,found
+sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore. Please look into this soon.,5,found
+sync_not_updating,Reporting this again: Data updated on desktop doesn't show up on mobile until much later.,1,found
+sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. This is affecting my daily work.,1,found
+sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh. Please look into this soon.,1,found
+sync_not_updating,Data updated on desktop doesn't show up on mobile until much later. Please look into this soon.,1,found
+sync_not_updating,Following up on this: Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.,1,found
+sync_not_updating,Just ran into this once more: Sync between the web app and mobile app is broken. Please look into this soon.,8,found
+sync_not_updating,This has come up again. Data updated on desktop doesn't show up on mobile until much later. This is affecting my daily work.,1,found
+sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.,1,found
+sync_not_updating,Update: Changes I make aren't syncing across devices. This is affecting my daily work.,1,found
+sync_not_updating,Still happening - Changes I make aren't syncing across devices.,1,found
+sync_not_updating,Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?,6,found
+sync_not_updating,Following up on this: Sync between the web app and mobile app is broken. Can someone confirm this is being looked at?,7,found
+sync_not_updating,"Data updated on desktop doesn't show up on mobile until much later. Happening consistently, not a one-off.",1,found
+sync_not_updating,Sync between the web app and mobile app is broken.,3,found
+sync_not_updating,Data updated on desktop doesn't show up on mobile until much later.,1,found
+sync_not_updating,"Just ran into this once more: Changes I make aren't syncing across devices. Happening consistently, not a one-off.",2,found
+sync_not_updating,Records updated by a teammate don't reflect on my screen without a manual refresh.,1,found
+sync_not_updating,"Changes I make aren't syncing across devices. Happening consistently, not a one-off.",1,found
+sync_not_updating,Just ran into this once more: Data updated on desktop doesn't show up on mobile until much later. Can someone confirm this is being looked at?,2,found
+sync_not_updating,"Cross-device sync just isn't happening anymore. Happening consistently, not a one-off.",5,found
+sync_not_updating,Reporting this again: Sync between the web app and mobile app is broken.,2,found
+sync_not_updating,Reporting this again: Records updated by a teammate don't reflect on my screen without a manual refresh.,1,found
+sync_not_updating,Following up on this: Cross-device sync just isn't happening anymore.,6,found
+subscription_upgrade_failed,"Still happening - Upgrade button just spins forever and never completes. Happening consistently, not a one-off.",1,found
+subscription_upgrade_failed,"This has come up again. Upgrade button just spins forever and never completes. Happening consistently, not a one-off.",1,found
+subscription_upgrade_failed,Just ran into this once more: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?,5,found
+subscription_upgrade_failed,This has come up again. Plan upgrade charged my card but didn't actually upgrade the account. This is affecting my daily work.,6,found
+subscription_upgrade_failed,Just ran into this once more: Plan upgrade charged my card but didn't actually upgrade the account.,2,found
+subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account. Can someone confirm this is being looked at?,7,found
+subscription_upgrade_failed,Following up on this: I tried to move to a higher tier and the transaction errors out. Can someone confirm this is being looked at?,9,found
+subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out. This is affecting my daily work.,13,found
+subscription_upgrade_failed,Plan upgrade charged my card but didn't actually upgrade the account.,7,found
+subscription_upgrade_failed,I tried to move to a higher tier and the transaction errors out.,8,found
+subscription_upgrade_failed,Just ran into this once more: Upgrading my plan keeps failing at the payment step.,1,found
+subscription_upgrade_failed,This has come up again. Upgrading my plan keeps failing at the payment step.,1,found
+subscription_upgrade_failed,"This has come up again. Upgrading my plan keeps failing at the payment step. Happening consistently, not a one-off.",1,found
+subscription_upgrade_failed,Upgrade button just spins forever and never completes.,1,found
+subscription_upgrade_failed,Upgrading my plan keeps failing at the payment step.,1,found
+invoice_missing_details,Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.,1,found
+invoice_missing_details,Still happening - Tax ID isn't showing up anywhere on the downloaded invoice. Please look into this soon.,1,found
+invoice_missing_details,Still happening - Generated invoices are missing the company billing address. Can someone confirm this is being looked at?,1,found
+invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes.,1,found
+invoice_missing_details,"This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice. Happening consistently, not a one-off.",1,found
+invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Please look into this soon.",1,found
+invoice_missing_details,"Still happening - Invoice PDF is incomplete, some line items are blank. Can someone confirm this is being looked at?",1,found
+invoice_missing_details,"This has come up again. Invoice PDF is incomplete, some line items are blank.",1,found
+invoice_missing_details,Just ran into this once more: The invoice doesn't show a proper tax breakdown for accounting purposes. Please look into this soon.,1,found
+invoice_missing_details,"Still happening - The invoice doesn't show a proper tax breakdown for accounting purposes. Happening consistently, not a one-off.",1,found
+invoice_missing_details,Update: Generated invoices are missing the company billing address. Can someone confirm this is being looked at?,1,found
+invoice_missing_details,Update: The invoice doesn't show a proper tax breakdown for accounting purposes. This is affecting my daily work.,1,found
+invoice_missing_details,"Invoice PDF is incomplete, some line items are blank.",1,found
+invoice_missing_details,Generated invoices are missing the company billing address. This is affecting my daily work.,1,found
+invoice_missing_details,This has come up again. Tax ID isn't showing up anywhere on the downloaded invoice.,1,found
+double_charged,This has come up again. My card shows two separate charges for one invoice.,1,found
+double_charged,This has come up again. Got billed two times for a single month of service.,1,found
+double_charged,My card shows two separate charges for one invoice.,1,found
+double_charged,Still happening - I was charged twice for the same subscription this month. Can someone confirm this is being looked at?,1,found
+double_charged,There's a duplicate charge on my statement for this plan.,1,found
+double_charged,Just ran into this once more: There's a duplicate charge on my statement for this plan. Can someone confirm this is being looked at?,1,found
+double_charged,I was charged twice for the same subscription this month. Please look into this soon.,1,found
+double_charged,Still happening - Got billed two times for a single month of service.,1,found
+double_charged,Following up on this: Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.,1,found
+double_charged,"There's a duplicate charge on my statement for this plan. Happening consistently, not a one-off.",1,found
+double_charged,"Billing deducted the amount twice in the same billing cycle. Happening consistently, not a one-off.",1,found
+double_charged,I was charged twice for the same subscription this month. Please look into this soon.,1,found
+double_charged,Update: Got billed two times for a single month of service. This is affecting my daily work.,1,found
+double_charged,My card shows two separate charges for one invoice. This is affecting my daily work.,1,found
+double_charged,Billing deducted the amount twice in the same billing cycle. This is affecting my daily work.,1,found
+double_charged,My card shows two separate charges for one invoice.,1,found
+double_charged,Got billed two times for a single month of service.,1,found
+double_charged,Update: There's a duplicate charge on my statement for this plan.,1,found
+double_charged,Billing deducted the amount twice in the same billing cycle.,1,found
+connection_drops_frequently,The connection keeps dropping while I'm using the app.,1,found
+connection_drops_frequently,Following up on this: I keep getting disconnected and have to reload the page constantly. This is affecting my daily work.,6,found
+connection_drops_frequently,Still happening - Network connection drops randomly during active use. Can someone confirm this is being looked at?,1,found
+connection_drops_frequently,"I keep getting disconnected and have to reload the page constantly. Happening consistently, not a one-off.",2,found
+connection_drops_frequently,"Still happening - Network connection drops randomly during active use. Happening consistently, not a one-off.",1,found
+connection_drops_frequently,Reporting this again: I keep getting disconnected and have to reload the page constantly.,3,found
+connection_drops_frequently,Just ran into this once more: The connection keeps dropping while I'm using the app. Please look into this soon.,1,found
+connection_drops_frequently,The connection keeps dropping while I'm using the app.,1,found
+connection_drops_frequently,Reporting this again: Network connection drops randomly during active use.,1,found
+connection_drops_frequently,This has come up again. I keep getting disconnected and have to reload the page constantly.,1,found
+connection_drops_frequently,"Network connection drops randomly during active use. Happening consistently, not a one-off.",1,found
+login_otp_not_received,"This has come up again. I never received the OTP when trying to log in. Happening consistently, not a one-off.",1,found
+login_otp_not_received,"Update: Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off.",1,found
+login_otp_not_received,"No OTP text message has come through after multiple retries. Happening consistently, not a one-off.",1,found
+login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through.",1,found
+login_otp_not_received,"Still happening - Two-factor login is stuck because the code never shows up. Happening consistently, not a one-off.",6,found
+login_otp_not_received,"OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,found
+login_otp_not_received,I never received the OTP when trying to log in.,1,found
+login_otp_not_received,Still happening - Two-factor login is stuck because the code never shows up. Can someone confirm this is being looked at?,12,found
+login_otp_not_received,"Signing in fails every time because the SMS code doesn't arrive. Happening consistently, not a one-off.",1,found
+login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off.",3,found
+login_otp_not_received,This has come up again. I never received the OTP when trying to log in. This is affecting my daily work.,1,found
+login_otp_not_received,"Update: The verification code never arrived on my phone, so I can't sign in. Happening consistently, not a one-off.",4,found
+login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in.",6,found
+login_otp_not_received,Just ran into this once more: Two-factor login is stuck because the code never shows up. This is affecting my daily work.,11,found
+login_otp_not_received,Signing in fails every time because the SMS code doesn't arrive.,1,found
+login_otp_not_received,Update: I never received the OTP when trying to log in. Can someone confirm this is being looked at?,1,found
+login_otp_not_received,Following up on this: Signing in fails every time because the SMS code doesn't arrive.,1,found
+login_otp_not_received,Two-factor login is stuck because the code never shows up. Please look into this soon.,6,found
+login_otp_not_received,No OTP text message has come through after multiple retries.,1,found
+login_otp_not_received,"This has come up again. OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,found
+login_otp_not_received,No OTP text message has come through after multiple retries. This is affecting my daily work.,1,found
+login_otp_not_received,"The verification code never arrived on my phone, so I can't sign in.",6,found
+login_otp_not_received,"Following up on this: OTP delivery is broken, I've waited 20 minutes and nothing came through. Please look into this soon.",1,found
+live_chat_unavailable,Reporting this again: The chat widget just sits there with no agent picking it up. Can someone confirm this is being looked at?,1,found
+live_chat_unavailable,Live chat support shows as available but no one ever responds.,1,found
+live_chat_unavailable,Following up on this: The chat widget just sits there with no agent picking it up. Please look into this soon.,1,found
+live_chat_unavailable,Still happening - Live chat support shows as available but no one ever responds.,1,found
+live_chat_unavailable,Just ran into this once more: Live chat support shows as available but no one ever responds.,1,found
+live_chat_unavailable,Still happening - The chat widget just sits there with no agent picking it up. Please look into this soon.,1,found
+live_chat_unavailable,Update: The chat widget just sits there with no agent picking it up.,1,found
+cant_change_email,"Following up on this: Changing my login email fails with a generic error every time. Happening consistently, not a one-off.",1,found
+cant_change_email,Update: I can't update the email address linked to my account. This is affecting my daily work.,1,found
+cant_change_email,Following up on this: I can't update the email address linked to my account. This is affecting my daily work.,1,found
+cant_change_email,Reporting this again: I can't update the email address linked to my account. Please look into this soon.,1,found
+cant_change_email,Changing my login email fails with a generic error every time.,2,found
+cant_change_email,Changing my login email fails with a generic error every time. This is affecting my daily work.,4,found
+cant_change_email,Reporting this again: Changing my login email fails with a generic error every time.,2,found
+session_logs_out_randomly,"Just ran into this once more: The app signs me out on its own, forcing me to log back in constantly. Happening consistently, not a one-off.",1,found
+session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive. Please look into this soon.",1,found
+session_logs_out_randomly,"Update: Random logouts are happening throughout the day, very disruptive.",1,found
+session_logs_out_randomly,My session expires every few minutes even though I'm active. Please look into this soon.,1,found
+session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly.",1,found
+session_logs_out_randomly,"Following up on this: The app signs me out on its own, forcing me to log back in constantly.",1,found
+session_logs_out_randomly,"Random logouts are happening throughout the day, very disruptive.",1,found
+session_logs_out_randomly,Session keeps dying even while I'm actively typing. This is affecting my daily work.,1,found
+session_logs_out_randomly,Just ran into this once more: Session keeps dying even while I'm actively typing.,2,found
+session_logs_out_randomly,Update: I keep getting logged out randomly in the middle of work.,1,found
+session_logs_out_randomly,"The app signs me out on its own, forcing me to log back in constantly.",1,found
+session_logs_out_randomly,Reporting this again: Session keeps dying even while I'm actively typing.,1,found
+session_logs_out_randomly,Update: My session expires every few minutes even though I'm active.,2,found
+session_logs_out_randomly,Session keeps dying even while I'm actively typing.,2,found
+session_logs_out_randomly,This has come up again. I keep getting logged out randomly in the middle of work.,1,found
+session_logs_out_randomly,Just ran into this once more: I keep getting logged out randomly in the middle of work.,1,found
+session_logs_out_randomly,My session expires every few minutes even though I'm active. This is affecting my daily work.,1,found
+session_logs_out_randomly,This has come up again. My session expires every few minutes even though I'm active.,1,found
+session_logs_out_randomly,"This has come up again. Random logouts are happening throughout the day, very disruptive. Can someone confirm this is being looked at?",1,found
+ticket_reopened_repeatedly,Support marks the ticket as resolved but the problem is still there.,2,found
+ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.,1,found
+ticket_reopened_repeatedly,I have to keep reopening the same ticket because it's never really fixed. Please look into this soon.,1,found
+ticket_reopened_repeatedly,This has come up again. Support marks the ticket as resolved but the problem is still there.,2,found
+ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there. Please look into this soon.,2,found
+ticket_reopened_repeatedly,"Reporting this again: My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off.",1,found
+ticket_reopened_repeatedly,Just ran into this once more: I have to keep reopening the same ticket because it's never really fixed. This is affecting my daily work.,1,found
+ticket_reopened_repeatedly,Reporting this again: My ticket keeps getting closed before the issue is actually resolved. This is affecting my daily work.,2,found
+ticket_reopened_repeatedly,"My ticket keeps getting closed before the issue is actually resolved. Happening consistently, not a one-off.",1,found
+ticket_reopened_repeatedly,Reporting this again: Support marks the ticket as resolved but the problem is still there.,2,found
+ticket_reopened_repeatedly,Update: My ticket keeps getting closed before the issue is actually resolved.,1,found
+notifications_not_sent,Notification alerts for updates have completely stopped coming through. This is affecting my daily work.,2,found
+notifications_not_sent,This has come up again. Push notifications just stopped working a week ago.,3,found
+notifications_not_sent,Push notifications just stopped working a week ago.,2,found
+notifications_not_sent,"No alerts are sent when a ticket status changes, I have to check manually. This is affecting my daily work.",1,found
+notifications_not_sent,Just ran into this once more: Notification alerts for updates have completely stopped coming through.,1,found
+notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me. Please look into this soon.,1,found
+notifications_not_sent,Notification alerts for updates have completely stopped coming through.,1,found
+notifications_not_sent,"Still happening - Notification alerts for updates have completely stopped coming through. Happening consistently, not a one-off.",1,found
+notifications_not_sent,"Just ran into this once more: I'm not getting notified when a new ticket is assigned to me. Happening consistently, not a one-off.",1,found
+notifications_not_sent,I'm not getting notified when a new ticket is assigned to me. Please look into this soon.,1,found
+notifications_not_sent,"Update: Push notifications just stopped working a week ago. Happening consistently, not a one-off.",1,found
+notifications_not_sent,Reporting this again: I'm not getting notified when a new ticket is assigned to me.,2,found
+notifications_not_sent,"This has come up again. No alerts are sent when a ticket status changes, I have to check manually. Can someone confirm this is being looked at?",1,found
+notifications_not_sent,"Still happening - Push notifications just stopped working a week ago. Happening consistently, not a one-off.",4,found
+notifications_not_sent,"Just ran into this once more: No alerts are sent when a ticket status changes, I have to check manually.",1,found
+app_crashes_on_open,Following up on this: The application crashes immediately every time I open it. Please look into this soon.,1,found
+app_crashes_on_open,"Update: The application crashes immediately every time I open it. Happening consistently, not a one-off.",1,found
+app_crashes_on_open,The moment I open the app it force-closes.,1,found
+app_crashes_on_open,"Still happening - App refuses to open, just crashes back to the home screen. Please look into this soon.",1,found
+app_crashes_on_open,"Reporting this again: App closes itself right after launch, can't get past the loading screen. Please look into this soon.",1,found
+app_crashes_on_open,"The moment I open the app it force-closes. Happening consistently, not a one-off.",1,found
+app_crashes_on_open,"This has come up again. App closes itself right after launch, can't get past the loading screen. Please look into this soon.",2,found
+app_crashes_on_open,The application crashes immediately every time I open it.,1,found
+app_crashes_on_open,The moment I open the app it force-closes.,1,found
+app_crashes_on_open,"Following up on this: It crashes on startup on my device, happens every single time. Can someone confirm this is being looked at?",3,found
+app_crashes_on_open,Still happening - The moment I open the app it force-closes.,1,found
+app_crashes_on_open,"Still happening - It crashes on startup on my device, happens every single time. Happening consistently, not a one-off.",1,found
+app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. Happening consistently, not a one-off.",1,found
+app_crashes_on_open,"App closes itself right after launch, can't get past the loading screen. This is affecting my daily work.",1,found
+app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen.",1,found
+app_crashes_on_open,"Update: It crashes on startup on my device, happens every single time. This is affecting my daily work.",1,found
+app_crashes_on_open,"App refuses to open, just crashes back to the home screen. This is affecting my daily work.",1,found
+app_crashes_on_open,"Just ran into this once more: App refuses to open, just crashes back to the home screen.",1,found
+app_crashes_on_open,"It crashes on startup on my device, happens every single time. Please look into this soon.",1,found
+dashboard_extremely_slow,"Update: Dashboard is lagging badly, barely usable during peak hours.",1,found
+dashboard_extremely_slow,Still happening - The dashboard takes over a minute to load basic data. This is affecting my daily work.,1,found
+dashboard_extremely_slow,"This has come up again. Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work.",1,found
+dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading.",1,found
+dashboard_extremely_slow,"The dashboard takes over a minute to load basic data. Happening consistently, not a one-off.",1,found
+dashboard_extremely_slow,"Just ran into this once more: Everything is painfully slow, loading a single page takes forever. Happening consistently, not a one-off.",1,found
+dashboard_extremely_slow,"Performance has gotten really bad, pages hang for a long time before loading.",1,found
+dashboard_extremely_slow,"Dashboard is lagging badly, barely usable during peak hours.",1,found
+dashboard_extremely_slow,"Following up on this: Everything is painfully slow, loading a single page takes forever. This is affecting my daily work.",1,found
+dashboard_extremely_slow,Just ran into this once more: The dashboard takes over a minute to load basic data. Please look into this soon.,1,found
+dashboard_extremely_slow,Reporting this again: Loading times have gotten unbearable over the last few weeks. This is affecting my daily work.,1,found
+dashboard_extremely_slow,"Loading times have gotten unbearable over the last few weeks. Happening consistently, not a one-off.",1,found
+dashboard_extremely_slow,Loading times have gotten unbearable over the last few weeks.,1,found
+dashboard_extremely_slow,"Reporting this again: Dashboard is lagging badly, barely usable during peak hours. This is affecting my daily work.",1,found
+dashboard_extremely_slow,"Update: Performance has gotten really bad, pages hang for a long time before loading.",3,found
+dashboard_extremely_slow,This has come up again. Loading times have gotten unbearable over the last few weeks. Please look into this soon.,1,found
+dashboard_extremely_slow,"Everything is painfully slow, loading a single page takes forever.",1,found
+dashboard_extremely_slow,"Update: Everything is painfully slow, loading a single page takes forever. Please look into this soon.",1,found
+dashboard_extremely_slow,"Following up on this: Performance has gotten really bad, pages hang for a long time before loading.",1,found
+sso_login_fails,"Update: SAML login redirects back with an invalid token message. Happening consistently, not a one-off.",1,found
+sso_login_fails,SSO login just spins and never completes.,3,found
+sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.,1,found
+sso_login_fails,Just ran into this once more: Single sign-on through our company account fails with an authentication error.,1,found
+sso_login_fails,This has come up again. SAML login redirects back with an invalid token message.,1,found
+sso_login_fails,Reporting this again: SAML login redirects back with an invalid token message. Can someone confirm this is being looked at?,1,found
+sso_login_fails,Still happening - SSO login just spins and never completes.,5,found
+sso_login_fails,SSO login just spins and never completes.,3,found
+sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.,1,found
+sso_login_fails,Just ran into this once more: SAML login redirects back with an invalid token message.,1,found
+sso_login_fails,Still happening - Trying to log in via our identity provider throws a token error.,1,found
+sso_login_fails,Reporting this again: Trying to log in via our identity provider throws a token error.,1,found
+sso_login_fails,Still happening - Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?,1,found
+sso_login_fails,Following up on this: SSO login just spins and never completes.,4,found
+sso_login_fails,Update: Single sign-on through our company account fails with an authentication error. Can someone confirm this is being looked at?,1,found
+card_declined_incorrectly,Following up on this: Payment fails at checkout despite the card working everywhere else.,1,found
+card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.,1,found
+card_declined_incorrectly,My card keeps getting declined even though there are sufficient funds.,1,found
+card_declined_incorrectly,"Update: Payment fails at checkout despite the card working everywhere else. Happening consistently, not a one-off.",1,found
+card_declined_incorrectly,Following up on this: My card keeps getting declined even though there are sufficient funds.,1,found
+card_declined_incorrectly,Update: Payment fails at checkout despite the card working everywhere else. This is affecting my daily work.,7,found
+card_declined_incorrectly,This has come up again. Payment fails at checkout despite the card working everywhere else.,1,found
+escalation_ignored,"Still happening - I asked to escalate this issue and nothing has happened since. Happening consistently, not a one-off.",9,found
+escalation_ignored,Reporting this again: Requested a manager review three times with no follow-up at all.,1,found
+escalation_ignored,Following up on this: Requested a manager review three times with no follow-up at all.,1,found
+escalation_ignored,This has come up again. I asked to escalate this issue and nothing has happened since. This is affecting my daily work.,6,found
+escalation_ignored,Still happening - Requested a manager review three times with no follow-up at all. This is affecting my daily work.,1,found
+escalation_ignored,Following up on this: I asked to escalate this issue and nothing has happened since.,5,found
+escalation_ignored,Update: I asked to escalate this issue and nothing has happened since.,9,found
+agent_unhelpful,This has come up again. Got a copy-pasted response that had nothing to do with my actual question.,1,found
+agent_unhelpful,The support agent I spoke to didn't actually solve my problem.,20,found
+agent_unhelpful,"Chat support just gave generic answers that didn't address my issue. Happening consistently, not a one-off.",7,found
+agent_unhelpful,Just ran into this once more: The agent closed my ticket without actually fixing anything. This is affecting my daily work.,32,found
+agent_unhelpful,Reporting this again: Chat support just gave generic answers that didn't address my issue. Can someone confirm this is being looked at?,5,found
+agent_unhelpful,Just ran into this once more: Got a copy-pasted response that had nothing to do with my actual question.,1,found
+agent_unhelpful,Still happening - The support agent I spoke to didn't actually solve my problem.,21,found
+agent_unhelpful,Update: Chat support just gave generic answers that didn't address my issue.,6,found
+agent_unhelpful,The support agent I spoke to didn't actually solve my problem. Please look into this soon.,25,found
+agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. Please look into this soon.,29,found
+agent_unhelpful,"Got a copy-pasted response that had nothing to do with my actual question. Happening consistently, not a one-off.",1,found
+agent_unhelpful,Chat support just gave generic answers that didn't address my issue.,4,found
+agent_unhelpful,This has come up again. The support agent I spoke to didn't actually solve my problem. This is affecting my daily work.,13,found
+agent_unhelpful,Reporting this again: The agent closed my ticket without actually fixing anything. This is affecting my daily work.,32,found
+agent_unhelpful,Following up on this: The agent closed my ticket without actually fixing anything.,26,found
+permissions_not_saving,"This has come up again. Permission changes I make for team members don't save. Happening consistently, not a one-off.",1,found
+permissions_not_saving,"Update: Permission changes I make for team members don't save. Happening consistently, not a one-off.",1,found
+permissions_not_saving,Permission changes I make for team members don't save. Can someone confirm this is being looked at?,1,found
+permissions_not_saving,I set a teammate's access level but it reverts back on its own.,1,found
+permissions_not_saving,"Just ran into this once more: Role permissions keep resetting to default after I configure them. Happening consistently, not a one-off.",1,found
+permissions_not_saving,Role permissions keep resetting to default after I configure them.,1,found
+permissions_not_saving,This has come up again. Permission changes I make for team members don't save.,1,found
+permissions_not_saving,Reporting this again: Role permissions keep resetting to default after I configure them.,1,found
+permissions_not_saving,"Reporting this again: I set a teammate's access level but it reverts back on its own. Happening consistently, not a one-off.",1,found
+permissions_not_saving,Role permissions keep resetting to default after I configure them. Please look into this soon.,1,found
+permissions_not_saving,I set a teammate's access level but it reverts back on its own.,1,found
+cant_bulk_edit,This has come up again. Bulk actions on the tickets list just don't apply to anything selected. Please look into this soon.,1,found
+cant_bulk_edit,"Reporting this again: There's no way to bulk update multiple tickets at once, only one at a time.",1,found
+cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Happening consistently, not a one-off.",1,found
+cant_bulk_edit,Reporting this again: Bulk actions on the tickets list just don't apply to anything selected.,1,found
+cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time.",1,found
+cant_bulk_edit,"Update: There's no way to bulk update multiple tickets at once, only one at a time. Can someone confirm this is being looked at?",1,found
+cant_bulk_edit,Just ran into this once more: Bulk actions on the tickets list just don't apply to anything selected.,1,found
+attachments_fail_to_upload,Following up on this: Uploading a screenshot to a ticket just hangs and never finishes.,1,found
+attachments_fail_to_upload,Still happening - File attachments fail to upload no matter the file size. This is affecting my daily work.,1,found
+attachments_fail_to_upload,Just ran into this once more: Uploading a screenshot to a ticket just hangs and never finishes. Can someone confirm this is being looked at?,2,found
+attachments_fail_to_upload,File attachments fail to upload no matter the file size. Can someone confirm this is being looked at?,1,found
+attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.,1,found
+attachments_fail_to_upload,Uploading a screenshot to a ticket just hangs and never finishes.,1,found
+attachments_fail_to_upload,"File attachments fail to upload no matter the file size. Happening consistently, not a one-off.",1,found
+refund_not_processed,Just ran into this once more: Refund status shows completed but I don't see the amount in my bank. Please look into this soon.,2,found
+refund_not_processed,The refund was approved but the money never came back to my account.,1,found
+refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago.,2,found
+refund_not_processed,"This has come up again. I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off.",1,found
+refund_not_processed,The refund was approved but the money never came back to my account. Can someone confirm this is being looked at?,1,found
+refund_not_processed,This has come up again. Still waiting on a refund that was promised over two weeks ago.,1,found
+refund_not_processed,"Reporting this again: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off.",1,found
+refund_not_processed,Just ran into this once more: Refund request was accepted but nothing has actually been credited.,1,found
+refund_not_processed,Still happening - Still waiting on a refund that was promised over two weeks ago. Please look into this soon.,1,found
+refund_not_processed,"Still happening - Refund status shows completed but I don't see the amount in my bank. Happening consistently, not a one-off.",1,found
+refund_not_processed,Update: Refund status shows completed but I don't see the amount in my bank.,1,found
+refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund. Can someone confirm this is being looked at?,2,found
+refund_not_processed,Update: I cancelled weeks ago and still haven't received my refund.,1,found
+refund_not_processed,"Still happening - I cancelled weeks ago and still haven't received my refund. Happening consistently, not a one-off.",1,found
+refund_not_processed,Just ran into this once more: Still waiting on a refund that was promised over two weeks ago.,1,found
+refund_not_processed,Refund request was accepted but nothing has actually been credited.,1,found
+refund_not_processed,Reporting this again: The refund was approved but the money never came back to my account.,1,found
+refund_not_processed,"Update: Refund request was accepted but nothing has actually been credited. Happening consistently, not a one-off.",1,found
+refund_not_processed,This has come up again. Refund status shows completed but I don't see the amount in my bank. This is affecting my daily work.,1,found
+analytics_data_wrong,Just ran into this once more: The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.,1,found
+analytics_data_wrong,Just ran into this once more: Analytics figures seem to be miscalculated compared to raw data.,1,found
+analytics_data_wrong,Following up on this: Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.,1,found
+analytics_data_wrong,Reporting this again: Report totals in the dashboard don't add up correctly. This is affecting my daily work.,1,found
+analytics_data_wrong,Report totals in the dashboard don't add up correctly.,1,found
+analytics_data_wrong,Following up on this: The analytics dashboard is showing numbers that don't match reality.,1,found
+analytics_data_wrong,Analytics figures seem to be miscalculated compared to raw data. Please look into this soon.,1,found
+analytics_data_wrong,Report totals in the dashboard don't add up correctly. Can someone confirm this is being looked at?,1,found
+analytics_data_wrong,This has come up again. Report totals in the dashboard don't add up correctly.,1,found
+analytics_data_wrong,The analytics dashboard is showing numbers that don't match reality. This is affecting my daily work.,1,found
+analytics_data_wrong,This has come up again. The analytics dashboard is showing numbers that don't match reality.,1,found
+account_locked_incorrectly,"Just ran into this once more: Got flagged as suspicious and locked out for no real reason. Happening consistently, not a one-off.",1,found
+account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password. This is affecting my daily work.,1,found
+account_locked_incorrectly,I was locked out of my account even though I entered the correct password. This is affecting my daily work.,1,found
+account_locked_incorrectly,Still happening - Account lockout triggered incorrectly and support hasn't unlocked it yet. Please look into this soon.,1,found
+account_locked_incorrectly,"My account got locked after one failed login attempt, which seems wrong.",1,found
+account_locked_incorrectly,Reporting this again: I was locked out of my account even though I entered the correct password.,1,found
+account_locked_incorrectly,Still happening - Got flagged as suspicious and locked out for no real reason.,1,found
+account_locked_incorrectly,"Reporting this again: My account got locked after one failed login attempt, which seems wrong. Happening consistently, not a one-off.",1,found
+account_locked_incorrectly,"Following up on this: My account got locked after one failed login attempt, which seems wrong.",1,found
+account_locked_incorrectly,"Update: My account got locked after one failed login attempt, which seems wrong.",1,found
+account_locked_incorrectly,Reporting this again: Got flagged as suspicious and locked out for no real reason. This is affecting my daily work.,2,found
+account_locked_incorrectly,Got flagged as suspicious and locked out for no real reason. Please look into this soon.,1,found
+account_locked_incorrectly,Following up on this: Account lockout triggered incorrectly and support hasn't unlocked it yet.,1,found
+account_locked_incorrectly,Just ran into this once more: Account lockout triggered incorrectly and support hasn't unlocked it yet. This is affecting my daily work.,1,found
+account_locked_incorrectly,Just ran into this once more: I was locked out of my account even though I entered the correct password.,1,found
+search_returns_nothing,Just ran into this once more: Search returns no results even for terms I know exist in my tickets.,1,found
+search_returns_nothing,Update: The search bar just comes back empty no matter what I type. This is affecting my daily work.,4,found
+search_returns_nothing,The search bar just comes back empty no matter what I type. Please look into this soon.,1,found
+search_returns_nothing,Still happening - Search returns no results even for terms I know exist in my tickets. Can someone confirm this is being looked at?,1,found
+search_returns_nothing,Update: Search returns no results even for terms I know exist in my tickets. Please look into this soon.,1,found
+search_returns_nothing,The search bar just comes back empty no matter what I type. Can someone confirm this is being looked at?,1,found
+search_returns_nothing,Update: The search bar just comes back empty no matter what I type.,1,found
+update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Happening consistently, not a one-off.",9,found
+update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely.",8,found
+update_broke_feature,"After updating the app, a core feature stopped working entirely. Please look into this soon.",4,found
+update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,found
+update_broke_feature,"This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,found
+update_broke_feature,Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.,1,found
+update_broke_feature,Following up on this: Something in the newest release broke a workflow I rely on daily. This is affecting my daily work.,1,found
+update_broke_feature,The latest update broke a feature that was working fine before.,1,found
+update_broke_feature,"Reporting this again: This version introduced a bug that wasn't there before the update. Happening consistently, not a one-off.",1,found
+update_broke_feature,Reporting this again: The latest update broke a feature that was working fine before.,2,found
+update_broke_feature,Something in the newest release broke a workflow I rely on daily.,1,found
+update_broke_feature,The latest update broke a feature that was working fine before.,1,found
+update_broke_feature,This has come up again. The latest update broke a feature that was working fine before. Can someone confirm this is being looked at?,5,found
+update_broke_feature,"This has come up again. After updating the app, a core feature stopped working entirely. Please look into this soon.",8,found
+update_broke_feature,Reporting this again: This version introduced a bug that wasn't there before the update. Can someone confirm this is being looked at?,2,found
+export_fails,This has come up again. CSV export has been broken for me the past few days.,1,found
+export_fails,"Still happening - Exporting reports to CSV fails every time I try. Happening consistently, not a one-off.",1,found
+export_fails,Reporting this again: Exporting reports to CSV fails every time I try.,1,found
+export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads. This is affecting my daily work.,1,found
+export_fails,Reporting this again: Trying to export data throws an error and nothing downloads. Can someone confirm this is being looked at?,1,found
+export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded.",1,found
+export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try.,1,found
+export_fails,"This has come up again. The export button doesn't do anything, no file gets downloaded. Can someone confirm this is being looked at?",1,found
+export_fails,Export just spins indefinitely and never produces a file. Please look into this soon.,1,found
+export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded. Please look into this soon.",1,found
+export_fails,Just ran into this once more: CSV export has been broken for me the past few days.,1,found
+export_fails,Following up on this: Export just spins indefinitely and never produces a file. Please look into this soon.,1,found
+export_fails,Following up on this: Trying to export data throws an error and nothing downloads. Please look into this soon.,1,found
+export_fails,Still happening - Export just spins indefinitely and never produces a file. Please look into this soon.,1,found
+export_fails,"Following up on this: The export button doesn't do anything, no file gets downloaded.",1,found
+export_fails,Just ran into this once more: Exporting reports to CSV fails every time I try. Please look into this soon.,1,found
+export_fails,CSV export has been broken for me the past few days.,1,found
+export_fails,Just ran into this once more: Trying to export data throws an error and nothing downloads.,1,found
+export_fails,Just ran into this once more: CSV export has been broken for me the past few days.,1,found
+no_response_from_support,No one has responded to my request for help yet.,3,found
+no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?,1,found
+no_response_from_support,"I submitted a support ticket three days ago and haven't heard back. Happening consistently, not a one-off.",1,found
+no_response_from_support,I submitted a support ticket three days ago and haven't heard back.,1,found
+no_response_from_support,Reporting this again: I'm still waiting on any response from the support team. Can someone confirm this is being looked at?,1,found
+no_response_from_support,Just ran into this once more: Radio silence from support since I opened this ticket.,1,found
+no_response_from_support,Still happening - No one has responded to my request for help yet. This is affecting my daily work.,4,found
+no_response_from_support,This has come up again. Support hasn't replied to my message even after multiple follow-ups.,1,found
+no_response_from_support,Radio silence from support since I opened this ticket. Can someone confirm this is being looked at?,1,found
+no_response_from_support,I'm still waiting on any response from the support team. Can someone confirm this is being looked at?,1,found
+no_response_from_support,Reporting this again: Support hasn't replied to my message even after multiple follow-ups.,1,found
+no_response_from_support,Reporting this again: I'm still waiting on any response from the support team.,1,found
+no_response_from_support,Reporting this again: No one has responded to my request for help yet.,1,found
+no_response_from_support,This has come up again. I submitted a support ticket three days ago and haven't heard back. This is affecting my daily work.,1,found
+no_response_from_support,Just ran into this once more: Support hasn't replied to my message even after multiple follow-ups. This is affecting my daily work.,1,found
+no_response_from_support,This has come up again. Radio silence from support since I opened this ticket.,1,found
+no_response_from_support,No one has responded to my request for help yet.,3,found
+no_response_from_support,I'm still waiting on any response from the support team.,1,found
+no_response_from_support,Following up on this: Support hasn't replied to my message even after multiple follow-ups.,1,found
+api_integration_broken,Update: Our API integration stopped working after the last platform update.,1,found
+api_integration_broken,Still happening - The webhook integration isn't firing events anymore. Please look into this soon.,5,found
+api_integration_broken,"Still happening - API calls are returning errors that weren't happening before. Happening consistently, not a one-off.",1,found
+api_integration_broken,Reporting this again: The webhook integration isn't firing events anymore. Please look into this soon.,5,found
+api_integration_broken,Reporting this again: API calls are returning errors that weren't happening before. This is affecting my daily work.,2,found
+api_integration_broken,Update: Our API integration stopped working after the last platform update. Please look into this soon.,1,found
+api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere.,1,found
+api_integration_broken,This has come up again. API responses started returning malformed data out of nowhere. Can someone confirm this is being looked at?,1,found
+api_integration_broken,Following up on this: API calls are returning errors that weren't happening before.,1,found
+api_integration_broken,"Still happening - Our API integration stopped working after the last platform update. Happening consistently, not a one-off.",1,found
+api_integration_broken,API calls are returning errors that weren't happening before.,1,found
+api_integration_broken,The webhook integration isn't firing events anymore. This is affecting my daily work.,10,found
+api_integration_broken,Following up on this: Our API integration stopped working after the last platform update.,1,found
+api_integration_broken,Update: API responses started returning malformed data out of nowhere.,1,found
+api_integration_broken,Still happening - The webhook integration isn't firing events anymore.,7,found
+wallet_balance_incorrect,Following up on this: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?,1,found
+wallet_balance_incorrect,Reporting this again: Wallet shows less credit than what was added last week. Can someone confirm this is being looked at?,1,found
+wallet_balance_incorrect,This has come up again. Wallet shows less credit than what was added last week.,2,found
+wallet_balance_incorrect,Wallet shows less credit than what was added last week. This is affecting my daily work.,1,found
+wallet_balance_incorrect,Just ran into this once more: My account wallet balance is showing an incorrect amount. Can someone confirm this is being looked at?,1,found
+wallet_balance_incorrect,"Following up on this: My account wallet balance is showing an incorrect amount. Happening consistently, not a one-off.",1,found
+wallet_balance_incorrect,Following up on this: Wallet shows less credit than what was added last week.,1,found
+wallet_balance_incorrect,"Still happening - The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off.",1,found
+wallet_balance_incorrect,Still happening - The credit balance doesn't match what I actually topped up.,1,found
+wallet_balance_incorrect,"Update: The credit balance doesn't match what I actually topped up. Happening consistently, not a one-off.",1,found
+wallet_balance_incorrect,The credit balance doesn't match what I actually topped up. Please look into this soon.,1,found
+cannot_cancel_subscription,Still happening - There's no way to actually cancel my subscription from the settings page.,1,found
+cannot_cancel_subscription,There's no way to actually cancel my subscription from the settings page.,1,found
+cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?,1,found
+cannot_cancel_subscription,Reporting this again: There's no way to actually cancel my subscription from the settings page. Please look into this soon.,1,found
+cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off.",1,found
+cannot_cancel_subscription,"Still happening - The cancel button on the billing page does nothing when clicked. Happening consistently, not a one-off.",1,found
+cannot_cancel_subscription,This has come up again. The cancel button on the billing page does nothing when clicked. Can someone confirm this is being looked at?,1,found
+mfa_setup_fails,Reporting this again: The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?,1,found
+mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step.,1,found
+mfa_setup_fails,This has come up again. Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.,1,found
+mfa_setup_fails,Following up on this: Setting up two-factor authentication fails at the QR code step. This is affecting my daily work.,1,found
+mfa_setup_fails,This has come up again. MFA enrollment keeps timing out before I can finish setup.,1,found
+mfa_setup_fails,MFA enrollment keeps timing out before I can finish setup. This is affecting my daily work.,1,found
+mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code. Can someone confirm this is being looked at?,1,found
+mfa_setup_fails,Just ran into this once more: The authenticator app won't pair no matter how many times I scan the code. This is affecting my daily work.,1,found
+mfa_setup_fails,"Update: Setting up two-factor authentication fails at the QR code step. Happening consistently, not a one-off.",1,found
+mfa_setup_fails,The authenticator app won't pair no matter how many times I scan the code.,1,found
+mfa_setup_fails,Following up on this: MFA enrollment keeps timing out before I can finish setup. Can someone confirm this is being looked at?,1,found
+password_reset_broken,Following up on this: Reset password flow throws a 404 as soon as I click the emailed link.,1,found
+password_reset_broken,Reset password flow throws a 404 as soon as I click the emailed link.,1,found
+password_reset_broken,"Just ran into this once more: Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?",1,found
+password_reset_broken,"Update: The password reset link in the email doesn't work, it just shows an error page.",1,found
+password_reset_broken,Just ran into this once more: I clicked forgot password and the reset link is broken. Can someone confirm this is being looked at?,1,found
+password_reset_broken,"Update: I clicked forgot password and the reset link is broken. Happening consistently, not a one-off.",1,found
+password_reset_broken,This has come up again. Password reset email arrives but the link leads to a blank screen. Please look into this soon.,1,found
+password_reset_broken,"This has come up again. Can't reset my password, the link expires instantly. Can someone confirm this is being looked at?",1,found
+password_reset_broken,Still happening - Reset password flow throws a 404 as soon as I click the emailed link. Can someone confirm this is being looked at?,1,found
+password_reset_broken,"Password reset email arrives but the link leads to a blank screen. Happening consistently, not a one-off.",1,found
+password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon.",1,found
+password_reset_broken,Update: Reset password flow throws a 404 as soon as I click the emailed link.,1,found
+password_reset_broken,I clicked forgot password and the reset link is broken. Please look into this soon.,1,found
+password_reset_broken,"Can't reset my password, the link expires instantly.",1,found
+password_reset_broken,Still happening - Password reset email arrives but the link leads to a blank screen. This is affecting my daily work.,1,found
+password_reset_broken,Update: I clicked forgot password and the reset link is broken.,1,found
+password_reset_broken,"The password reset link in the email doesn't work, it just shows an error page.",1,found
+password_reset_broken,"Still happening - The password reset link in the email doesn't work, it just shows an error page. Please look into this soon.",1,found
+password_reset_broken,Reporting this again: Password reset email arrives but the link leads to a blank screen. Can someone confirm this is being looked at?,1,found

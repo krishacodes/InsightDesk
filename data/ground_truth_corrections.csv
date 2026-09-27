@@ -1,0 +1,6 @@
+pair_id,original_label,corrected_label,reason
+52,duplicate,not_duplicate,"Different specific invoice defects (missing billing address vs missing tax breakdown) - plausibly different code paths, not one fix"
+61,duplicate,not_duplicate,Same pairing type as pair 52 - different invoice fields missing
+80,duplicate,not_duplicate,Different specific sync manifestations (stale teammate updates vs cross-device sync) grouped under one issue_id
+89,duplicate,not_duplicate,Different specific MFA failure modes (enrollment timeout vs authenticator pairing) - same granularity issue as pair 80
+98,duplicate,not_duplicate,Same pairing type as pair 80 - stale updates vs cross-device sync
